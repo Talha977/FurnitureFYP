@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0465CAC02406B29500A8E62B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0465CABF2406B29500A8E62B /* GoogleService-Info.plist */; };
 		3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481C30E2406953100C15B57 /* ARKit.framework */; };
 		3481C34D2406986D00C15B57 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C32E2406986C00C15B57 /* Models.scnassets */; };
 		3481C34E2406986D00C15B57 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C32F2406986C00C15B57 /* Utilities.swift */; };
@@ -142,6 +143,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0465CABF2406B29500A8E62B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA322367DBE64D405E65460 /* Pods-FurnitureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureApp.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp.debug.xcconfig"; sourceTree = "<group>"; };
 		17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraft.release.xcconfig"; path = "Target Support Files/Pods-BeerCraft/Pods-BeerCraft.release.xcconfig"; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		E2419A5522EB8CAA0054D9E4 = {
 			isa = PBXGroup;
 			children = (
+				0465CABF2406B29500A8E62B /* GoogleService-Info.plist */,
 				E29E3EE3235A47D50022E433 /* Shared */,
 				3481C32D2406986C00C15B57 /* ARKitProject */,
 				E2419A6022EB8CAB0054D9E4 /* Furniture */,
@@ -679,6 +682,7 @@
 				3481C3562406986D00C15B57 /* Assets.xcassets in Resources */,
 				E258632522F08C2400B5080D /* FurnitureCartCell.xib in Resources */,
 				E2419A6922EB8CAE0054D9E4 /* Assets.xcassets in Resources */,
+				0465CAC02406B29500A8E62B /* GoogleService-Info.plist in Resources */,
 				E258633222F330A100B5080D /* SingleFieldFormCell.xib in Resources */,
 				E2419A6722EB8CAB0054D9E4 /* Main.storyboard in Resources */,
 				E2419AA522EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib in Resources */,
@@ -1013,7 +1017,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = BeerCraft/Furnitura.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Furniture/Furnitura.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
@@ -1037,7 +1041,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = BeerCraft/Furnitura.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Furniture/Furnitura.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
