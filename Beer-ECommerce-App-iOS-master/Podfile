@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'BeerCraft' do
+target 'FurnitureApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -9,17 +9,21 @@ target 'BeerCraft' do
 
 	pod 'AlamofireObjectMapper', '~> 5.2'
 	pod 'IQKeyboardManagerSwift'
-	pod 'FCAlertView'	
+	pod 'FCAlertView'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Firestore'
+	pod 'Firebase/Storage'
+	pod 'Firebase/Database'
 
 
-  target 'BeerCraftTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'BeerCraftUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+#  target 'BeerCraftTests' do
+#    inherit! :search_paths
+#    # Pods for testing
+#  end
+#
+#  target 'BeerCraftUITests' do
+#    inherit! :search_paths
+#    # Pods for testing
+#  end
 
 end
