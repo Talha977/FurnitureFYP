@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0465CAC02406B29500A8E62B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0465CABF2406B29500A8E62B /* GoogleService-Info.plist */; };
 		3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481C30E2406953100C15B57 /* ARKit.framework */; };
 		3481C34D2406986D00C15B57 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C32E2406986C00C15B57 /* Models.scnassets */; };
 		3481C34E2406986D00C15B57 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C32F2406986C00C15B57 /* Utilities.swift */; };
@@ -32,24 +33,24 @@
 		3481C3662406986D00C15B57 /* ScieneView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C34B2406986C00C15B57 /* ScieneView+Extension.swift */; };
 		3481C3672406986D00C15B57 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C34C2406986C00C15B57 /* SettingsViewController.swift */; };
 		34ACFCAC2405A6EA007683C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ACFCAB2405A6EA007683C2 /* Extensions.swift */; };
-		34ACFCAD2405C3B7007683C2 /* Pods_BeerCraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C3EA2ECEDA7121CDFDDFE9 /* Pods_BeerCraft.framework */; };
 		34FC08C22404655D00A2BA43 /* FurnitureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC08C12404655D00A2BA43 /* FurnitureModel.swift */; };
+		C28FFF6C31250291DA20AE33 /* Pods_FurnitureApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306D6D220BE2F14EEAD59816 /* Pods_FurnitureApp.framework */; };
 		E2419A6222EB8CAB0054D9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A6122EB8CAB0054D9E4 /* AppDelegate.swift */; };
 		E2419A6722EB8CAB0054D9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2419A6522EB8CAB0054D9E4 /* Main.storyboard */; };
 		E2419A6922EB8CAE0054D9E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2419A6822EB8CAE0054D9E4 /* Assets.xcassets */; };
 		E2419A6C22EB8CAE0054D9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2419A6A22EB8CAE0054D9E4 /* LaunchScreen.storyboard */; };
 		E2419A9422EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9222EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift */; };
-		E2419A9722EB8E320054D9E4 /* BeerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9622EB8E320054D9E4 /* BeerDataModel.swift */; };
-		E2419A9B22EB92BE0054D9E4 /* BeerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9A22EB92BE0054D9E4 /* BeerDetailViewController.swift */; };
-		E2419A9D22EBA3020054D9E4 /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9C22EBA3020054D9E4 /* BeerDetailView.swift */; };
-		E2419A9F22EBA3250054D9E4 /* BeerDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2419A9E22EBA3250054D9E4 /* BeerDetailView.xib */; };
-		E2419AA422EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419AA222EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift */; };
-		E2419AA522EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2419AA322EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib */; };
+		E2419A9722EB8E320054D9E4 /* FurnitureDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9622EB8E320054D9E4 /* FurnitureDataModel.swift */; };
+		E2419A9B22EB92BE0054D9E4 /* FurnitureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9A22EB92BE0054D9E4 /* FurnitureDetailViewController.swift */; };
+		E2419A9D22EBA3020054D9E4 /* FurnitureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9C22EBA3020054D9E4 /* FurnitureDetailView.swift */; };
+		E2419A9F22EBA3250054D9E4 /* FurnitureDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2419A9E22EBA3250054D9E4 /* FurnitureDetailView.xib */; };
+		E2419AA422EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419AA222EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.swift */; };
+		E2419AA522EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2419AA322EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.xib */; };
 		E2419AA722EBBCE70054D9E4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419AA622EBBCE70054D9E4 /* Extension.swift */; };
 		E2419AAD22ECCDA30054D9E4 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419AAC22ECCDA30054D9E4 /* FilterTableViewController.swift */; };
-		E258632422F08C2400B5080D /* BeerCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632222F08C2400B5080D /* BeerCartCell.swift */; };
-		E258632522F08C2400B5080D /* BeerCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258632322F08C2400B5080D /* BeerCartCell.xib */; };
-		E258632722F09D2B00B5080D /* BeerCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632622F09D2B00B5080D /* BeerCart.swift */; };
+		E258632422F08C2400B5080D /* FurnitureCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632222F08C2400B5080D /* FurnitureCartCell.swift */; };
+		E258632522F08C2400B5080D /* FurnitureCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258632322F08C2400B5080D /* FurnitureCartCell.xib */; };
+		E258632722F09D2B00B5080D /* FurnitureCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632622F09D2B00B5080D /* FurnitureCart.swift */; };
 		E258632922F0B17A00B5080D /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632822F0B17A00B5080D /* Global.swift */; };
 		E258632B22F0BF4A00B5080D /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632A22F0BF4A00B5080D /* CartViewController.swift */; };
 		E258633122F330A100B5080D /* SingleFieldFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632F22F330A100B5080D /* SingleFieldFormCell.swift */; };
@@ -142,10 +143,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0465CABF2406B29500A8E62B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DA322367DBE64D405E65460 /* Pods-FurnitureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureApp.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp.debug.xcconfig"; sourceTree = "<group>"; };
 		17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraft.release.xcconfig"; path = "Target Support Files/Pods-BeerCraft/Pods-BeerCraft.release.xcconfig"; sourceTree = "<group>"; };
-		19C3EA2ECEDA7121CDFDDFE9 /* Pods_BeerCraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C2092706CCC8716844DCEF /* Pods-BeerCraftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BeerCraftUITests/Pods-BeerCraftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		306D6D220BE2F14EEAD59816 /* Pods_FurnitureApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3481C30E2406953100C15B57 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		3481C32E2406986C00C15B57 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		3481C32F2406986C00C15B57 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -186,17 +189,17 @@
 		E2419A6B22EB8CAE0054D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2419A6D22EB8CAE0054D9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2419A9222EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManagerRequestHandler.swift; sourceTree = "<group>"; };
-		E2419A9622EB8E320054D9E4 /* BeerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDataModel.swift; sourceTree = "<group>"; };
-		E2419A9A22EB92BE0054D9E4 /* BeerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewController.swift; sourceTree = "<group>"; };
-		E2419A9C22EBA3020054D9E4 /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
-		E2419A9E22EBA3250054D9E4 /* BeerDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerDetailView.xib; sourceTree = "<group>"; };
-		E2419AA222EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewCellTableViewCell.swift; sourceTree = "<group>"; };
-		E2419AA322EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerListViewCellTableViewCell.xib; sourceTree = "<group>"; };
+		E2419A9622EB8E320054D9E4 /* FurnitureDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureDataModel.swift; sourceTree = "<group>"; };
+		E2419A9A22EB92BE0054D9E4 /* FurnitureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureDetailViewController.swift; sourceTree = "<group>"; };
+		E2419A9C22EBA3020054D9E4 /* FurnitureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureDetailView.swift; sourceTree = "<group>"; };
+		E2419A9E22EBA3250054D9E4 /* FurnitureDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurnitureDetailView.xib; sourceTree = "<group>"; };
+		E2419AA222EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		E2419AA322EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurnitureViewCellTableViewCell.xib; sourceTree = "<group>"; };
 		E2419AA622EBBCE70054D9E4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E2419AAC22ECCDA30054D9E4 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
-		E258632222F08C2400B5080D /* BeerCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCartCell.swift; sourceTree = "<group>"; };
-		E258632322F08C2400B5080D /* BeerCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCartCell.xib; sourceTree = "<group>"; };
-		E258632622F09D2B00B5080D /* BeerCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCart.swift; sourceTree = "<group>"; };
+		E258632222F08C2400B5080D /* FurnitureCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureCartCell.swift; sourceTree = "<group>"; };
+		E258632322F08C2400B5080D /* FurnitureCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurnitureCartCell.xib; sourceTree = "<group>"; };
+		E258632622F09D2B00B5080D /* FurnitureCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureCart.swift; sourceTree = "<group>"; };
 		E258632822F0B17A00B5080D /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		E258632A22F0BF4A00B5080D /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		E258632F22F330A100B5080D /* SingleFieldFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFieldFormCell.swift; sourceTree = "<group>"; };
@@ -222,6 +225,7 @@
 		E29E3EEB235A488A0022E433 /* IntentKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentKit.h; sourceTree = "<group>"; };
 		E29E3EEC235A488A0022E433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E29E3EF6235A49640022E433 /* NSUserActivity+IntentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+IntentData.swift"; sourceTree = "<group>"; };
+		F4AFCDCB556E2C33907830BC /* Pods-FurnitureApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureApp.release.xcconfig"; path = "Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,7 +235,7 @@
 			files = (
 				3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */,
 				E29E3EF0235A488A0022E433 /* IntentKit.framework in Frameworks */,
-				34ACFCAD2405C3B7007683C2 /* Pods_BeerCraft.framework in Frameworks */,
+				C28FFF6C31250291DA20AE33 /* Pods_FurnitureApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +270,10 @@
 			isa = PBXGroup;
 			children = (
 				3481C30E2406953100C15B57 /* ARKit.framework */,
-				19C3EA2ECEDA7121CDFDDFE9 /* Pods_BeerCraft.framework */,
 				07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */,
 				6A13C20DE60AE1C2B3E9D460 /* Pods_BeerCraftUITests.framework */,
 				E25A642D235A5CCA0072C1F1 /* IntentsUI.framework */,
+				306D6D220BE2F14EEAD59816 /* Pods_FurnitureApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -329,6 +333,8 @@
 				4B0C8B597554664A2933A395 /* Pods-BeerCraftTests.release.xcconfig */,
 				22C2092706CCC8716844DCEF /* Pods-BeerCraftUITests.debug.xcconfig */,
 				45B05BAB8C582CA0C154AD59 /* Pods-BeerCraftUITests.release.xcconfig */,
+				0DA322367DBE64D405E65460 /* Pods-FurnitureApp.debug.xcconfig */,
+				F4AFCDCB556E2C33907830BC /* Pods-FurnitureApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -336,12 +342,13 @@
 		E2419A5522EB8CAA0054D9E4 = {
 			isa = PBXGroup;
 			children = (
+				0465CABF2406B29500A8E62B /* GoogleService-Info.plist */,
 				E29E3EE3235A47D50022E433 /* Shared */,
 				3481C32D2406986C00C15B57 /* ARKitProject */,
-				E2419A6022EB8CAB0054D9E4 /* BeerCraft */,
+				E2419A6022EB8CAB0054D9E4 /* Furniture */,
 				E29E3EEA235A488A0022E433 /* IntentKit */,
-				E25A6424235A5CC90072C1F1 /* BeerMenu */,
-				E25A642F235A5CCA0072C1F1 /* BeerMenuUI */,
+				E25A6424235A5CC90072C1F1 /* FurnitureMenu */,
+				E25A642F235A5CCA0072C1F1 /* FurnitureMenuUI */,
 				E2419A5F22EB8CAB0054D9E4 /* Products */,
 				A230B7B07EE0D9A8E6E36F85 /* Pods */,
 				0F88C719F0BFAAD0100AE809 /* Frameworks */,
@@ -359,7 +366,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E2419A6022EB8CAB0054D9E4 /* BeerCraft */ = {
+		E2419A6022EB8CAB0054D9E4 /* Furniture */ = {
 			isa = PBXGroup;
 			children = (
 				34ACFCAF24066E8E007683C2 /* Furnitura.entitlements */,
@@ -367,9 +374,9 @@
 				E2419A8F22EB8D440054D9E4 /* Model */,
 				E2419A9122EB8D530054D9E4 /* Controller */,
 				E2419A9922EB90DB0054D9E4 /* Storyboard */,
-				E2419A9822EB90C10054D9E4 /* Supporting Files */,
+				E2419A9822EB90C10054D9E4 /* SupportingFiles */,
 			);
-			path = BeerCraft;
+			path = Furniture;
 			sourceTree = "<group>";
 		};
 		E2419A8F22EB8D440054D9E4 /* Model */ = {
@@ -377,8 +384,8 @@
 			children = (
 				E25A6462235A71C90072C1F1 /* ServerManager.swift */,
 				E2419A9222EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift */,
-				E2419A9622EB8E320054D9E4 /* BeerDataModel.swift */,
-				E258632622F09D2B00B5080D /* BeerCart.swift */,
+				E2419A9622EB8E320054D9E4 /* FurnitureDataModel.swift */,
+				E258632622F09D2B00B5080D /* FurnitureCart.swift */,
 				34FC08C12404655D00A2BA43 /* FurnitureModel.swift */,
 				34ACFCAB2405A6EA007683C2 /* Extensions.swift */,
 			);
@@ -388,10 +395,10 @@
 		E2419A9022EB8D4C0054D9E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E258632C22F3300000B5080D /* BeerCheckout */,
-				E258632122F08C0400B5080D /* BeerCart */,
-				E2419AA122EBB3FA0054D9E4 /* BeerListCell */,
-				E2419AA022EBB3E30054D9E4 /* BeerDetailView */,
+				E258632C22F3300000B5080D /* FurnitureCheckout */,
+				E258632122F08C0400B5080D /* FurnitureCart */,
+				E2419AA122EBB3FA0054D9E4 /* FurnitureListCell */,
+				E2419AA022EBB3E30054D9E4 /* FurnitureDetailView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,7 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				E2419A6322EB8CAB0054D9E4 /* FurnitureListView.swift */,
-				E2419A9A22EB92BE0054D9E4 /* BeerDetailViewController.swift */,
+				E2419A9A22EB92BE0054D9E4 /* FurnitureDetailViewController.swift */,
 				E2419AA622EBBCE70054D9E4 /* Extension.swift */,
 				E2419AAC22ECCDA30054D9E4 /* FilterTableViewController.swift */,
 				E258632A22F0BF4A00B5080D /* CartViewController.swift */,
@@ -409,7 +416,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		E2419A9822EB90C10054D9E4 /* Supporting Files */ = {
+		E2419A9822EB90C10054D9E4 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				E2419A6122EB8CAB0054D9E4 /* AppDelegate.swift */,
@@ -418,7 +425,7 @@
 				E258632822F0B17A00B5080D /* Global.swift */,
 				E258633922F430E800B5080D /* CheckoutFormMetadeta.swift */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		E2419A9922EB90DB0054D9E4 /* Storyboard */ = {
@@ -430,40 +437,40 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		E2419AA022EBB3E30054D9E4 /* BeerDetailView */ = {
+		E2419AA022EBB3E30054D9E4 /* FurnitureDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				E2419A9C22EBA3020054D9E4 /* BeerDetailView.swift */,
-				E2419A9E22EBA3250054D9E4 /* BeerDetailView.xib */,
+				E2419A9C22EBA3020054D9E4 /* FurnitureDetailView.swift */,
+				E2419A9E22EBA3250054D9E4 /* FurnitureDetailView.xib */,
 			);
-			path = BeerDetailView;
+			path = FurnitureDetailView;
 			sourceTree = "<group>";
 		};
-		E2419AA122EBB3FA0054D9E4 /* BeerListCell */ = {
+		E2419AA122EBB3FA0054D9E4 /* FurnitureListCell */ = {
 			isa = PBXGroup;
 			children = (
-				E2419AA222EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift */,
-				E2419AA322EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib */,
+				E2419AA222EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.swift */,
+				E2419AA322EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.xib */,
 			);
-			path = BeerListCell;
+			path = FurnitureListCell;
 			sourceTree = "<group>";
 		};
-		E258632122F08C0400B5080D /* BeerCart */ = {
+		E258632122F08C0400B5080D /* FurnitureCart */ = {
 			isa = PBXGroup;
 			children = (
-				E258632222F08C2400B5080D /* BeerCartCell.swift */,
-				E258632322F08C2400B5080D /* BeerCartCell.xib */,
+				E258632222F08C2400B5080D /* FurnitureCartCell.swift */,
+				E258632322F08C2400B5080D /* FurnitureCartCell.xib */,
 			);
-			path = BeerCart;
+			path = FurnitureCart;
 			sourceTree = "<group>";
 		};
-		E258632C22F3300000B5080D /* BeerCheckout */ = {
+		E258632C22F3300000B5080D /* FurnitureCheckout */ = {
 			isa = PBXGroup;
 			children = (
 				E258632E22F3302200B5080D /* Normal Cell */,
 				E258632D22F3301300B5080D /* Multiple Fields */,
 			);
-			path = BeerCheckout;
+			path = FurnitureCheckout;
 			sourceTree = "<group>";
 		};
 		E258632D22F3301300B5080D /* Multiple Fields */ = {
@@ -484,23 +491,23 @@
 			path = "Normal Cell";
 			sourceTree = "<group>";
 		};
-		E25A6424235A5CC90072C1F1 /* BeerMenu */ = {
+		E25A6424235A5CC90072C1F1 /* FurnitureMenu */ = {
 			isa = PBXGroup;
 			children = (
 				E25A6425235A5CC90072C1F1 /* IntentHandler.swift */,
 				E25A6427235A5CC90072C1F1 /* Info.plist */,
 			);
-			path = BeerMenu;
+			path = FurnitureMenu;
 			sourceTree = "<group>";
 		};
-		E25A642F235A5CCA0072C1F1 /* BeerMenuUI */ = {
+		E25A642F235A5CCA0072C1F1 /* FurnitureMenuUI */ = {
 			isa = PBXGroup;
 			children = (
 				E25A6430235A5CCA0072C1F1 /* IntentViewController.swift */,
 				E25A6432235A5CCA0072C1F1 /* MainInterface.storyboard */,
 				E25A6435235A5CCA0072C1F1 /* Info.plist */,
 			);
-			path = BeerMenuUI;
+			path = FurnitureMenuUI;
 			sourceTree = "<group>";
 		};
 		E29E3EE3235A47D50022E433 /* Shared */ = {
@@ -627,7 +634,7 @@
 				);
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Siddhant Mishra";
+				ORGANIZATIONNAME = "Talha Asif";
 				TargetAttributes = {
 					E2419A5D22EB8CAB0054D9E4 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -673,14 +680,15 @@
 				3481C3542406986D00C15B57 /* .swiftlint.yml in Resources */,
 				E2419A6C22EB8CAE0054D9E4 /* LaunchScreen.storyboard in Resources */,
 				3481C3562406986D00C15B57 /* Assets.xcassets in Resources */,
-				E258632522F08C2400B5080D /* BeerCartCell.xib in Resources */,
+				E258632522F08C2400B5080D /* FurnitureCartCell.xib in Resources */,
 				E2419A6922EB8CAE0054D9E4 /* Assets.xcassets in Resources */,
+				0465CAC02406B29500A8E62B /* GoogleService-Info.plist in Resources */,
 				E258633222F330A100B5080D /* SingleFieldFormCell.xib in Resources */,
 				E2419A6722EB8CAB0054D9E4 /* Main.storyboard in Resources */,
-				E2419AA522EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib in Resources */,
+				E2419AA522EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.xib in Resources */,
 				3481C34D2406986D00C15B57 /* Models.scnassets in Resources */,
 				E258633622F330BD00B5080D /* MultipleFieldFormCell.xib in Resources */,
-				E2419A9F22EBA3250054D9E4 /* BeerDetailView.xib in Resources */,
+				E2419A9F22EBA3250054D9E4 /* FurnitureDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,7 +732,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BeerCraft-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FurnitureApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -737,15 +745,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeerCraft/Pods-BeerCraft-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeerCraft/Pods-BeerCraft-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeerCraft/Pods-BeerCraft-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -756,8 +764,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3481C35D2406986D00C15B57 /* Vase.swift in Sources */,
-				E2419A9722EB8E320054D9E4 /* BeerDataModel.swift in Sources */,
-				E2419A9B22EB92BE0054D9E4 /* BeerDetailViewController.swift in Sources */,
+				E2419A9722EB8E320054D9E4 /* FurnitureDataModel.swift in Sources */,
+				E2419A9B22EB92BE0054D9E4 /* FurnitureDetailViewController.swift in Sources */,
 				E258632B22F0BF4A00B5080D /* CartViewController.swift in Sources */,
 				3481C3522406986D00C15B57 /* HitTestVisualization.swift in Sources */,
 				E25A6463235A71C90072C1F1 /* ServerManager.swift in Sources */,
@@ -773,7 +781,7 @@
 				E258632922F0B17A00B5080D /* Global.swift in Sources */,
 				E25A646F235A7C750072C1F1 /* FurnitureListView.swift in Sources */,
 				3481C3612406986D00C15B57 /* ARCameraTrackingState.swift in Sources */,
-				E258632722F09D2B00B5080D /* BeerCart.swift in Sources */,
+				E258632722F09D2B00B5080D /* FurnitureCart.swift in Sources */,
 				3481C3532406986D00C15B57 /* Gesture.swift in Sources */,
 				E258633A22F430E800B5080D /* CheckoutFormMetadeta.swift in Sources */,
 				3481C35A2406986D00C15B57 /* Candle.swift in Sources */,
@@ -786,11 +794,11 @@
 				E258633822F4236C00B5080D /* CheckoutViewController.swift in Sources */,
 				3481C3592406986D00C15B57 /* VirtualObjectsManager.swift in Sources */,
 				3481C3512406986D00C15B57 /* FocusSquare.swift in Sources */,
-				E2419A9D22EBA3020054D9E4 /* BeerDetailView.swift in Sources */,
-				E258632422F08C2400B5080D /* BeerCartCell.swift in Sources */,
+				E2419A9D22EBA3020054D9E4 /* FurnitureDetailView.swift in Sources */,
+				E258632422F08C2400B5080D /* FurnitureCartCell.swift in Sources */,
 				3481C3642406986D00C15B57 /* VirtualObject.swift in Sources */,
 				E258633122F330A100B5080D /* SingleFieldFormCell.swift in Sources */,
-				E2419AA422EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift in Sources */,
+				E2419AA422EBB41D0054D9E4 /* FurnitureViewCellTableViewCell.swift in Sources */,
 				3481C34F2406986D00C15B57 /* PlaneDebugVisualization.swift in Sources */,
 				E2419A9422EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift in Sources */,
 				3481C3552406986D00C15B57 /* MainViewController.swift in Sources */,
@@ -1005,15 +1013,15 @@
 		};
 		E2419A8722EB8CAF0054D9E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48B5D4CB01B1AE22E100F466 /* Pods-BeerCraft.debug.xcconfig */;
+			baseConfigurationReference = 0DA322367DBE64D405E65460 /* Pods-FurnitureApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = BeerCraft/Furnitura.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Furniture/Furnitura.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
-				INFOPLIST_FILE = "$(SRCROOT)/BeerCraft/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Furniture/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1029,15 +1037,15 @@
 		};
 		E2419A8822EB8CAF0054D9E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */;
+			baseConfigurationReference = F4AFCDCB556E2C33907830BC /* Pods-FurnitureApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = BeerCraft/Furnitura.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Furniture/Furnitura.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
-				INFOPLIST_FILE = "$(SRCROOT)/BeerCraft/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Furniture/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1057,7 +1065,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
-				INFOPLIST_FILE = BeerMenuUI/Info.plist;
+				INFOPLIST_FILE = FurnitureMenuUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1079,7 +1087,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
-				INFOPLIST_FILE = BeerMenuUI/Info.plist;
+				INFOPLIST_FILE = FurnitureMenuUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1101,7 +1109,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
-				INFOPLIST_FILE = BeerMenu/Info.plist;
+				INFOPLIST_FILE = FurnitureMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1123,7 +1131,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
-				INFOPLIST_FILE = BeerMenu/Info.plist;
+				INFOPLIST_FILE = FurnitureMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

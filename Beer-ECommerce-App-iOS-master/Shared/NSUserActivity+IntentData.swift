@@ -1,10 +1,8 @@
+ //  FurnitureApp
  //
-//  NSUserActivity+IntentData.swift
-//  IntentKit
-//
-//  Created by Siddhant Mishra on 19/10/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
-//
+ //  Copyright © 2020 Talha Asif. All rights reserved.
+ //
+
 
 import Foundation
 import Intents
