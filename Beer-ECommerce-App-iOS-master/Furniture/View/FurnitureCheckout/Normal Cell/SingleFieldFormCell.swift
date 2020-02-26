@@ -1,9 +1,6 @@
+//  FurnitureApp
 //
-//  SingleFieldFormCell.swift
-//  BeerCraft
-//
-//  Created by Siddhant Mishra on 01/08/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Talha Asif. All rights reserved.
 //
 
 import UIKit

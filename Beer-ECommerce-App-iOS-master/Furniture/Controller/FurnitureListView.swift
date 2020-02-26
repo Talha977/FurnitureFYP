@@ -1,9 +1,6 @@
+//  FurnitureApp
 //
-//  ViewController.swift
-//  BeerCraft
-//
-//  Created by Siddhant Mishra on 27/07/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Talha Asif. All rights reserved.
 //
 
 import UIKit
@@ -15,12 +12,12 @@ class FurnitureListView: UIViewController {
     
     @IBOutlet weak var beerListView: UITableView!
     var vSpinner : UIView?
-    var beerData = [Beers]()
+    var beerData = [Furnitures]()
     var beerSort = Bool()
-    var beerArrRef = [Beers]()
+    var beerArrRef = [Furnitures]()
     var filterArr = [String]()
-    var selectedRecord = Beers()
-    var searchArr = [Beers]()
+    var selectedRecord = Furnitures()
+    var searchArr = [Furnitures]()
     var filterOn = Bool()
     
     @IBOutlet weak var beerSearchBar: UISearchBar!
@@ -32,7 +29,7 @@ class FurnitureListView: UIViewController {
 //        beerData = beerData.sorted(by: {Double($0.cost) ?? 0 < Double($1.cost) ?? 0})
 //        beerListView.reloadData()
         filterOn = false
-        beerListView.register(UINib(nibName: "BeerListViewCellTableViewCell", bundle: nil), forCellReuseIdentifier: "BeerListViewCellTableViewCell")
+        beerListView.register(UINib(nibName: "FurnitureViewCellTableViewCell", bundle: nil), forCellReuseIdentifier: "FurnitureViewCellTableViewCell")
         setupNavigationBar()
         INInteraction.delete(with: "Take my order") { err in
             print(err?.localizedDescription)
@@ -45,7 +42,7 @@ class FurnitureListView: UIViewController {
     func addSelectBeerSiriIntent(){
        let intent = SelectBeerIntent()
         intent.suggestedInvocationPhrase = "Take my order"
-        intent.beerName = "beerName"
+        intent.beerName = "FurnitureName"
         intent.amount = 0
        let interaction = INInteraction(intent: intent, response: nil)
        
@@ -62,7 +59,7 @@ class FurnitureListView: UIViewController {
     
     func addTakeOrderSiri(){
         let intent = SelectBeerIntent()
-        intent.beerName = "beerName"
+        intent.beerName = "FurnitureName"
         intent.amount = 0
         guard let shortcut = INShortcut(intent: intent) else {
             return
@@ -139,7 +136,7 @@ class FurnitureListView: UIViewController {
                 self.showErrorAlertWithTitle("Error", message: error.details.message)
             }
             else {
-                if let details = details as? [Beers] {
+                if let details = details as? [Furnitures] {
                     self.updateUIwithDetails(details)
                     self.removeSpinner(spinner: self.vSpinner)
                     self.vSpinner = nil
@@ -152,7 +149,7 @@ class FurnitureListView: UIViewController {
     
     
     //Update table on response of API
-    func updateUIwithDetails(_ details:[BeerData]){
+    func updateUIwithDetails(_ details:[FurnitureData]){
         beerData.removeAll()
         beerData = details
         beerArrRef = beerData // Master ref of data
@@ -205,7 +202,7 @@ extension FurnitureListView:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BeerListViewCellTableViewCell", for: indexPath) as! BeerListViewCellTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FurnitureViewCellTableViewCell", for: indexPath) as! FurnitureViewCellTableViewCell
         
         cell.layer.cornerRadius = 10.0
         
@@ -281,7 +278,7 @@ extension FurnitureListView{
             let controller = segue.destination as! FilterTableViewController
             controller.filterArray = filterArr
         } else if segue.identifier == "showBeerDetail"{
-            if let nextViewController = segue.destination as? BeerDetailViewController {
+            if let nextViewController = segue.destination as? FurnitureDetailViewController {
                 nextViewController.beerDetail = selectedRecord
             }
         }

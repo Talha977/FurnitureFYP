@@ -1,10 +1,8 @@
+//  FurnitureApp
 //
-//  Extensions.swift
-//  BeerCraft
+//  Copyright © 2020 Talha Asif. All rights reserved.
 //
-//  Created by Mnet on 02/07/1441 AH.
-//  Copyright © 1441 Siddhant Mishra. All rights reserved.
-//
+
 
 import Foundation
 import UIKit

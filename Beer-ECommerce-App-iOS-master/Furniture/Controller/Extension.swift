@@ -1,9 +1,6 @@
+//  FurnitureApp
 //
-//  ViewController+Extension.swift
-//  BeerCraft
-//
-//  Created by Siddhant Mishra on 27/07/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Talha Asif. All rights reserved.
 //
 
 import Foundation

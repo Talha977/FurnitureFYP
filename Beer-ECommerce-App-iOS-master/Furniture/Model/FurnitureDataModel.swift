@@ -1,15 +1,13 @@
+//  FurnitureApp
 //
-//  BeerDataModel.swift
-//  BeerCraft
+//  Copyright © 2020 Talha Asif. All rights reserved.
 //
-//  Created by Siddhant Mishra on 27/07/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
-//
+
 
 import Foundation
 import ObjectMapper
 
-typealias Beers = BeerData
+typealias Furnitures = FurnitureData
 
 
 //class FurnitureModel
@@ -28,7 +26,7 @@ typealias Beers = BeerData
 
 
 
-struct BeerData: Mappable {
+struct FurnitureData: Mappable {
     public var id:Int = 0
     public var abv:String?
     public var ibu:String?

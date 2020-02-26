@@ -1,14 +1,12 @@
+
+//  FurnitureApp
 //
-//  BeerDetailView.swift
-//  BeerCraft
-//
-//  Created by Siddhant Mishra on 27/07/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Talha Asif. All rights reserved.
 //
 
 import UIKit
 
-class BeerDetailView: UIView {
+class FurnitureDetailView: UIView {
 
     @IBOutlet weak var beerPicture: UIImageView!
     @IBOutlet weak var beerName: UILabel!
@@ -24,8 +22,7 @@ class BeerDetailView: UIView {
 //    @IBOutlet weak var ibuLBL: UILabel!
     @IBOutlet weak var styleLBL: UILabel!
  
-    
-    var beerData:Beers?{
+    var beerData:Furnitures?{
         didSet{
             if let beerDetails = beerData{
                

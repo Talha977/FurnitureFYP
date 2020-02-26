@@ -1,9 +1,6 @@
+//  FurnitureApp
 //
-//  ServerManager.swift
-//  Contacts
-//
-//  Created by Siddhant Mishra on 30/05/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Talha Asif. All rights reserved.
 //
 
 import Foundation
@@ -54,9 +51,9 @@ public struct ServerManager{
     
      static let sharedInstance = ServerManager()
     
-    func getAllBeers(_ handler:@escaping ([Beers?],ServerError?) -> Void){
+    func getAllBeers(_ handler:@escaping ([Furnitures?],ServerError?) -> Void){
         
-        Alamofire.request(ServerRequestRouter.getBeers).validate().responseArray {(response:DataResponse<[Beers]>) in
+        Alamofire.request(ServerRequestRouter.getBeers).validate().responseArray {(response:DataResponse<[Furnitures]>) in
             
             switch response.result {
         

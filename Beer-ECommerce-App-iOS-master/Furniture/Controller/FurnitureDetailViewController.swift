@@ -1,14 +1,11 @@
+//  FurnitureApp
 //
-//  BeerDetailViewController.swift
-//  BeerCraft
-//
-//  Created by Siddhant Mishra on 27/07/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Talha Asif. All rights reserved.
 //
 
 import UIKit
 
-class BeerDetailViewController: UIViewController {
+class FurnitureDetailViewController: UIViewController {
     
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var cartBtn: UIButton!
@@ -17,12 +14,12 @@ class BeerDetailViewController: UIViewController {
     @IBOutlet weak var itemCounterLBL: UILabel!
     
     
-    open var beerDetail = Beers()
+    open var beerDetail = Furnitures()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let customView = BeerDetailView().loadNib() as! BeerDetailView
+        let customView = FurnitureDetailView().loadNib() as! FurnitureDetailView
         customView.frame = CGRect(x: 0, y: 0, width: detailView.frame.width, height: detailView.frame.height)
         customView.beerData = beerDetail
         self.detailView.addSubview(customView)

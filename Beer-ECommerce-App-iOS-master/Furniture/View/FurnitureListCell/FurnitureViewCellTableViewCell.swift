@@ -2,13 +2,12 @@
 //  BeerListViewCellTableViewCell.swift
 //  BeerCraft
 //
-//  Created by Siddhant Mishra on 27/07/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Talha Asif . All rights reserved.
 //
 
 import UIKit
 
-class BeerListViewCellTableViewCell: UITableViewCell {
+class FurnitureViewCellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var beerImage: UIImageView!
     
@@ -20,7 +19,7 @@ class BeerListViewCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var beerPrice: UILabel!
     
-    var beerData:Beers?{
+    var beerData:Furnitures?{
         didSet{
             if let beerDetails = beerData{
                 

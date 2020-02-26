@@ -1,10 +1,8 @@
+//  FurnitureApp
 //
-//  AppDelegate.swift
-//  BeerCraft
+//  Copyright © 2020 Talha Asif. All rights reserved.
 //
-//  Created by Siddhant Mishra on 27/07/19.
-//  Copyright © 2019 Siddhant Mishra. All rights reserved.
-//
+
 
 import UIKit
 import IntentKit
