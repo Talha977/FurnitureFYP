@@ -3,6 +3,8 @@ import Foundation
 import SceneKit
 import UIKit
 import Photos
+import Firebase
+
 
 class MainViewController: UIViewController {
     var dragOnInfinitePlanesEnabled = false
@@ -23,7 +25,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let db = Firestore.firestore()
         Setting.registerDefaults()
         setupScene()
         setupDebug()

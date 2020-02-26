@@ -12,15 +12,18 @@ import Intents
 import IQKeyboardManagerSwift
 import os.log
 import Firebase
+import FirebaseFirestore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
+        IQKeyboardManager.shared.enable = true
         return true
     }
     
@@ -46,25 +49,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-
-        os_log("TK421: Continue type = %{public}s", userActivity.activityType)
-        guard userActivity.activityType == NSUserActivity.orderBeerActivityType else{
-            os_log("TK421: Can't continue unknown NSUserActivity type = %{public}s", userActivity.activityType)
-            return false
-        }
-        
-        
-        guard let window = window,
-            let rootViewController = window.rootViewController as? UINavigationController else {
-                os_log("TK421: Failed to access root view controller.")
-                return false
-        }
-        
-        restorationHandler(rootViewController.viewControllers)
-        
-        return true
-    }
+//    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+//
+//        os_log("TK421: Continue type = %{public}s", userActivity.activityType)
+//        guard userActivity.activityType == NSUserActivity.orderBeerActivityType else{
+//            os_log("TK421: Can't continue unknown NSUserActivity type = %{public}s", userActivity.activityType)
+//            return false
+//        }
+//
+//
+//        guard let window = window,
+//            let rootViewController = window.rootViewController as? UINavigationController else {
+//
+//                os_log("TK421: Failed to access root view controller.")
+//                return false
+//        }
+//
+//        restorationHandler(rootViewController.viewControllers)
+//
+//        return true
+//    }
 
 }
 
