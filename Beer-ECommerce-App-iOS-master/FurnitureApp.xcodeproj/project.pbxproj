@@ -1,0 +1,1262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481C30E2406953100C15B57 /* ARKit.framework */; };
+		3481C34D2406986D00C15B57 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C32E2406986C00C15B57 /* Models.scnassets */; };
+		3481C34E2406986D00C15B57 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C32F2406986C00C15B57 /* Utilities.swift */; };
+		3481C34F2406986D00C15B57 /* PlaneDebugVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3312406986C00C15B57 /* PlaneDebugVisualization.swift */; };
+		3481C3502406986D00C15B57 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3322406986C00C15B57 /* Plane.swift */; };
+		3481C3512406986D00C15B57 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3332406986C00C15B57 /* FocusSquare.swift */; };
+		3481C3522406986D00C15B57 /* HitTestVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3342406986C00C15B57 /* HitTestVisualization.swift */; };
+		3481C3532406986D00C15B57 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3352406986C00C15B57 /* Gesture.swift */; };
+		3481C3542406986D00C15B57 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3481C3362406986C00C15B57 /* .swiftlint.yml */; };
+		3481C3552406986D00C15B57 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3372406986C00C15B57 /* MainViewController.swift */; };
+		3481C3562406986D00C15B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C3382406986C00C15B57 /* Assets.xcassets */; };
+		3481C3572406986D00C15B57 /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3392406986C00C15B57 /* TextManager.swift */; };
+		3481C3582406986D00C15B57 /* Chair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C33B2406986C00C15B57 /* Chair.swift */; };
+		3481C3592406986D00C15B57 /* VirtualObjectsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C33C2406986C00C15B57 /* VirtualObjectsManager.swift */; };
+		3481C35A2406986D00C15B57 /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C33D2406986C00C15B57 /* Candle.swift */; };
+		3481C35B2406986D00C15B57 /* Cup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C33E2406986C00C15B57 /* Cup.swift */; };
+		3481C35C2406986D00C15B57 /* Sofa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C33F2406986C00C15B57 /* Sofa.swift */; };
+		3481C35D2406986D00C15B57 /* Vase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3402406986C00C15B57 /* Vase.swift */; };
+		3481C35E2406986D00C15B57 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3412406986C00C15B57 /* Lamp.swift */; };
+		3481C3612406986D00C15B57 /* ARCameraTrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3462406986C00C15B57 /* ARCameraTrackingState.swift */; };
+		3481C3632406986D00C15B57 /* VirtualObjectSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3482406986C00C15B57 /* VirtualObjectSelectionViewController.swift */; };
+		3481C3642406986D00C15B57 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C3492406986C00C15B57 /* VirtualObject.swift */; };
+		3481C3662406986D00C15B57 /* ScieneView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C34B2406986C00C15B57 /* ScieneView+Extension.swift */; };
+		3481C3672406986D00C15B57 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C34C2406986C00C15B57 /* SettingsViewController.swift */; };
+		34ACFCAC2405A6EA007683C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ACFCAB2405A6EA007683C2 /* Extensions.swift */; };
+		34ACFCAD2405C3B7007683C2 /* Pods_BeerCraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C3EA2ECEDA7121CDFDDFE9 /* Pods_BeerCraft.framework */; };
+		34FC08C22404655D00A2BA43 /* FurnitureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC08C12404655D00A2BA43 /* FurnitureModel.swift */; };
+		E2419A6222EB8CAB0054D9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A6122EB8CAB0054D9E4 /* AppDelegate.swift */; };
+		E2419A6722EB8CAB0054D9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2419A6522EB8CAB0054D9E4 /* Main.storyboard */; };
+		E2419A6922EB8CAE0054D9E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2419A6822EB8CAE0054D9E4 /* Assets.xcassets */; };
+		E2419A6C22EB8CAE0054D9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2419A6A22EB8CAE0054D9E4 /* LaunchScreen.storyboard */; };
+		E2419A9422EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9222EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift */; };
+		E2419A9722EB8E320054D9E4 /* BeerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9622EB8E320054D9E4 /* BeerDataModel.swift */; };
+		E2419A9B22EB92BE0054D9E4 /* BeerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9A22EB92BE0054D9E4 /* BeerDetailViewController.swift */; };
+		E2419A9D22EBA3020054D9E4 /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9C22EBA3020054D9E4 /* BeerDetailView.swift */; };
+		E2419A9F22EBA3250054D9E4 /* BeerDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2419A9E22EBA3250054D9E4 /* BeerDetailView.xib */; };
+		E2419AA422EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419AA222EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift */; };
+		E2419AA522EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2419AA322EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib */; };
+		E2419AA722EBBCE70054D9E4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419AA622EBBCE70054D9E4 /* Extension.swift */; };
+		E2419AAD22ECCDA30054D9E4 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419AAC22ECCDA30054D9E4 /* FilterTableViewController.swift */; };
+		E258632422F08C2400B5080D /* BeerCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632222F08C2400B5080D /* BeerCartCell.swift */; };
+		E258632522F08C2400B5080D /* BeerCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258632322F08C2400B5080D /* BeerCartCell.xib */; };
+		E258632722F09D2B00B5080D /* BeerCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632622F09D2B00B5080D /* BeerCart.swift */; };
+		E258632922F0B17A00B5080D /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632822F0B17A00B5080D /* Global.swift */; };
+		E258632B22F0BF4A00B5080D /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632A22F0BF4A00B5080D /* CartViewController.swift */; };
+		E258633122F330A100B5080D /* SingleFieldFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632F22F330A100B5080D /* SingleFieldFormCell.swift */; };
+		E258633222F330A100B5080D /* SingleFieldFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258633022F330A100B5080D /* SingleFieldFormCell.xib */; };
+		E258633522F330BD00B5080D /* MultipleFieldFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258633322F330BD00B5080D /* MultipleFieldFormCell.swift */; };
+		E258633622F330BD00B5080D /* MultipleFieldFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258633422F330BD00B5080D /* MultipleFieldFormCell.xib */; };
+		E258633822F4236C00B5080D /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258633722F4236C00B5080D /* CheckoutViewController.swift */; };
+		E258633A22F430E800B5080D /* CheckoutFormMetadeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258633922F430E800B5080D /* CheckoutFormMetadeta.swift */; };
+		E25A641D235A5B520072C1F1 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E25A641C235A5B520072C1F1 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		E25A641E235A5B620072C1F1 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E25A641C235A5B520072C1F1 /* Intents.intentdefinition */; };
+		E25A6426235A5CC90072C1F1 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A6425235A5CC90072C1F1 /* IntentHandler.swift */; };
+		E25A642E235A5CCA0072C1F1 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25A642D235A5CCA0072C1F1 /* IntentsUI.framework */; };
+		E25A6431235A5CCA0072C1F1 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A6430235A5CCA0072C1F1 /* IntentViewController.swift */; };
+		E25A6434235A5CCA0072C1F1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25A6432235A5CCA0072C1F1 /* MainInterface.storyboard */; };
+		E25A6443235A5CF70072C1F1 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E25A641C235A5B520072C1F1 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		E25A6444235A5CF80072C1F1 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E25A641C235A5B520072C1F1 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		E25A6447235A5D450072C1F1 /* IntentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29E3EE9235A488A0022E433 /* IntentKit.framework */; };
+		E25A644A235A5D680072C1F1 /* IntentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29E3EE9235A488A0022E433 /* IntentKit.framework */; };
+		E25A644C235A60780072C1F1 /* BeerMenuIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A644B235A60780072C1F1 /* BeerMenuIntentHandler.swift */; };
+		E25A6463235A71C90072C1F1 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A6462235A71C90072C1F1 /* ServerManager.swift */; };
+		E25A646F235A7C750072C1F1 /* FurnitureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A6322EB8CAB0054D9E4 /* FurnitureListView.swift */; };
+		E25A6474235ADFB00072C1F1 /* BeerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A6473235ADFB00072C1F1 /* BeerList.swift */; };
+		E25A6477235AF9C80072C1F1 /* SelectBeerIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A6475235AF8020072C1F1 /* SelectBeerIntentHandler.swift */; };
+		E29E3EED235A488A0022E433 /* IntentKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E29E3EEB235A488A0022E433 /* IntentKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E29E3EF0235A488A0022E433 /* IntentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29E3EE9235A488A0022E433 /* IntentKit.framework */; };
+		E29E3EF1235A488A0022E433 /* IntentKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E29E3EE9235A488A0022E433 /* IntentKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E29E3EF7235A49640022E433 /* NSUserActivity+IntentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E3EF6235A49640022E433 /* NSUserActivity+IntentData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E25A6436235A5CCA0072C1F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2419A5622EB8CAB0054D9E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E25A642B235A5CCA0072C1F1;
+			remoteInfo = BeerMenuUI;
+		};
+		E25A6439235A5CCA0072C1F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2419A5622EB8CAB0054D9E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E25A6422235A5CC90072C1F1;
+			remoteInfo = BeerMenu;
+		};
+		E25A6445235A5D3E0072C1F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2419A5622EB8CAB0054D9E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E29E3EE8235A488A0022E433;
+			remoteInfo = IntentKit;
+		};
+		E25A6448235A5D5E0072C1F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2419A5622EB8CAB0054D9E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E29E3EE8235A488A0022E433;
+			remoteInfo = IntentKit;
+		};
+		E29E3EEE235A488A0022E433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2419A5622EB8CAB0054D9E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E29E3EE8235A488A0022E433;
+			remoteInfo = IntentKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E25A6442235A5CCA0072C1F1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E29E3EF5235A488A0022E433 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E29E3EF1235A488A0022E433 /* IntentKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraft.release.xcconfig"; path = "Target Support Files/Pods-BeerCraft/Pods-BeerCraft.release.xcconfig"; sourceTree = "<group>"; };
+		19C3EA2ECEDA7121CDFDDFE9 /* Pods_BeerCraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C2092706CCC8716844DCEF /* Pods-BeerCraftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BeerCraftUITests/Pods-BeerCraftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3481C30E2406953100C15B57 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		3481C32E2406986C00C15B57 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
+		3481C32F2406986C00C15B57 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		3481C3312406986C00C15B57 /* PlaneDebugVisualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneDebugVisualization.swift; sourceTree = "<group>"; };
+		3481C3322406986C00C15B57 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		3481C3332406986C00C15B57 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		3481C3342406986C00C15B57 /* HitTestVisualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitTestVisualization.swift; sourceTree = "<group>"; };
+		3481C3352406986C00C15B57 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		3481C3362406986C00C15B57 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		3481C3372406986C00C15B57 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3481C3382406986C00C15B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3481C3392406986C00C15B57 /* TextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
+		3481C33B2406986C00C15B57 /* Chair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chair.swift; sourceTree = "<group>"; };
+		3481C33C2406986C00C15B57 /* VirtualObjectsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectsManager.swift; sourceTree = "<group>"; };
+		3481C33D2406986C00C15B57 /* Candle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
+		3481C33E2406986C00C15B57 /* Cup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cup.swift; sourceTree = "<group>"; };
+		3481C33F2406986C00C15B57 /* Sofa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sofa.swift; sourceTree = "<group>"; };
+		3481C3402406986C00C15B57 /* Vase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vase.swift; sourceTree = "<group>"; };
+		3481C3412406986C00C15B57 /* Lamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
+		3481C3462406986C00C15B57 /* ARCameraTrackingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARCameraTrackingState.swift; sourceTree = "<group>"; };
+		3481C3482406986C00C15B57 /* VirtualObjectSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelectionViewController.swift; sourceTree = "<group>"; };
+		3481C3492406986C00C15B57 /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		3481C34B2406986C00C15B57 /* ScieneView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScieneView+Extension.swift"; sourceTree = "<group>"; };
+		3481C34C2406986C00C15B57 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		34ACFCAB2405A6EA007683C2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		34ACFCAF24066E8E007683C2 /* Furnitura.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Furnitura.entitlements; sourceTree = "<group>"; };
+		34FC08C12404655D00A2BA43 /* FurnitureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureModel.swift; sourceTree = "<group>"; };
+		45B05BAB8C582CA0C154AD59 /* Pods-BeerCraftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraftUITests.release.xcconfig"; path = "Target Support Files/Pods-BeerCraftUITests/Pods-BeerCraftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		48B5D4CB01B1AE22E100F466 /* Pods-BeerCraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraft.debug.xcconfig"; path = "Target Support Files/Pods-BeerCraft/Pods-BeerCraft.debug.xcconfig"; sourceTree = "<group>"; };
+		4B0C8B597554664A2933A395 /* Pods-BeerCraftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraftTests.release.xcconfig"; path = "Target Support Files/Pods-BeerCraftTests/Pods-BeerCraftTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A13C20DE60AE1C2B3E9D460 /* Pods_BeerCraftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FD193A6A6E686D8706B80A7 /* Pods-BeerCraftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraftTests.debug.xcconfig"; path = "Target Support Files/Pods-BeerCraftTests/Pods-BeerCraftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2419A5E22EB8CAB0054D9E4 /* Furnitura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furnitura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2419A6122EB8CAB0054D9E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2419A6322EB8CAB0054D9E4 /* FurnitureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureListView.swift; sourceTree = "<group>"; };
+		E2419A6622EB8CAB0054D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2419A6822EB8CAE0054D9E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2419A6B22EB8CAE0054D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2419A6D22EB8CAE0054D9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2419A9222EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManagerRequestHandler.swift; sourceTree = "<group>"; };
+		E2419A9622EB8E320054D9E4 /* BeerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDataModel.swift; sourceTree = "<group>"; };
+		E2419A9A22EB92BE0054D9E4 /* BeerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewController.swift; sourceTree = "<group>"; };
+		E2419A9C22EBA3020054D9E4 /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
+		E2419A9E22EBA3250054D9E4 /* BeerDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerDetailView.xib; sourceTree = "<group>"; };
+		E2419AA222EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		E2419AA322EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerListViewCellTableViewCell.xib; sourceTree = "<group>"; };
+		E2419AA622EBBCE70054D9E4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E2419AAC22ECCDA30054D9E4 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		E258632222F08C2400B5080D /* BeerCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCartCell.swift; sourceTree = "<group>"; };
+		E258632322F08C2400B5080D /* BeerCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCartCell.xib; sourceTree = "<group>"; };
+		E258632622F09D2B00B5080D /* BeerCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCart.swift; sourceTree = "<group>"; };
+		E258632822F0B17A00B5080D /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		E258632A22F0BF4A00B5080D /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		E258632F22F330A100B5080D /* SingleFieldFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFieldFormCell.swift; sourceTree = "<group>"; };
+		E258633022F330A100B5080D /* SingleFieldFormCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleFieldFormCell.xib; sourceTree = "<group>"; };
+		E258633322F330BD00B5080D /* MultipleFieldFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleFieldFormCell.swift; sourceTree = "<group>"; };
+		E258633422F330BD00B5080D /* MultipleFieldFormCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleFieldFormCell.xib; sourceTree = "<group>"; };
+		E258633722F4236C00B5080D /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		E258633922F430E800B5080D /* CheckoutFormMetadeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutFormMetadeta.swift; sourceTree = "<group>"; };
+		E25A641C235A5B520072C1F1 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		E25A6423235A5CC90072C1F1 /* BeerMenu.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BeerMenu.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25A6425235A5CC90072C1F1 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		E25A6427235A5CC90072C1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E25A642C235A5CCA0072C1F1 /* BeerMenuUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BeerMenuUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25A642D235A5CCA0072C1F1 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		E25A6430235A5CCA0072C1F1 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		E25A6433235A5CCA0072C1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E25A6435235A5CCA0072C1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E25A644B235A60780072C1F1 /* BeerMenuIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerMenuIntentHandler.swift; sourceTree = "<group>"; };
+		E25A6462235A71C90072C1F1 /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		E25A6473235ADFB00072C1F1 /* BeerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerList.swift; sourceTree = "<group>"; };
+		E25A6475235AF8020072C1F1 /* SelectBeerIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBeerIntentHandler.swift; sourceTree = "<group>"; };
+		E29E3EE9235A488A0022E433 /* IntentKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IntentKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29E3EEB235A488A0022E433 /* IntentKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentKit.h; sourceTree = "<group>"; };
+		E29E3EEC235A488A0022E433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E29E3EF6235A49640022E433 /* NSUserActivity+IntentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+IntentData.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2419A5B22EB8CAB0054D9E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */,
+				E29E3EF0235A488A0022E433 /* IntentKit.framework in Frameworks */,
+				34ACFCAD2405C3B7007683C2 /* Pods_BeerCraft.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25A6420235A5CC90072C1F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25A6447235A5D450072C1F1 /* IntentKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25A6429235A5CCA0072C1F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25A644A235A5D680072C1F1 /* IntentKit.framework in Frameworks */,
+				E25A642E235A5CCA0072C1F1 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E29E3EE6235A488A0022E433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F88C719F0BFAAD0100AE809 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3481C30E2406953100C15B57 /* ARKit.framework */,
+				19C3EA2ECEDA7121CDFDDFE9 /* Pods_BeerCraft.framework */,
+				07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */,
+				6A13C20DE60AE1C2B3E9D460 /* Pods_BeerCraftUITests.framework */,
+				E25A642D235A5CCA0072C1F1 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3481C32D2406986C00C15B57 /* ARKitProject */ = {
+			isa = PBXGroup;
+			children = (
+				3481C32E2406986C00C15B57 /* Models.scnassets */,
+				3481C32F2406986C00C15B57 /* Utilities.swift */,
+				3481C3302406986C00C15B57 /* UI Elements */,
+				3481C3362406986C00C15B57 /* .swiftlint.yml */,
+				3481C3372406986C00C15B57 /* MainViewController.swift */,
+				3481C3382406986C00C15B57 /* Assets.xcassets */,
+				3481C3392406986C00C15B57 /* TextManager.swift */,
+				3481C33A2406986C00C15B57 /* Virtual Objects */,
+				3481C3462406986C00C15B57 /* ARCameraTrackingState.swift */,
+				3481C3482406986C00C15B57 /* VirtualObjectSelectionViewController.swift */,
+				3481C3492406986C00C15B57 /* VirtualObject.swift */,
+				3481C34B2406986C00C15B57 /* ScieneView+Extension.swift */,
+				3481C34C2406986C00C15B57 /* SettingsViewController.swift */,
+			);
+			path = ARKitProject;
+			sourceTree = "<group>";
+		};
+		3481C3302406986C00C15B57 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				3481C3312406986C00C15B57 /* PlaneDebugVisualization.swift */,
+				3481C3322406986C00C15B57 /* Plane.swift */,
+				3481C3332406986C00C15B57 /* FocusSquare.swift */,
+				3481C3342406986C00C15B57 /* HitTestVisualization.swift */,
+				3481C3352406986C00C15B57 /* Gesture.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		3481C33A2406986C00C15B57 /* Virtual Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3481C33B2406986C00C15B57 /* Chair.swift */,
+				3481C33C2406986C00C15B57 /* VirtualObjectsManager.swift */,
+				3481C33D2406986C00C15B57 /* Candle.swift */,
+				3481C33E2406986C00C15B57 /* Cup.swift */,
+				3481C33F2406986C00C15B57 /* Sofa.swift */,
+				3481C3402406986C00C15B57 /* Vase.swift */,
+				3481C3412406986C00C15B57 /* Lamp.swift */,
+			);
+			path = "Virtual Objects";
+			sourceTree = "<group>";
+		};
+		A230B7B07EE0D9A8E6E36F85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48B5D4CB01B1AE22E100F466 /* Pods-BeerCraft.debug.xcconfig */,
+				17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */,
+				9FD193A6A6E686D8706B80A7 /* Pods-BeerCraftTests.debug.xcconfig */,
+				4B0C8B597554664A2933A395 /* Pods-BeerCraftTests.release.xcconfig */,
+				22C2092706CCC8716844DCEF /* Pods-BeerCraftUITests.debug.xcconfig */,
+				45B05BAB8C582CA0C154AD59 /* Pods-BeerCraftUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E2419A5522EB8CAA0054D9E4 = {
+			isa = PBXGroup;
+			children = (
+				E29E3EE3235A47D50022E433 /* Shared */,
+				3481C32D2406986C00C15B57 /* ARKitProject */,
+				E2419A6022EB8CAB0054D9E4 /* BeerCraft */,
+				E29E3EEA235A488A0022E433 /* IntentKit */,
+				E25A6424235A5CC90072C1F1 /* BeerMenu */,
+				E25A642F235A5CCA0072C1F1 /* BeerMenuUI */,
+				E2419A5F22EB8CAB0054D9E4 /* Products */,
+				A230B7B07EE0D9A8E6E36F85 /* Pods */,
+				0F88C719F0BFAAD0100AE809 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E2419A5F22EB8CAB0054D9E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2419A5E22EB8CAB0054D9E4 /* Furnitura.app */,
+				E29E3EE9235A488A0022E433 /* IntentKit.framework */,
+				E25A6423235A5CC90072C1F1 /* BeerMenu.appex */,
+				E25A642C235A5CCA0072C1F1 /* BeerMenuUI.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2419A6022EB8CAB0054D9E4 /* BeerCraft */ = {
+			isa = PBXGroup;
+			children = (
+				34ACFCAF24066E8E007683C2 /* Furnitura.entitlements */,
+				E2419A9022EB8D4C0054D9E4 /* View */,
+				E2419A8F22EB8D440054D9E4 /* Model */,
+				E2419A9122EB8D530054D9E4 /* Controller */,
+				E2419A9922EB90DB0054D9E4 /* Storyboard */,
+				E2419A9822EB90C10054D9E4 /* Supporting Files */,
+			);
+			path = BeerCraft;
+			sourceTree = "<group>";
+		};
+		E2419A8F22EB8D440054D9E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E25A6462235A71C90072C1F1 /* ServerManager.swift */,
+				E2419A9222EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift */,
+				E2419A9622EB8E320054D9E4 /* BeerDataModel.swift */,
+				E258632622F09D2B00B5080D /* BeerCart.swift */,
+				34FC08C12404655D00A2BA43 /* FurnitureModel.swift */,
+				34ACFCAB2405A6EA007683C2 /* Extensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2419A9022EB8D4C0054D9E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E258632C22F3300000B5080D /* BeerCheckout */,
+				E258632122F08C0400B5080D /* BeerCart */,
+				E2419AA122EBB3FA0054D9E4 /* BeerListCell */,
+				E2419AA022EBB3E30054D9E4 /* BeerDetailView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2419A9122EB8D530054D9E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2419A6322EB8CAB0054D9E4 /* FurnitureListView.swift */,
+				E2419A9A22EB92BE0054D9E4 /* BeerDetailViewController.swift */,
+				E2419AA622EBBCE70054D9E4 /* Extension.swift */,
+				E2419AAC22ECCDA30054D9E4 /* FilterTableViewController.swift */,
+				E258632A22F0BF4A00B5080D /* CartViewController.swift */,
+				E258633722F4236C00B5080D /* CheckoutViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2419A9822EB90C10054D9E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2419A6122EB8CAB0054D9E4 /* AppDelegate.swift */,
+				E2419A6822EB8CAE0054D9E4 /* Assets.xcassets */,
+				E2419A6D22EB8CAE0054D9E4 /* Info.plist */,
+				E258632822F0B17A00B5080D /* Global.swift */,
+				E258633922F430E800B5080D /* CheckoutFormMetadeta.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2419A9922EB90DB0054D9E4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E2419A6522EB8CAB0054D9E4 /* Main.storyboard */,
+				E2419A6A22EB8CAE0054D9E4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E2419AA022EBB3E30054D9E4 /* BeerDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				E2419A9C22EBA3020054D9E4 /* BeerDetailView.swift */,
+				E2419A9E22EBA3250054D9E4 /* BeerDetailView.xib */,
+			);
+			path = BeerDetailView;
+			sourceTree = "<group>";
+		};
+		E2419AA122EBB3FA0054D9E4 /* BeerListCell */ = {
+			isa = PBXGroup;
+			children = (
+				E2419AA222EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift */,
+				E2419AA322EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib */,
+			);
+			path = BeerListCell;
+			sourceTree = "<group>";
+		};
+		E258632122F08C0400B5080D /* BeerCart */ = {
+			isa = PBXGroup;
+			children = (
+				E258632222F08C2400B5080D /* BeerCartCell.swift */,
+				E258632322F08C2400B5080D /* BeerCartCell.xib */,
+			);
+			path = BeerCart;
+			sourceTree = "<group>";
+		};
+		E258632C22F3300000B5080D /* BeerCheckout */ = {
+			isa = PBXGroup;
+			children = (
+				E258632E22F3302200B5080D /* Normal Cell */,
+				E258632D22F3301300B5080D /* Multiple Fields */,
+			);
+			path = BeerCheckout;
+			sourceTree = "<group>";
+		};
+		E258632D22F3301300B5080D /* Multiple Fields */ = {
+			isa = PBXGroup;
+			children = (
+				E258633322F330BD00B5080D /* MultipleFieldFormCell.swift */,
+				E258633422F330BD00B5080D /* MultipleFieldFormCell.xib */,
+			);
+			path = "Multiple Fields";
+			sourceTree = "<group>";
+		};
+		E258632E22F3302200B5080D /* Normal Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E258632F22F330A100B5080D /* SingleFieldFormCell.swift */,
+				E258633022F330A100B5080D /* SingleFieldFormCell.xib */,
+			);
+			path = "Normal Cell";
+			sourceTree = "<group>";
+		};
+		E25A6424235A5CC90072C1F1 /* BeerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E25A6425235A5CC90072C1F1 /* IntentHandler.swift */,
+				E25A6427235A5CC90072C1F1 /* Info.plist */,
+			);
+			path = BeerMenu;
+			sourceTree = "<group>";
+		};
+		E25A642F235A5CCA0072C1F1 /* BeerMenuUI */ = {
+			isa = PBXGroup;
+			children = (
+				E25A6430235A5CCA0072C1F1 /* IntentViewController.swift */,
+				E25A6432235A5CCA0072C1F1 /* MainInterface.storyboard */,
+				E25A6435235A5CCA0072C1F1 /* Info.plist */,
+			);
+			path = BeerMenuUI;
+			sourceTree = "<group>";
+		};
+		E29E3EE3235A47D50022E433 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E25A6473235ADFB00072C1F1 /* BeerList.swift */,
+				E29E3EF6235A49640022E433 /* NSUserActivity+IntentData.swift */,
+				E25A644B235A60780072C1F1 /* BeerMenuIntentHandler.swift */,
+				E25A641C235A5B520072C1F1 /* Intents.intentdefinition */,
+				E25A6475235AF8020072C1F1 /* SelectBeerIntentHandler.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E29E3EEA235A488A0022E433 /* IntentKit */ = {
+			isa = PBXGroup;
+			children = (
+				E29E3EEB235A488A0022E433 /* IntentKit.h */,
+				E29E3EEC235A488A0022E433 /* Info.plist */,
+			);
+			path = IntentKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E29E3EE4235A488A0022E433 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E29E3EED235A488A0022E433 /* IntentKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E2419A5D22EB8CAB0054D9E4 /* FurnitureApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2419A8622EB8CAF0054D9E4 /* Build configuration list for PBXNativeTarget "FurnitureApp" */;
+			buildPhases = (
+				EB9AD38C6DBE460527A55488 /* [CP] Check Pods Manifest.lock */,
+				E2419A5A22EB8CAB0054D9E4 /* Sources */,
+				E2419A5B22EB8CAB0054D9E4 /* Frameworks */,
+				E2419A5C22EB8CAB0054D9E4 /* Resources */,
+				F83D7E5BC55E2CDFB5D1F2BB /* [CP] Embed Pods Frameworks */,
+				E29E3EF5235A488A0022E433 /* Embed Frameworks */,
+				E25A6442235A5CCA0072C1F1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E29E3EEF235A488A0022E433 /* PBXTargetDependency */,
+				E25A6437235A5CCA0072C1F1 /* PBXTargetDependency */,
+				E25A643A235A5CCA0072C1F1 /* PBXTargetDependency */,
+			);
+			name = FurnitureApp;
+			productName = BeerCraft;
+			productReference = E2419A5E22EB8CAB0054D9E4 /* Furnitura.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E25A6422235A5CC90072C1F1 /* BeerMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E25A643F235A5CCA0072C1F1 /* Build configuration list for PBXNativeTarget "BeerMenu" */;
+			buildPhases = (
+				E25A641F235A5CC90072C1F1 /* Sources */,
+				E25A6420235A5CC90072C1F1 /* Frameworks */,
+				E25A6421235A5CC90072C1F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E25A6446235A5D3E0072C1F1 /* PBXTargetDependency */,
+			);
+			name = BeerMenu;
+			productName = BeerMenu;
+			productReference = E25A6423235A5CC90072C1F1 /* BeerMenu.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E25A642B235A5CCA0072C1F1 /* BeerMenuUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E25A643C235A5CCA0072C1F1 /* Build configuration list for PBXNativeTarget "BeerMenuUI" */;
+			buildPhases = (
+				E25A6428235A5CCA0072C1F1 /* Sources */,
+				E25A6429235A5CCA0072C1F1 /* Frameworks */,
+				E25A642A235A5CCA0072C1F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E25A6449235A5D5E0072C1F1 /* PBXTargetDependency */,
+			);
+			name = BeerMenuUI;
+			productName = BeerMenuUI;
+			productReference = E25A642C235A5CCA0072C1F1 /* BeerMenuUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E29E3EE8235A488A0022E433 /* IntentKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E29E3EF2235A488A0022E433 /* Build configuration list for PBXNativeTarget "IntentKit" */;
+			buildPhases = (
+				E29E3EE4235A488A0022E433 /* Headers */,
+				E29E3EE5235A488A0022E433 /* Sources */,
+				E29E3EE6235A488A0022E433 /* Frameworks */,
+				E29E3EE7235A488A0022E433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntentKit;
+			productName = IntentKit;
+			productReference = E29E3EE9235A488A0022E433 /* IntentKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2419A5622EB8CAB0054D9E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					New,
+				);
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Siddhant Mishra";
+				TargetAttributes = {
+					E2419A5D22EB8CAB0054D9E4 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					E25A6422235A5CC90072C1F1 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					E25A642B235A5CCA0072C1F1 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					E29E3EE8235A488A0022E433 = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+					};
+				};
+			};
+			buildConfigurationList = E2419A5922EB8CAB0054D9E4 /* Build configuration list for PBXProject "FurnitureApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2419A5522EB8CAA0054D9E4;
+			productRefGroup = E2419A5F22EB8CAB0054D9E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2419A5D22EB8CAB0054D9E4 /* FurnitureApp */,
+				E29E3EE8235A488A0022E433 /* IntentKit */,
+				E25A6422235A5CC90072C1F1 /* BeerMenu */,
+				E25A642B235A5CCA0072C1F1 /* BeerMenuUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2419A5C22EB8CAB0054D9E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3481C3542406986D00C15B57 /* .swiftlint.yml in Resources */,
+				E2419A6C22EB8CAE0054D9E4 /* LaunchScreen.storyboard in Resources */,
+				3481C3562406986D00C15B57 /* Assets.xcassets in Resources */,
+				E258632522F08C2400B5080D /* BeerCartCell.xib in Resources */,
+				E2419A6922EB8CAE0054D9E4 /* Assets.xcassets in Resources */,
+				E258633222F330A100B5080D /* SingleFieldFormCell.xib in Resources */,
+				E2419A6722EB8CAB0054D9E4 /* Main.storyboard in Resources */,
+				E2419AA522EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib in Resources */,
+				3481C34D2406986D00C15B57 /* Models.scnassets in Resources */,
+				E258633622F330BD00B5080D /* MultipleFieldFormCell.xib in Resources */,
+				E2419A9F22EBA3250054D9E4 /* BeerDetailView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25A6421235A5CC90072C1F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25A642A235A5CCA0072C1F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25A6434235A5CCA0072C1F1 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E29E3EE7235A488A0022E433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EB9AD38C6DBE460527A55488 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeerCraft-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F83D7E5BC55E2CDFB5D1F2BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeerCraft/Pods-BeerCraft-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeerCraft/Pods-BeerCraft-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeerCraft/Pods-BeerCraft-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2419A5A22EB8CAB0054D9E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3481C35D2406986D00C15B57 /* Vase.swift in Sources */,
+				E2419A9722EB8E320054D9E4 /* BeerDataModel.swift in Sources */,
+				E2419A9B22EB92BE0054D9E4 /* BeerDetailViewController.swift in Sources */,
+				E258632B22F0BF4A00B5080D /* CartViewController.swift in Sources */,
+				3481C3522406986D00C15B57 /* HitTestVisualization.swift in Sources */,
+				E25A6463235A71C90072C1F1 /* ServerManager.swift in Sources */,
+				E25A641D235A5B520072C1F1 /* Intents.intentdefinition in Sources */,
+				34FC08C22404655D00A2BA43 /* FurnitureModel.swift in Sources */,
+				E2419AAD22ECCDA30054D9E4 /* FilterTableViewController.swift in Sources */,
+				3481C3662406986D00C15B57 /* ScieneView+Extension.swift in Sources */,
+				3481C3502406986D00C15B57 /* Plane.swift in Sources */,
+				3481C34E2406986D00C15B57 /* Utilities.swift in Sources */,
+				3481C3572406986D00C15B57 /* TextManager.swift in Sources */,
+				3481C3582406986D00C15B57 /* Chair.swift in Sources */,
+				3481C35B2406986D00C15B57 /* Cup.swift in Sources */,
+				E258632922F0B17A00B5080D /* Global.swift in Sources */,
+				E25A646F235A7C750072C1F1 /* FurnitureListView.swift in Sources */,
+				3481C3612406986D00C15B57 /* ARCameraTrackingState.swift in Sources */,
+				E258632722F09D2B00B5080D /* BeerCart.swift in Sources */,
+				3481C3532406986D00C15B57 /* Gesture.swift in Sources */,
+				E258633A22F430E800B5080D /* CheckoutFormMetadeta.swift in Sources */,
+				3481C35A2406986D00C15B57 /* Candle.swift in Sources */,
+				E2419A6222EB8CAB0054D9E4 /* AppDelegate.swift in Sources */,
+				E2419AA722EBBCE70054D9E4 /* Extension.swift in Sources */,
+				34ACFCAC2405A6EA007683C2 /* Extensions.swift in Sources */,
+				3481C3632406986D00C15B57 /* VirtualObjectSelectionViewController.swift in Sources */,
+				3481C35C2406986D00C15B57 /* Sofa.swift in Sources */,
+				E258633522F330BD00B5080D /* MultipleFieldFormCell.swift in Sources */,
+				E258633822F4236C00B5080D /* CheckoutViewController.swift in Sources */,
+				3481C3592406986D00C15B57 /* VirtualObjectsManager.swift in Sources */,
+				3481C3512406986D00C15B57 /* FocusSquare.swift in Sources */,
+				E2419A9D22EBA3020054D9E4 /* BeerDetailView.swift in Sources */,
+				E258632422F08C2400B5080D /* BeerCartCell.swift in Sources */,
+				3481C3642406986D00C15B57 /* VirtualObject.swift in Sources */,
+				E258633122F330A100B5080D /* SingleFieldFormCell.swift in Sources */,
+				E2419AA422EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift in Sources */,
+				3481C34F2406986D00C15B57 /* PlaneDebugVisualization.swift in Sources */,
+				E2419A9422EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift in Sources */,
+				3481C3552406986D00C15B57 /* MainViewController.swift in Sources */,
+				3481C35E2406986D00C15B57 /* Lamp.swift in Sources */,
+				3481C3672406986D00C15B57 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25A641F235A5CC90072C1F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25A6443235A5CF70072C1F1 /* Intents.intentdefinition in Sources */,
+				E25A6426235A5CC90072C1F1 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25A6428235A5CCA0072C1F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25A6444235A5CF80072C1F1 /* Intents.intentdefinition in Sources */,
+				E25A6431235A5CCA0072C1F1 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E29E3EE5235A488A0022E433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25A641E235A5B620072C1F1 /* Intents.intentdefinition in Sources */,
+				E29E3EF7235A49640022E433 /* NSUserActivity+IntentData.swift in Sources */,
+				E25A644C235A60780072C1F1 /* BeerMenuIntentHandler.swift in Sources */,
+				E25A6474235ADFB00072C1F1 /* BeerList.swift in Sources */,
+				E25A6477235AF9C80072C1F1 /* SelectBeerIntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E25A6437235A5CCA0072C1F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E25A642B235A5CCA0072C1F1 /* BeerMenuUI */;
+			targetProxy = E25A6436235A5CCA0072C1F1 /* PBXContainerItemProxy */;
+		};
+		E25A643A235A5CCA0072C1F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E25A6422235A5CC90072C1F1 /* BeerMenu */;
+			targetProxy = E25A6439235A5CCA0072C1F1 /* PBXContainerItemProxy */;
+		};
+		E25A6446235A5D3E0072C1F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E29E3EE8235A488A0022E433 /* IntentKit */;
+			targetProxy = E25A6445235A5D3E0072C1F1 /* PBXContainerItemProxy */;
+		};
+		E25A6449235A5D5E0072C1F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E29E3EE8235A488A0022E433 /* IntentKit */;
+			targetProxy = E25A6448235A5D5E0072C1F1 /* PBXContainerItemProxy */;
+		};
+		E29E3EEF235A488A0022E433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E29E3EE8235A488A0022E433 /* IntentKit */;
+			targetProxy = E29E3EEE235A488A0022E433 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2419A6522EB8CAB0054D9E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2419A6622EB8CAB0054D9E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2419A6A22EB8CAE0054D9E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2419A6B22EB8CAE0054D9E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E25A6432235A5CCA0072C1F1 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E25A6433235A5CCA0072C1F1 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2419A8422EB8CAF0054D9E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2419A8522EB8CAF0054D9E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2419A8722EB8CAF0054D9E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48B5D4CB01B1AE22E100F466 /* Pods-BeerCraft.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BeerCraft/Furnitura.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9L575X827;
+				INFOPLIST_FILE = "$(SRCROOT)/BeerCraft/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Furnitures.App;
+				PRODUCT_NAME = Furnitura;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2419A8822EB8CAF0054D9E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BeerCraft/Furnitura.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9L575X827;
+				INFOPLIST_FILE = "$(SRCROOT)/BeerCraft/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Furnitures.App;
+				PRODUCT_NAME = Furnitura;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E25A643D235A5CCA0072C1F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9L575X827;
+				INFOPLIST_FILE = BeerMenuUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Furnitures.FurnitureMenuUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E25A643E235A5CCA0072C1F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9L575X827;
+				INFOPLIST_FILE = BeerMenuUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Furnitures.FurnitureMenuUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E25A6440235A5CCA0072C1F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9L575X827;
+				INFOPLIST_FILE = BeerMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Furnitures.FurnitureMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E25A6441235A5CCA0072C1F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9L575X827;
+				INFOPLIST_FILE = BeerMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Furnitures.FurnitureMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E29E3EF3235A488A0022E433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = U9L575X827;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = IntentKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Furnitures;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E29E3EF4235A488A0022E433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = U9L575X827;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = IntentKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Furnitures;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2419A5922EB8CAB0054D9E4 /* Build configuration list for PBXProject "FurnitureApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2419A8422EB8CAF0054D9E4 /* Debug */,
+				E2419A8522EB8CAF0054D9E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2419A8622EB8CAF0054D9E4 /* Build configuration list for PBXNativeTarget "FurnitureApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2419A8722EB8CAF0054D9E4 /* Debug */,
+				E2419A8822EB8CAF0054D9E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E25A643C235A5CCA0072C1F1 /* Build configuration list for PBXNativeTarget "BeerMenuUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E25A643D235A5CCA0072C1F1 /* Debug */,
+				E25A643E235A5CCA0072C1F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E25A643F235A5CCA0072C1F1 /* Build configuration list for PBXNativeTarget "BeerMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E25A6440235A5CCA0072C1F1 /* Debug */,
+				E25A6441235A5CCA0072C1F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E29E3EF2235A488A0022E433 /* Build configuration list for PBXNativeTarget "IntentKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E29E3EF3235A488A0022E433 /* Debug */,
+				E29E3EF4235A488A0022E433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2419A5622EB8CAB0054D9E4 /* Project object */;
+}
