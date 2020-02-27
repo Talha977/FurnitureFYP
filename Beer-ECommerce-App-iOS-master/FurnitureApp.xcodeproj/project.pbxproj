@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0424C0AF2407256B008986C2 /* FurnitureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0AE2407256B008986C2 /* FurnitureListView.swift */; };
-		0424C0B124072581008986C2 /* BeerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0B024072581008986C2 /* BeerDetailViewController.swift */; };
 		0424C0B324072590008986C2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0B224072590008986C2 /* Extension.swift */; };
 		0424C0B5240725A3008986C2 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0B4240725A3008986C2 /* FilterTableViewController.swift */; };
 		0424C0B7240725B2008986C2 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0B6240725B2008986C2 /* CartViewController.swift */; };
 		0424C0B9240725BC008986C2 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0B8240725BB008986C2 /* CheckoutViewController.swift */; };
 		0424C0BD24072861008986C2 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0BC24072861008986C2 /* Posts.swift */; };
 		0424C0C1240728EF008986C2 /* HomeViewController 03-10-38-989.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0C0240728EF008986C2 /* HomeViewController 03-10-38-989.swift */; };
+		0424C0C424073DFC008986C2 /* FurnitureViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0C224073DFC008986C2 /* FurnitureViewCellTableViewCell.swift */; };
+		0424C0C524073DFC008986C2 /* FurnitureViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0424C0C324073DFC008986C2 /* FurnitureViewCellTableViewCell.xib */; };
+		0424C0C824073E11008986C2 /* FurnitureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0C624073E11008986C2 /* FurnitureDetailView.swift */; };
+		0424C0C924073E11008986C2 /* FurnitureDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0424C0C724073E11008986C2 /* FurnitureDetailView.xib */; };
+		0424C0CC24073E3E008986C2 /* FurnitureCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0CA24073E3E008986C2 /* FurnitureCart.swift */; };
+		0424C0CD24073E3E008986C2 /* FurnitureDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0CB24073E3E008986C2 /* FurnitureDataModel.swift */; };
+		0424C0CF24073E63008986C2 /* FurnitureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0CE24073E63008986C2 /* FurnitureDetailViewController.swift */; };
 		0465CAC02406B29500A8E62B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0465CABF2406B29500A8E62B /* GoogleService-Info.plist */; };
 		0465CAC32406C08500A8E62B /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CAC12406C08500A8E62B /* HomeCell.swift */; };
 		0465CAC42406C08500A8E62B /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0465CAC22406C08500A8E62B /* HomeCell.xib */; };
@@ -57,14 +63,8 @@
 		E2419A6922EB8CAE0054D9E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2419A6822EB8CAE0054D9E4 /* Assets.xcassets */; };
 		E2419A6C22EB8CAE0054D9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2419A6A22EB8CAE0054D9E4 /* LaunchScreen.storyboard */; };
 		E2419A9422EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9222EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift */; };
-		E2419A9722EB8E320054D9E4 /* BeerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9622EB8E320054D9E4 /* BeerDataModel.swift */; };
-		E2419A9D22EBA3020054D9E4 /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419A9C22EBA3020054D9E4 /* BeerDetailView.swift */; };
-		E2419A9F22EBA3250054D9E4 /* BeerDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2419A9E22EBA3250054D9E4 /* BeerDetailView.xib */; };
-		E2419AA422EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2419AA222EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift */; };
-		E2419AA522EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2419AA322EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib */; };
 		E258632422F08C2400B5080D /* FurnitureCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632222F08C2400B5080D /* FurnitureCartCell.swift */; };
 		E258632522F08C2400B5080D /* FurnitureCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258632322F08C2400B5080D /* FurnitureCartCell.xib */; };
-		E258632722F09D2B00B5080D /* BeerCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632622F09D2B00B5080D /* BeerCart.swift */; };
 		E258632922F0B17A00B5080D /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632822F0B17A00B5080D /* Global.swift */; };
 		E258633122F330A100B5080D /* SingleFieldFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258632F22F330A100B5080D /* SingleFieldFormCell.swift */; };
 		E258633222F330A100B5080D /* SingleFieldFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258633022F330A100B5080D /* SingleFieldFormCell.xib */; };
@@ -155,13 +155,19 @@
 
 /* Begin PBXFileReference section */
 		0424C0AE2407256B008986C2 /* FurnitureListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureListView.swift; sourceTree = "<group>"; };
-		0424C0B024072581008986C2 /* BeerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerDetailViewController.swift; sourceTree = "<group>"; };
 		0424C0B224072590008986C2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		0424C0B4240725A3008986C2 /* FilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		0424C0B6240725B2008986C2 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		0424C0B8240725BB008986C2 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		0424C0BC24072861008986C2 /* Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Posts.swift; path = Furniture/ARKitProject/Posts.swift; sourceTree = SOURCE_ROOT; };
 		0424C0C0240728EF008986C2 /* HomeViewController 03-10-38-989.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeViewController 03-10-38-989.swift"; sourceTree = "<group>"; };
+		0424C0C224073DFC008986C2 /* FurnitureViewCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		0424C0C324073DFC008986C2 /* FurnitureViewCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FurnitureViewCellTableViewCell.xib; sourceTree = "<group>"; };
+		0424C0C624073E11008986C2 /* FurnitureDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureDetailView.swift; sourceTree = "<group>"; };
+		0424C0C724073E11008986C2 /* FurnitureDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FurnitureDetailView.xib; sourceTree = "<group>"; };
+		0424C0CA24073E3E008986C2 /* FurnitureCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureCart.swift; sourceTree = "<group>"; };
+		0424C0CB24073E3E008986C2 /* FurnitureDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureDataModel.swift; sourceTree = "<group>"; };
+		0424C0CE24073E63008986C2 /* FurnitureDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureDetailViewController.swift; sourceTree = "<group>"; };
 		0465CABF2406B29500A8E62B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0465CAC12406C08500A8E62B /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		0465CAC22406C08500A8E62B /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
@@ -216,14 +222,8 @@
 		E2419A6B22EB8CAE0054D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2419A6D22EB8CAE0054D9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2419A9222EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManagerRequestHandler.swift; sourceTree = "<group>"; };
-		E2419A9622EB8E320054D9E4 /* BeerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDataModel.swift; sourceTree = "<group>"; };
-		E2419A9C22EBA3020054D9E4 /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
-		E2419A9E22EBA3250054D9E4 /* BeerDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerDetailView.xib; sourceTree = "<group>"; };
-		E2419AA222EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewCellTableViewCell.swift; sourceTree = "<group>"; };
-		E2419AA322EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerListViewCellTableViewCell.xib; sourceTree = "<group>"; };
 		E258632222F08C2400B5080D /* FurnitureCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureCartCell.swift; sourceTree = "<group>"; };
 		E258632322F08C2400B5080D /* FurnitureCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurnitureCartCell.xib; sourceTree = "<group>"; };
-		E258632622F09D2B00B5080D /* BeerCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCart.swift; sourceTree = "<group>"; };
 		E258632822F0B17A00B5080D /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		E258632F22F330A100B5080D /* SingleFieldFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFieldFormCell.swift; sourceTree = "<group>"; };
 		E258633022F330A100B5080D /* SingleFieldFormCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleFieldFormCell.xib; sourceTree = "<group>"; };
@@ -413,8 +413,8 @@
 				0424C0BC24072861008986C2 /* Posts.swift */,
 				E25A6462235A71C90072C1F1 /* ServerManager.swift */,
 				E2419A9222EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift */,
-				E2419A9622EB8E320054D9E4 /* BeerDataModel.swift */,
-				E258632622F09D2B00B5080D /* BeerCart.swift */,
+				0424C0CA24073E3E008986C2 /* FurnitureCart.swift */,
+				0424C0CB24073E3E008986C2 /* FurnitureDataModel.swift */,
 				34FC08C12404655D00A2BA43 /* FurnitureModel.swift */,
 				34ACFCAB2405A6EA007683C2 /* Extensions.swift */,
 			);
@@ -437,7 +437,7 @@
 			children = (
 				0424C0C0240728EF008986C2 /* HomeViewController 03-10-38-989.swift */,
 				0424C0AE2407256B008986C2 /* FurnitureListView.swift */,
-				0424C0B024072581008986C2 /* BeerDetailViewController.swift */,
+				0424C0CE24073E63008986C2 /* FurnitureDetailViewController.swift */,
 				0424C0B224072590008986C2 /* Extension.swift */,
 				0424C0B4240725A3008986C2 /* FilterTableViewController.swift */,
 				0424C0B6240725B2008986C2 /* CartViewController.swift */,
@@ -473,8 +473,8 @@
 		E2419AA022EBB3E30054D9E4 /* FurnitureDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				E2419A9C22EBA3020054D9E4 /* BeerDetailView.swift */,
-				E2419A9E22EBA3250054D9E4 /* BeerDetailView.xib */,
+				0424C0C624073E11008986C2 /* FurnitureDetailView.swift */,
+				0424C0C724073E11008986C2 /* FurnitureDetailView.xib */,
 			);
 			path = FurnitureDetailView;
 			sourceTree = "<group>";
@@ -482,8 +482,8 @@
 		E2419AA122EBB3FA0054D9E4 /* FurnitureListCell */ = {
 			isa = PBXGroup;
 			children = (
-				E2419AA222EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift */,
-				E2419AA322EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib */,
+				0424C0C224073DFC008986C2 /* FurnitureViewCellTableViewCell.swift */,
+				0424C0C324073DFC008986C2 /* FurnitureViewCellTableViewCell.xib */,
 			);
 			path = FurnitureListCell;
 			sourceTree = "<group>";
@@ -712,6 +712,7 @@
 			files = (
 				3481C3542406986D00C15B57 /* .swiftlint.yml in Resources */,
 				E2419A6C22EB8CAE0054D9E4 /* LaunchScreen.storyboard in Resources */,
+				0424C0C524073DFC008986C2 /* FurnitureViewCellTableViewCell.xib in Resources */,
 				3481C3562406986D00C15B57 /* Assets.xcassets in Resources */,
 				E258632522F08C2400B5080D /* FurnitureCartCell.xib in Resources */,
 				E2419A6922EB8CAE0054D9E4 /* Assets.xcassets in Resources */,
@@ -719,11 +720,10 @@
 				0465CAC42406C08500A8E62B /* HomeCell.xib in Resources */,
 				0465CACC2406C7BC00A8E62B /* NewPostViewController.xib in Resources */,
 				E258633222F330A100B5080D /* SingleFieldFormCell.xib in Resources */,
+				0424C0C924073E11008986C2 /* FurnitureDetailView.xib in Resources */,
 				E2419A6722EB8CAB0054D9E4 /* Main.storyboard in Resources */,
-				E2419AA522EBB41D0054D9E4 /* BeerListViewCellTableViewCell.xib in Resources */,
 				3481C34D2406986D00C15B57 /* Models.scnassets in Resources */,
 				E258633622F330BD00B5080D /* MultipleFieldFormCell.xib in Resources */,
-				E2419A9F22EBA3250054D9E4 /* BeerDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,11 +799,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3481C35D2406986D00C15B57 /* Vase.swift in Sources */,
-				E2419A9722EB8E320054D9E4 /* BeerDataModel.swift in Sources */,
 				046B63F22407188B00BFF243 /* SignUpViewController.swift in Sources */,
 				3481C3522406986D00C15B57 /* HitTestVisualization.swift in Sources */,
 				0424C0AF2407256B008986C2 /* FurnitureListView.swift in Sources */,
 				E25A6463235A71C90072C1F1 /* ServerManager.swift in Sources */,
+				0424C0CD24073E3E008986C2 /* FurnitureDataModel.swift in Sources */,
 				E25A641D235A5B520072C1F1 /* Intents.intentdefinition in Sources */,
 				0424C0BD24072861008986C2 /* Posts.swift in Sources */,
 				0465CAD02406CEA900A8E62B /* Posts.swift in Sources */,
@@ -818,7 +818,7 @@
 				3481C35B2406986D00C15B57 /* Cup.swift in Sources */,
 				E258632922F0B17A00B5080D /* Global.swift in Sources */,
 				3481C3612406986D00C15B57 /* ARCameraTrackingState.swift in Sources */,
-				E258632722F09D2B00B5080D /* BeerCart.swift in Sources */,
+				0424C0C424073DFC008986C2 /* FurnitureViewCellTableViewCell.swift in Sources */,
 				3481C3532406986D00C15B57 /* Gesture.swift in Sources */,
 				E258633A22F430E800B5080D /* CheckoutFormMetadeta.swift in Sources */,
 				3481C35A2406986D00C15B57 /* Candle.swift in Sources */,
@@ -827,26 +827,26 @@
 				0424C0B324072590008986C2 /* Extension.swift in Sources */,
 				0424C0B9240725BC008986C2 /* CheckoutViewController.swift in Sources */,
 				0424C0C1240728EF008986C2 /* HomeViewController 03-10-38-989.swift in Sources */,
+				0424C0C824073E11008986C2 /* FurnitureDetailView.swift in Sources */,
 				34ACFCAC2405A6EA007683C2 /* Extensions.swift in Sources */,
 				046B63F32407188B00BFF243 /* LoginViewController.swift in Sources */,
 				3481C3632406986D00C15B57 /* VirtualObjectSelectionViewController.swift in Sources */,
 				3481C35C2406986D00C15B57 /* Sofa.swift in Sources */,
 				E258633522F330BD00B5080D /* MultipleFieldFormCell.swift in Sources */,
+				0424C0CC24073E3E008986C2 /* FurnitureCart.swift in Sources */,
 				3481C3592406986D00C15B57 /* VirtualObjectsManager.swift in Sources */,
 				3481C3512406986D00C15B57 /* FocusSquare.swift in Sources */,
 				0465CACB2406C7BC00A8E62B /* NewPostViewController.swift in Sources */,
-				0424C0B124072581008986C2 /* BeerDetailViewController.swift in Sources */,
-				E2419A9D22EBA3020054D9E4 /* BeerDetailView.swift in Sources */,
 				E258632422F08C2400B5080D /* FurnitureCartCell.swift in Sources */,
 				3481C3642406986D00C15B57 /* VirtualObject.swift in Sources */,
 				E258633122F330A100B5080D /* SingleFieldFormCell.swift in Sources */,
-				E2419AA422EBB41D0054D9E4 /* BeerListViewCellTableViewCell.swift in Sources */,
 				3481C34F2406986D00C15B57 /* PlaneDebugVisualization.swift in Sources */,
 				046B63E72407043B00BFF243 /* HelpersExtension.swift in Sources */,
 				046B63E52407007200BFF243 /* ImageServices.swift in Sources */,
 				E2419A9422EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift in Sources */,
 				3481C3552406986D00C15B57 /* MainViewController.swift in Sources */,
 				3481C35E2406986D00C15B57 /* Lamp.swift in Sources */,
+				0424C0CF24073E63008986C2 /* FurnitureDetailViewController.swift in Sources */,
 				3481C3672406986D00C15B57 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
