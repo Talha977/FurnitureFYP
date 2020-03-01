@@ -26,7 +26,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nRi-32-C9V">
                     <rect key="frame" x="10" y="55.5" width="50" height="47.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Hzi-kU-fza"/>
                         <constraint firstAttribute="height" constant="50" id="LNy-fL-LXf"/>
@@ -40,7 +40,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmA-0P-bx8">
                             <rect key="frame" x="0.0" y="0.0" width="87" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ei-J7-IAR">
@@ -64,7 +64,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVh-92-f2W">
                     <rect key="frame" x="10" y="158" width="80" height="30"/>
                     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Add Picture"/>
+                    <state key="normal" title="Add Picture">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                     <state key="selected" image="xmark.octagon.fill" catalog="system">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -74,24 +76,36 @@
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Say something ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8t-gd-ELJ">
                     <rect key="frame" x="10" y="114" width="394" height="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor ">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgt-2C-hG0">
-                    <rect key="frame" x="192" y="450" width="31" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Post"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgt-2C-hG0">
+                    <rect key="frame" x="20" y="448" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="UhU-bM-oCP"/>
+                    </constraints>
+                    <state key="normal" title="Post">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
                         <action selector="btnPostPressed:" destination="-1" eventType="touchUpInside" id="AEY-Mf-gL3"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.17254901959999999" green="0.18039215689999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="eVh-92-f2W" firstAttribute="top" secondItem="W8t-gd-ELJ" secondAttribute="bottom" constant="20" id="4IX-h1-Jbp"/>
                 <constraint firstItem="nRi-32-C9V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="9ac-jK-JzF"/>
+                <constraint firstItem="Lgt-2C-hG0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HPR-hv-KLY"/>
                 <constraint firstItem="W8t-gd-ELJ" firstAttribute="top" secondItem="nRi-32-C9V" secondAttribute="bottom" constant="10" id="MxG-cz-tyU"/>
                 <constraint firstItem="KuB-8r-I2r" firstAttribute="centerY" secondItem="nRi-32-C9V" secondAttribute="centerY" id="QeC-sm-F2g"/>
+                <constraint firstItem="Lgt-2C-hG0" firstAttribute="top" secondItem="nfa-Bf-Usi" secondAttribute="bottom" constant="50" id="RVB-mM-PG1"/>
                 <constraint firstItem="nRi-32-C9V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="VHw-5Z-FyZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W8t-gd-ELJ" secondAttribute="trailing" constant="10" id="W7x-uN-kPv"/>
                 <constraint firstItem="eVh-92-f2W" firstAttribute="leading" secondItem="nfa-Bf-Usi" secondAttribute="leading" constant="10" id="Wyz-Kk-mkl"/>
@@ -99,6 +113,7 @@
                 <constraint firstItem="nfa-Bf-Usi" firstAttribute="top" secondItem="W8t-gd-ELJ" secondAttribute="bottom" constant="10" id="baG-KM-IyB"/>
                 <constraint firstItem="nfa-Bf-Usi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ceg-dV-UvQ"/>
                 <constraint firstItem="KuB-8r-I2r" firstAttribute="leading" secondItem="nRi-32-C9V" secondAttribute="trailing" constant="10" id="iPD-zh-M7J"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lgt-2C-hG0" secondAttribute="trailing" constant="20" id="nqM-j6-8vf"/>
                 <constraint firstItem="W8t-gd-ELJ" firstAttribute="leading" secondItem="nRi-32-C9V" secondAttribute="leading" id="zh9-nv-zc7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

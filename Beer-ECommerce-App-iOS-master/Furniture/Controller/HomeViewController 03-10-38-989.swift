@@ -23,10 +23,7 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        Auth.auth().signInAnonymously() { (authResult, error) in
-          // ...
-        }
-        try! Auth.auth().signOut()
+   
 
         getPost { (posts) in
             
@@ -34,6 +31,9 @@ class HomeViewController: UIViewController {
             self.postsArr.append(contentsOf: posts)
             self.tableView.reloadData()
         }
+        
+        self.navigationItem.title = "Home"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName : "square.and.pencil"), style: .done, target: self, action: #selector(addPostBtn))
         
     }
 
@@ -80,15 +80,38 @@ class HomeViewController: UIViewController {
 
 }
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return postsArr.count
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }
+    
+ 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell
         cell.setPost(post: postsArr[indexPath.row])
+        cell.layer.cornerRadius = 10.0
+        cell.layer.masksToBounds = true
         return cell
     }
     
+
+
     
 }

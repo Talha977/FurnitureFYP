@@ -29,6 +29,9 @@ class NewPostViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tfHomeText.attributedPlaceholder = NSAttributedString(string: "Say something ...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+
+        Utilities.styleFilledButton(btnPost)
     }
 
 

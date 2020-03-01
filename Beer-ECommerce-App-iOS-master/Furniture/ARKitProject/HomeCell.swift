@@ -23,6 +23,9 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var lbltext: UILabel!
     
     @IBOutlet weak var lblTimestamp: UILabel!
+    
+    @IBOutlet weak var btnOptions: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -51,5 +54,9 @@ class HomeCell: UITableViewCell {
 //          }
  
     }
+    
+    @IBAction func btnOptionsPressed(_ sender: Any) {
+    }
+    
     
 }

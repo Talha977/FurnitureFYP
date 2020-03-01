@@ -38,11 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  inboxBarVC.tabBarItem = UITabBarItem(title: "Inbox", image: UIImage(systemName: "envelope"), selectedImage: nil)
 
              let arkit = storyboard.instantiateViewController(withIdentifier: "AR") as! MainViewController
-                 arkit.tabBarItem = UITabBarItem(title: "Notification", image: UIImage(systemName: "arkit"), selectedImage: nil)
+                 arkit.tabBarItem = UITabBarItem(title: "AR View", image: UIImage(systemName: "arkit"), selectedImage: nil)
             
                                  
              let Dashboard = storyboard.instantiateViewController(withIdentifier: "Dashboard") as! FurnitureListView
-                 Dashboard.tabBarItem = UITabBarItem(title: "Account", image: UIImage(systemName: "list.dash"), selectedImage: nil)
+                 Dashboard.tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(systemName: "list.dash"), selectedImage: nil)
                              
                              
                              
