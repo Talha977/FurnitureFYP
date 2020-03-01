@@ -13,6 +13,7 @@ struct Posts : Codable{
     var id :String
     var text : String
     var image : URL?
+    var userid : String
     
 
 

@@ -1,7 +1,7 @@
 import Foundation
 import ARKit
 
-enum MessageType {
+enum MessageT {
 	case trackingStateEscalation
 	case planeEstimation
 	case contentPlacement
@@ -54,7 +54,7 @@ class TextManager {
 
 	var schedulingMessagesBlocked = false
 
-	func scheduleMessage(_ text: String, inSeconds seconds: TimeInterval, messageType: MessageType) {
+	func scheduleMessage(_ text: String, inSeconds seconds: TimeInterval, messageType: MessageT) {
 		// Do not schedule a new message if a feedback escalation alert is still on screen.
 		guard !schedulingMessagesBlocked else {
 			return
@@ -131,7 +131,7 @@ class TextManager {
 		})
 	}
 
-	func cancelScheduledMessage(forType messageType: MessageType) {
+	func cancelScheduledMessage(forType messageType: MessageT) {
 		var timer: Timer?
 		switch messageType {
 		case .contentPlacement: timer = contentPlacementMessageTimer

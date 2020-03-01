@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import DropDown
+import Firebase
 
 class HomeCell: UITableViewCell {
 
@@ -26,6 +28,9 @@ class HomeCell: UITableViewCell {
     
     @IBOutlet weak var btnOptions: UIButton!
     
+    var dropDownData = [String]()
+    var optionSelected :((_ optionName : String) -> Void )? = nil
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -49,14 +54,42 @@ class HomeCell: UITableViewCell {
          
         
         imgHomePic.kf.setImage(with: post.image)
-//        ImageService.getImage(withURL: post.image!) { (image) in
-//              self.imgHomePic.image = image
-//          }
+        
+        if Auth.auth().currentUser?.uid == post.userid {
+                dropDownData = ["Delete", "Message"]
+            
+        }else{
+            dropDownData = [ "Message"]
+
+        }
+        
+
  
     }
     
-    @IBAction func btnOptionsPressed(_ sender: Any) {
-    }
+    @IBAction func btnOptionsPressed(_ sender: UIButton) {
+            print("pressed")
+            let dropDown = DropDown()
+    //
+            dropDown.anchorView = sender
+            dropDown.bottomOffset = CGPoint(x: 100, y: sender.bounds.height)
+    
+
+            // The list of items to display. Can be changed dynamically
+      
+        dropDown.dataSource = dropDownData
+            
+            // Action triggered on selection
+            dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+              print("Selected item: \(item) at index: \(index)")
+                self.optionSelected!(item)
+                
+            }
+    //        dropDown.width = 200
+            dropDown.show()
+
+        }
+    
     
     
 }

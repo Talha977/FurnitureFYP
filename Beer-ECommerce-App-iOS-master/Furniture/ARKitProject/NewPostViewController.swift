@@ -62,7 +62,7 @@ class NewPostViewController: UIViewController {
             let text = tfHomeText.text
             let timestamp = NSDate().timeIntervalSince1970
         uploadImage { (url) in
-            let payload = ["text" : text , "timestamp" : timestamp , "username" : "abc" ,"imageurl" : url?.absoluteString , "id" : Auth.auth().currentUser?.uid] as [String : Any]
+            let payload = ["text" : text , "timestamp" : timestamp , "username" : Auth.auth().currentUser?.displayName ,"imageurl" : url?.absoluteString , "id" : Auth.auth().currentUser?.uid] as [String : Any]
                 
                 let db = Firestore.firestore()
                 db.collection("posts").addDocument(data: payload) { (error) in
