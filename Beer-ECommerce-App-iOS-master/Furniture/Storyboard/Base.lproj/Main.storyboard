@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="Bas-cn-USF">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="obZ-pX-DbH" customClass="LoginViewController" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="obZ-pX-DbH" customClass="LoginViewController" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZC-cJ-7S1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,6 +81,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QF0-Az-BMA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0uQ-Tn-MfU"/>
                     <connections>
                         <outlet property="LoginButton" destination="tRb-Xj-x0k" id="WhH-bL-Ycr"/>
                         <outlet property="emailTextField" destination="9m5-3U-lFh" id="em2-RQ-cW7"/>
@@ -104,9 +105,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="YTF-6f-ft5" kind="relationship" relationship="viewControllers" id="bSz-RE-FiP"/>
-                        <segue destination="92X-Lh-MT8" kind="relationship" relationship="viewControllers" id="a8o-l6-Yuq"/>
                         <segue destination="7aQ-yc-6NO" kind="relationship" relationship="viewControllers" id="BsX-pb-wBF"/>
+                        <segue destination="YTF-6f-ft5" kind="relationship" relationship="viewControllers" id="Xsa-Ez-piY"/>
+                        <segue destination="JDp-QH-C7o" kind="relationship" relationship="viewControllers" id="6is-m4-diU"/>
+                        <segue destination="92X-Lh-MT8" kind="relationship" relationship="viewControllers" id="KMc-EH-7Ev"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zO-38-alW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -116,7 +118,7 @@
         <!--Home-->
         <scene sceneID="qEw-Hx-tiU">
             <objects>
-                <viewController id="7aQ-yc-6NO" customClass="HomeViewController" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="7aQ-yc-6NO" customClass="HomeViewController" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="muq-ji-DbO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,6 +156,22 @@
             </objects>
             <point key="canvasLocation" x="-679.20000000000005" y="834.33283358320841"/>
         </scene>
+        <!--Inbox-->
+        <scene sceneID="0Ew-gD-dJB">
+            <objects>
+                <viewController storyboardIdentifier="Inbox" id="JDp-QH-C7o" customClass="InboxBarViewController" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dHS-qb-uEP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="iRo-BW-Dcu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inbox" image="envelope" catalog="system" id="Mmk-gn-V5O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbA-fP-dcB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="1642"/>
+        </scene>
         <!--Dashboard-->
         <scene sceneID="7aP-0Q-QI6">
             <objects>
@@ -177,12 +195,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o10-ev-mRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="191"/>
+            <point key="canvasLocation" x="-1366" y="128"/>
         </scene>
         <!--Furniture List View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FurnitureListView" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dashboard" id="BYZ-38-t0r" customClass="FurnitureListView" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,10 +548,10 @@
             </objects>
             <point key="canvasLocation" x="1900.0000000000002" y="20.758928571428569"/>
         </scene>
-        <!--Item-->
+        <!--AR-->
         <scene sceneID="02p-vL-aZe">
             <objects>
-                <viewController id="92X-Lh-MT8" customClass="MainViewController" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AR" id="92X-Lh-MT8" customClass="MainViewController" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z4w-I3-Te8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -722,7 +740,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lR9-hr-25L"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="slX-Y1-D7n"/>
+                    <tabBarItem key="tabBarItem" title="AR" image="arkit" catalog="system" id="slX-Y1-D7n"/>
                     <connections>
                         <outlet property="addObjectButton" destination="WyT-Vd-RBK" id="gWp-pC-gXK"/>
                         <outlet property="debugMessageLabel" destination="0tP-Et-lTk" id="A2z-Ak-cUh"/>
@@ -737,7 +755,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Djl-nd-pNI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-659" y="1599"/>
+            <point key="canvasLocation" x="-2017" y="1661"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="qso-RL-MHZ">
@@ -806,6 +824,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnLoginScreen:" destination="zex-id-JcE" eventType="touchUpInside" id="fXQ-Am-YDw"/>
+                                    <segue destination="obZ-pX-DbH" kind="show" id="SOo-BQ-16p"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-1g-bk9">
@@ -856,6 +875,8 @@
         <image name="DownBtn" width="30" height="30"/>
         <image name="UpBtn" width="30" height="30"/>
         <image name="add" width="48" height="48"/>
+        <image name="arkit" catalog="system" width="64" height="64"/>
+        <image name="envelope" catalog="system" width="64" height="46"/>
         <image name="furn3" width="1146" height="1500"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="list.dash" catalog="system" width="64" height="42"/>
@@ -868,6 +889,6 @@
         <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A1f-gg-wDU"/>
+        <segue reference="Udo-0X-xin"/>
     </inferredMetricsTieBreakers>
 </document>

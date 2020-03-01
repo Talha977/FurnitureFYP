@@ -31,6 +31,7 @@
 		046B63E72407043B00BFF243 /* HelpersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B63E62407043B00BFF243 /* HelpersExtension.swift */; };
 		046B63F22407188B00BFF243 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B63EE2407188800BFF243 /* SignUpViewController.swift */; };
 		046B63F32407188B00BFF243 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B63EF2407188800BFF243 /* LoginViewController.swift */; };
+		04E92CC7240B38E300B54AE4 /* InboxBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92CC6240B38E300B54AE4 /* InboxBarViewController.swift */; };
 		3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481C30E2406953100C15B57 /* ARKit.framework */; };
 		3481C34D2406986D00C15B57 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C32E2406986C00C15B57 /* Models.scnassets */; };
 		3481C34E2406986D00C15B57 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C32F2406986C00C15B57 /* Utilities.swift */; };
@@ -178,6 +179,7 @@
 		046B63E62407043B00BFF243 /* HelpersExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpersExtension.swift; sourceTree = "<group>"; };
 		046B63EE2407188800BFF243 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "../../../../../../Applications/Xcode Projects/UdormManager/LoginDemo/View Controllers/SignUpViewController.swift"; sourceTree = "<group>"; };
 		046B63EF2407188800BFF243 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../../../../../Applications/Xcode Projects/UdormManager/LoginDemo/View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
+		04E92CC6240B38E300B54AE4 /* InboxBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxBarViewController.swift; sourceTree = "<group>"; };
 		07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA322367DBE64D405E65460 /* Pods-FurnitureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureApp.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp.debug.xcconfig"; sourceTree = "<group>"; };
 		17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraft.release.xcconfig"; path = "Target Support Files/Pods-BeerCraft/Pods-BeerCraft.release.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +290,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04E92CC5240B2F1000B54AE4 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				04E92CC6240B38E300B54AE4 /* InboxBarViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		0F88C719F0BFAAD0100AE809 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +411,7 @@
 				34ACFCAF24066E8E007683C2 /* Furnitura.entitlements */,
 				E2419A9022EB8D4C0054D9E4 /* View */,
 				E2419A8F22EB8D440054D9E4 /* Model */,
+				04E92CC5240B2F1000B54AE4 /* Chat */,
 				E2419A9122EB8D530054D9E4 /* Controller */,
 				E2419A9922EB90DB0054D9E4 /* Storyboard */,
 			);
@@ -813,6 +824,7 @@
 				3481C34E2406986D00C15B57 /* Utilities.swift in Sources */,
 				0424C0B5240725A3008986C2 /* FilterTableViewController.swift in Sources */,
 				0424C0B7240725B2008986C2 /* CartViewController.swift in Sources */,
+				04E92CC7240B38E300B54AE4 /* InboxBarViewController.swift in Sources */,
 				3481C3572406986D00C15B57 /* TextManager.swift in Sources */,
 				3481C3582406986D00C15B57 /* Chair.swift in Sources */,
 				3481C35B2406986D00C15B57 /* Cup.swift in Sources */,
