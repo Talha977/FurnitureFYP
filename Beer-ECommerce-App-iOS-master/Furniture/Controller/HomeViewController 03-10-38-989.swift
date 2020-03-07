@@ -54,7 +54,7 @@ class HomeViewController: UIViewController {
     func getPost(completionHandler : ((_ post : [Posts]) -> Void)? = nil){
         let db = Firestore.firestore()
         
-        db.collection("posts").addSnapshotListener { (snapshot, error) in
+        db.collection("posts").getDocuments { (snapshot, error) in
             for document in snapshot!.documents{
                 let documentID = document.documentID as! String
                 let id = document.get("id") as? String ?? ""
@@ -120,6 +120,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
                 
             }
             else if name == "Message"{
+                
                 
             }
             else if name == "Response"{

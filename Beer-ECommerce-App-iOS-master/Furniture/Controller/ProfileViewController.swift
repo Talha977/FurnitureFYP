@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
 
     @IBAction func btnSignoutPressed(_ sender: Any) {
         try! Auth.auth().signOut()
-        self.navigationController?.pushViewController(ViewController(), animated: true)
+//        self.navigationController?.pushViewController(ViewController(), animated: true)
 //        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //
 //        let vc = storyboard.instantiateViewController(withIdentifier: "VC") as! ViewController

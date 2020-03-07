@@ -56,7 +56,7 @@ class HomeCell: UITableViewCell {
         imgHomePic.kf.setImage(with: post.image)
         
         if Auth.auth().currentUser?.uid == post.userid {
-                dropDownData = ["Delete", "Message"]
+                dropDownData = ["Delete"]
             
         }else{
             dropDownData = [ "Message"]

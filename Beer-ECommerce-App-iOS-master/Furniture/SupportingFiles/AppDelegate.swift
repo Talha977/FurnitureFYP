@@ -64,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             self.navigationController.navigationBar.barTintColor = UIColor(red: 44/255, green: 46/255, blue: 47/255, alpha: 1)
             
+            UINavigationBar.appearance().tintColor = UIColor(red: 234/255, green: 174/255, blue: 47/255, alpha: 1)
             window?.rootViewController = self.navigationController
                 window?.makeKeyAndVisible()
         }
