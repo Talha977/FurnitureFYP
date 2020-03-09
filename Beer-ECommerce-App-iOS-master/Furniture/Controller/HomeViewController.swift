@@ -32,19 +32,21 @@ class HomeViewController: UIViewController {
             self.tableView.reloadData()
         }
         
-        self.navigationItem.title = "Home"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName : "square.and.pencil"), style: .done, target: self, action: #selector(addPostBtn))
+
         //        try! Auth.auth().signOut()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if Auth.auth().currentUser == nil {
-            btnNewPost.isHidden = true
-        }else{
-            btnNewPost.isHidden = false
-            
-        }
+        self.tabBarController?.navigationItem.title = "Home"
+        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName : "square.and.pencil"), style: .done, target: self, action: #selector(addPostBtn))
+        
+//        if Auth.auth().currentUser == nil {
+//            btnNewPost.isHidden = true
+//        }else{
+//            btnNewPost.isHidden = false
+//
+//        }
     }
     
     @IBAction func addPostBtn(_ sender: Any) {

@@ -21,7 +21,7 @@
 		0424C0B7240725B2008986C2 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0B6240725B2008986C2 /* CartViewController.swift */; };
 		0424C0B9240725BC008986C2 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0B8240725BB008986C2 /* CheckoutViewController.swift */; };
 		0424C0BD24072861008986C2 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0BC24072861008986C2 /* Posts.swift */; };
-		0424C0C1240728EF008986C2 /* HomeViewController 03-10-38-989.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0C0240728EF008986C2 /* HomeViewController 03-10-38-989.swift */; };
+		0424C0C1240728EF008986C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0C0240728EF008986C2 /* HomeViewController.swift */; };
 		0424C0C424073DFC008986C2 /* FurnitureViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0C224073DFC008986C2 /* FurnitureViewCellTableViewCell.swift */; };
 		0424C0C524073DFC008986C2 /* FurnitureViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0424C0C324073DFC008986C2 /* FurnitureViewCellTableViewCell.xib */; };
 		0424C0C824073E11008986C2 /* FurnitureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0C624073E11008986C2 /* FurnitureDetailView.swift */; };
@@ -29,6 +29,8 @@
 		0424C0CC24073E3E008986C2 /* FurnitureCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0CA24073E3E008986C2 /* FurnitureCart.swift */; };
 		0424C0CD24073E3E008986C2 /* FurnitureDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0CB24073E3E008986C2 /* FurnitureDataModel.swift */; };
 		0424C0CF24073E63008986C2 /* FurnitureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424C0CE24073E63008986C2 /* FurnitureDetailViewController.swift */; };
+		04268804241621E7001B757D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04268803241621E7001B757D /* LoginViewController.swift */; };
+		0426880624162206001B757D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426880524162206001B757D /* SignUpViewController.swift */; };
 		0465CAC02406B29500A8E62B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0465CABF2406B29500A8E62B /* GoogleService-Info.plist */; };
 		0465CAC32406C08500A8E62B /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CAC12406C08500A8E62B /* HomeCell.swift */; };
 		0465CAC42406C08500A8E62B /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0465CAC22406C08500A8E62B /* HomeCell.xib */; };
@@ -37,8 +39,6 @@
 		0465CAD02406CEA900A8E62B /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CACF2406CEA900A8E62B /* Posts.swift */; };
 		046B63E52407007200BFF243 /* ImageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B63E42407007100BFF243 /* ImageServices.swift */; };
 		046B63E72407043B00BFF243 /* HelpersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B63E62407043B00BFF243 /* HelpersExtension.swift */; };
-		046B63F22407188B00BFF243 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B63EE2407188800BFF243 /* SignUpViewController.swift */; };
-		046B63F32407188B00BFF243 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B63EF2407188800BFF243 /* LoginViewController.swift */; };
 		04E92CC7240B38E300B54AE4 /* InboxBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92CC6240B38E300B54AE4 /* InboxBarViewController.swift */; };
 		3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481C30E2406953100C15B57 /* ARKit.framework */; };
 		3481C34D2406986D00C15B57 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C32E2406986C00C15B57 /* Models.scnassets */; };
@@ -177,7 +177,7 @@
 		0424C0B6240725B2008986C2 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		0424C0B8240725BB008986C2 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		0424C0BC24072861008986C2 /* Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Posts.swift; path = Furniture/ARKitProject/Posts.swift; sourceTree = SOURCE_ROOT; };
-		0424C0C0240728EF008986C2 /* HomeViewController 03-10-38-989.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeViewController 03-10-38-989.swift"; sourceTree = "<group>"; };
+		0424C0C0240728EF008986C2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0424C0C224073DFC008986C2 /* FurnitureViewCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		0424C0C324073DFC008986C2 /* FurnitureViewCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FurnitureViewCellTableViewCell.xib; sourceTree = "<group>"; };
 		0424C0C624073E11008986C2 /* FurnitureDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureDetailView.swift; sourceTree = "<group>"; };
@@ -185,6 +185,8 @@
 		0424C0CA24073E3E008986C2 /* FurnitureCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureCart.swift; sourceTree = "<group>"; };
 		0424C0CB24073E3E008986C2 /* FurnitureDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureDataModel.swift; sourceTree = "<group>"; };
 		0424C0CE24073E63008986C2 /* FurnitureDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureDetailViewController.swift; sourceTree = "<group>"; };
+		04268803241621E7001B757D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0426880524162206001B757D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0465CABF2406B29500A8E62B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0465CAC12406C08500A8E62B /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		0465CAC22406C08500A8E62B /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
@@ -193,8 +195,6 @@
 		0465CACF2406CEA900A8E62B /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		046B63E42407007100BFF243 /* ImageServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServices.swift; sourceTree = "<group>"; };
 		046B63E62407043B00BFF243 /* HelpersExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpersExtension.swift; sourceTree = "<group>"; };
-		046B63EE2407188800BFF243 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "../../../../../../Applications/Xcode Projects/UdormManager/LoginDemo/View Controllers/SignUpViewController.swift"; sourceTree = "<group>"; };
-		046B63EF2407188800BFF243 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../../../../../Applications/Xcode Projects/UdormManager/LoginDemo/View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		04E92CC6240B38E300B54AE4 /* InboxBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxBarViewController.swift; sourceTree = "<group>"; };
 		07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA322367DBE64D405E65460 /* Pods-FurnitureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureApp.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -476,15 +476,15 @@
 		E2419A9122EB8D530054D9E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0424C0C0240728EF008986C2 /* HomeViewController 03-10-38-989.swift */,
+				0424C0C0240728EF008986C2 /* HomeViewController.swift */,
 				0424C0AE2407256B008986C2 /* FurnitureListView.swift */,
 				0424C0CE24073E63008986C2 /* FurnitureDetailViewController.swift */,
 				0424C0B224072590008986C2 /* Extension.swift */,
 				0424C0B4240725A3008986C2 /* FilterTableViewController.swift */,
 				0424C0B6240725B2008986C2 /* CartViewController.swift */,
 				0424C0B8240725BB008986C2 /* CheckoutViewController.swift */,
-				046B63EF2407188800BFF243 /* LoginViewController.swift */,
-				046B63EE2407188800BFF243 /* SignUpViewController.swift */,
+				04268803241621E7001B757D /* LoginViewController.swift */,
+				0426880524162206001B757D /* SignUpViewController.swift */,
 				040ED910240BE269005B65DC /* ProfileViewController.swift */,
 				040ED91F240C00BB005B65DC /* ViewController.swift */,
 			);
@@ -842,7 +842,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3481C35D2406986D00C15B57 /* Vase.swift in Sources */,
-				046B63F22407188B00BFF243 /* SignUpViewController.swift in Sources */,
 				3481C3522406986D00C15B57 /* HitTestVisualization.swift in Sources */,
 				0424C0AF2407256B008986C2 /* FurnitureListView.swift in Sources */,
 				E25A6463235A71C90072C1F1 /* ServerManager.swift in Sources */,
@@ -875,10 +874,10 @@
 				E2419A6222EB8CAB0054D9E4 /* AppDelegate.swift in Sources */,
 				0424C0B324072590008986C2 /* Extension.swift in Sources */,
 				0424C0B9240725BC008986C2 /* CheckoutViewController.swift in Sources */,
-				0424C0C1240728EF008986C2 /* HomeViewController 03-10-38-989.swift in Sources */,
+				0424C0C1240728EF008986C2 /* HomeViewController.swift in Sources */,
+				04268804241621E7001B757D /* LoginViewController.swift in Sources */,
 				0424C0C824073E11008986C2 /* FurnitureDetailView.swift in Sources */,
 				34ACFCAC2405A6EA007683C2 /* Extensions.swift in Sources */,
-				046B63F32407188B00BFF243 /* LoginViewController.swift in Sources */,
 				3481C3632406986D00C15B57 /* VirtualObjectSelectionViewController.swift in Sources */,
 				3481C35C2406986D00C15B57 /* Sofa.swift in Sources */,
 				E258633522F330BD00B5080D /* MultipleFieldFormCell.swift in Sources */,
@@ -898,6 +897,7 @@
 				3481C3552406986D00C15B57 /* MainViewController.swift in Sources */,
 				3481C35E2406986D00C15B57 /* Lamp.swift in Sources */,
 				040ED916240BEF00005B65DC /* DatabaseRepresentation.swift in Sources */,
+				0426880624162206001B757D /* SignUpViewController.swift in Sources */,
 				0424C0CF24073E63008986C2 /* FurnitureDetailViewController.swift in Sources */,
 				3481C3672406986D00C15B57 /* SettingsViewController.swift in Sources */,
 			);

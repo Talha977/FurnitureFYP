@@ -22,10 +22,15 @@ class ProfileViewController: UIViewController {
     }
     
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = "Profile"
+        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .done,target: self, action: #selector(btnSignoutPressed(_:)))
 
+
+    }
     @IBAction func btnSignoutPressed(_ sender: Any) {
         try! Auth.auth().signOut()
-//        self.navigationController?.pushViewController(ViewController(), animated: true)
+        self.navigationController?.pushViewController(ViewController(), animated: true)
 //        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //
 //        let vc = storyboard.instantiateViewController(withIdentifier: "VC") as! ViewController

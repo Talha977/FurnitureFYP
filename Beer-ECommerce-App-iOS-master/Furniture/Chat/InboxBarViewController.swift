@@ -19,7 +19,13 @@ class InboxBarViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = "Inbox"
+         self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName : "square.and.pencil"), style: .done, target: self, action: #selector(addPostBtn))
+    }
 
-
+    @IBAction func addPostBtn(_ sender: Any) {
+        self.present(NewPostViewController(), animated: true, completion: nil)
+    }
 
 }

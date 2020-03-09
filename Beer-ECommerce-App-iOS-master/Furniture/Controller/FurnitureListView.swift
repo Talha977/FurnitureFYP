@@ -30,7 +30,6 @@ class FurnitureListView: UIViewController {
 //        beerListView.reloadData()
         filterOn = false
         beerListView.register(UINib(nibName: "FurnitureViewCellTableViewCell", bundle: nil), forCellReuseIdentifier: "FurnitureViewCellTableViewCell")
-        setupNavigationBar()
         INInteraction.delete(with: "Take my order") { err in
             print(err?.localizedDescription)
         }
@@ -79,6 +78,9 @@ class FurnitureListView: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        setupNavigationBar()
+        
         //API call to get the details
         if beerData.count == 0{
             fetchAllBeers()
@@ -93,8 +95,10 @@ class FurnitureListView: UIViewController {
     
     // Setup for filter button
     func setupNavigationBar(){
+        self.tabBarController?.navigationItem.title = "Dashboard"
+
         let filterBtn = UIBarButtonItem(image: #imageLiteral(resourceName: "FilterBtn"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(navigateToFilterScreen))
-        self.navigationItem.rightBarButtonItem = filterBtn
+        self.tabBarController?.navigationItem.rightBarButtonItem = filterBtn
     }
     
     
