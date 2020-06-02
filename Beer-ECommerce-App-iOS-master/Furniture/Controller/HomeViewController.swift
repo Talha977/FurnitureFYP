@@ -8,13 +8,15 @@
 
 import UIKit
 import Firebase
+import JGProgressHUD
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var btnNewPost: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var postsArr = [Posts]()
-    
+    var hud : JGProgressHUD  = JGProgressHUD(style: .dark)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +24,9 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         tableView.delegate = self
         tableView.dataSource = self
-        
+        hud.textLabel.text = "Loading"
+        hud.show(in: self.view)
+
         
         
         getPost { (posts) in
@@ -58,6 +62,8 @@ class HomeViewController: UIViewController {
         let db = Firestore.firestore()
         
         db.collection("posts").getDocuments { (snapshot, error) in
+            self.hud.dismiss(animated: true)
+
             if snapshot == nil {
                 return
             }
