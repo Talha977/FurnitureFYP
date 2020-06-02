@@ -3,7 +3,7 @@
 //  FurnitureApp
 //
 //  Created by Danyal on 26/02/2020.
-//  Copyright © 2020 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Danyal Naveed. All rights reserved.
 //
 
 import UIKit
@@ -27,8 +27,9 @@ class HomeViewController: UIViewController {
         
         getPost { (posts) in
             
-            self.postsArr.removeAll()
-            self.postsArr.append(contentsOf: posts)
+//            self.postsArr.removeAll()
+//            self.postsArr.append(contentsOf: posts)
+            self.postsArr = posts
             self.tableView.reloadData()
         }
         
@@ -57,6 +58,9 @@ class HomeViewController: UIViewController {
         let db = Firestore.firestore()
         
         db.collection("posts").getDocuments { (snapshot, error) in
+            if snapshot == nil {
+                return
+            }
             for document in snapshot!.documents{
                 let documentID = document.documentID as! String
                 let id = document.get("id") as? String ?? ""

@@ -91,6 +91,7 @@ PODS:
   - GTMSessionFetcher/Core (1.2.2)
   - InputBarAccessoryView (4.2.2)
   - IQKeyboardManagerSwift (6.4.0)
+  - JGProgressHUD (2.1)
   - Kingfisher (5.7.0)
   - leveldb-library (1.20)
   - MessageKit (3.0.0):
@@ -112,6 +113,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - IQKeyboardManagerSwift
+  - JGProgressHUD
   - Kingfisher
   - MessageKit
 
@@ -141,6 +143,7 @@ SPEC REPOS:
   trunk:
     - DropDown
     - InputBarAccessoryView
+    - JGProgressHUD
     - MessageKit
 
 SPEC CHECKSUMS:
@@ -162,6 +165,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   InputBarAccessoryView: 2b937602598e2fab3149f37f51dd7ad795653812
   IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
+  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
@@ -169,6 +173,6 @@ SPEC CHECKSUMS:
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
 
-PODFILE CHECKSUM: 95a599a4887f20b6b20331fd7eff0e8e18c72168
+PODFILE CHECKSUM: 73543dab95cd2660b7acb9a07acacaf6feaf5e02
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.2

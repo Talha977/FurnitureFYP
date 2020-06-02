@@ -17,6 +17,8 @@ target 'FurnitureApp' do
  	pod 'Kingfisher'
 	pod 'DropDown'
 	pod 'MessageKit'
+	pod 'JGProgressHUD'
+
 
 
 #  target 'BeerCraftTests' do

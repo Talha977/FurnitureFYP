@@ -3,11 +3,12 @@
 //  FurnitureApp
 //
 //  Created by Danyal on 26/02/2020.
-//  Copyright © 2020 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Danyal Naveed
 //
 
 import UIKit
 import Firebase
+import JGProgressHUD
 
 class NewPostViewController: UIViewController {
 
@@ -25,6 +26,8 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var btnAddPicture: UIButton!
     
     let db = Firestore.firestore()
+    var hud : JGProgressHUD  = JGProgressHUD(style: .dark)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +35,11 @@ class NewPostViewController: UIViewController {
         tfHomeText.attributedPlaceholder = NSAttributedString(string: "Say something ...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
 
         Utilities.styleFilledButton(btnPost)
+
+         
+        hud.textLabel.text = "Loading"
+
+        
     }
 
 
@@ -39,8 +47,8 @@ class NewPostViewController: UIViewController {
     
     @IBAction func btnAddPicturePressed(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        sender.setTitle("", for: .selected)
-        sender.setTitle("Add Picture", for: .disabled)
+//        sender.setTitle("", for: .selected)
+//        sender.setTitle("Add Picture", for: .disabled)
 
         if sender.isSelected {
             showBottomActivity()
@@ -55,6 +63,7 @@ class NewPostViewController: UIViewController {
     }
     
     @IBAction func btnPostPressed(_ sender: Any) {
+        hud.show(in: self.view)
         addPost()
     }
     
@@ -69,6 +78,8 @@ class NewPostViewController: UIViewController {
                     if error != nil{
                         print("succeful")
                         self.tfHomeText.text = ""
+                        self.hud.dismiss(animated: true)
+
 
                     }
                     self.dismiss(animated: true, completion: nil)
@@ -78,7 +89,7 @@ class NewPostViewController: UIViewController {
 }
     func uploadImage(completion: @escaping (_ url: URL?)->()) {
         guard let image = imgHomePic.image else { return }
-        let storageRef = Storage.storage().reference().child("AnnoucementImages").child("\(UUID())")
+        let storageRef = Storage.storage().reference().child("ForumImages").child("\(UUID())")
 
         let imageData = image.jpegData(compressionQuality: 0.8)
         let metaData = StorageMetadata()

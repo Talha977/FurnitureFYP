@@ -3,7 +3,7 @@
 //  FurnitureApp
 //
 //  Created by Danyal on 01/03/2020.
-//  Copyright © 2020 Siddhant Mishra. All rights reserved.
+//  Copyright © 2020 Danyal Naveed. All rights reserved.
 //
 
 import UIKit
@@ -28,9 +28,10 @@ class ProfileViewController: UIViewController {
 
 
     }
-    @IBAction func btnSignoutPressed(_ sender: Any) {
+    @IBAction func btnSignoutPressed(_ sender: UIBarButtonItem) {
         try! Auth.auth().signOut()
-        self.navigationController?.pushViewController(ViewController(), animated: true)
+//        self.navigationController?.popToViewController(LoginViewController(), animated: true)
+        self.tabBarController?.navigationController?.popToRootViewController(animated: true)
 //        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //
 //        let vc = storyboard.instantiateViewController(withIdentifier: "VC") as! ViewController

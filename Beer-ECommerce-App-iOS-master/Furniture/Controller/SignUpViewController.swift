@@ -1,10 +1,11 @@
 //
 //  SignUpViewController.swift
-//  LoginDemo
+//  FurnitureApp
 //
-//  Created by Hossein Esmaeilifarrokh on 9/29/19.
-//  Copyright © 2019 Hossein Esmaeilifarrokh. All rights reserved.
+//  Created by Danyal on 01/03/2020.
+//  Copyright © 2020 Danyal Naveed. All rights reserved.
 //
+
 
 import UIKit
 import FirebaseAuth
