@@ -80,29 +80,38 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wel-rB-MY9">
-                        <rect key="frame" x="10" y="325.5" width="120" height="30"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wel-rB-MY9">
+                        <rect key="frame" x="10" y="325.5" width="130" height="30"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZn-wN-H3S">
                                 <rect key="frame" x="0.0" y="0.0" width="33.5" height="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="heart"/>
                                 <state key="selected" image="heart.fill"/>
+                                <connections>
+                                    <action selector="btnLikePress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j0B-I9-lQM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN5-3F-0yO">
-                                <rect key="frame" x="43.5" y="0.0" width="33" height="30"/>
+                                <rect key="frame" x="48.5" y="0.0" width="33" height="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="comment"/>
+                                <connections>
+                                    <action selector="btnCommentPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aoq-Rs-r72"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfj-dr-Y09">
-                                <rect key="frame" x="86.5" y="0.0" width="33.5" height="30"/>
+                                <rect key="frame" x="96.5" y="0.0" width="33.5" height="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="share"/>
+                                <connections>
+                                    <action selector="btnSharePress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="um5-Lj-gcH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="HGM-0S-0x7"/>
-                            <constraint firstAttribute="width" constant="120" id="l3B-Gl-iIP"/>
+                            <constraint firstAttribute="width" constant="130" id="l3B-Gl-iIP"/>
                         </constraints>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVI-Fe-kwF">
@@ -113,6 +122,9 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" image="save"/>
                         <state key="selected" image="save.fill"/>
+                        <connections>
+                            <action selector="btnSavePress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="abu-cn-K5t"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -142,7 +154,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnComment" destination="nN5-3F-0yO" id="c8U-Vr-61x"/>
+                <outlet property="btnLike" destination="FZn-wN-H3S" id="7ke-KM-IXE"/>
                 <outlet property="btnOptions" destination="Wsm-6g-3xS" id="9ic-uy-kfo"/>
+                <outlet property="btnSave" destination="kVI-Fe-kwF" id="g8p-iV-xp5"/>
+                <outlet property="btnShare" destination="hfj-dr-Y09" id="KFy-12-dyU"/>
                 <outlet property="imgHomePic" destination="5mc-cU-jhR" id="JCe-dj-g1P"/>
                 <outlet property="imgUserPic" destination="qOp-Oy-QNN" id="HEz-lp-H5e"/>
                 <outlet property="lblTimestamp" destination="Yar-kl-K7n" id="r8h-Hw-IhZ"/>
@@ -154,13 +170,13 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="comment" width="26" height="26"/>
+        <image name="comment" width="50" height="50"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="heart" width="26" height="26"/>
+        <image name="heart" width="50" height="50"/>
         <image name="heart.fill" width="50" height="50"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="save" width="50" height="50"/>
         <image name="save.fill" width="50" height="50"/>
-        <image name="share" width="64" height="64"/>
+        <image name="share" width="50" height="50"/>
     </resources>
 </document>

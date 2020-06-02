@@ -39,6 +39,12 @@
 		0465CAD02406CEA900A8E62B /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CACF2406CEA900A8E62B /* Posts.swift */; };
 		046B63E52407007200BFF243 /* ImageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B63E42407007100BFF243 /* ImageServices.swift */; };
 		046B63E72407043B00BFF243 /* HelpersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B63E62407043B00BFF243 /* HelpersExtension.swift */; };
+		04B964A724869F3300A41991 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B964A524869F3300A41991 /* ProfileCell.swift */; };
+		04B964A824869F3300A41991 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B964A624869F3300A41991 /* ProfileCell.xib */; };
+		04B964AB24869F5400A41991 /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B964A924869F5400A41991 /* PostsCell.swift */; };
+		04B964AC24869F5400A41991 /* PostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B964AA24869F5400A41991 /* PostsCell.xib */; };
+		04B964AF2486A2BA00A41991 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B964AD2486A2BA00A41991 /* PostImageCell.swift */; };
+		04B964B02486A2BA00A41991 /* PostImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B964AE2486A2BA00A41991 /* PostImageCell.xib */; };
 		04E92CC7240B38E300B54AE4 /* InboxBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92CC6240B38E300B54AE4 /* InboxBarViewController.swift */; };
 		3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481C30E2406953100C15B57 /* ARKit.framework */; };
 		3481C34D2406986D00C15B57 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C32E2406986C00C15B57 /* Models.scnassets */; };
@@ -195,6 +201,12 @@
 		0465CACF2406CEA900A8E62B /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		046B63E42407007100BFF243 /* ImageServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServices.swift; sourceTree = "<group>"; };
 		046B63E62407043B00BFF243 /* HelpersExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpersExtension.swift; sourceTree = "<group>"; };
+		04B964A524869F3300A41991 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		04B964A624869F3300A41991 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		04B964A924869F5400A41991 /* PostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
+		04B964AA24869F5400A41991 /* PostsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsCell.xib; sourceTree = "<group>"; };
+		04B964AD2486A2BA00A41991 /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
+		04B964AE2486A2BA00A41991 /* PostImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostImageCell.xib; sourceTree = "<group>"; };
 		04E92CC6240B38E300B54AE4 /* InboxBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxBarViewController.swift; sourceTree = "<group>"; };
 		07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA322367DBE64D405E65460 /* Pods-FurnitureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureApp.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -318,6 +330,21 @@
 			path = helpers;
 			sourceTree = "<group>";
 		};
+		04B964A424869F0600A41991 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0465CAC12406C08500A8E62B /* HomeCell.swift */,
+				0465CAC22406C08500A8E62B /* HomeCell.xib */,
+				04B964A524869F3300A41991 /* ProfileCell.swift */,
+				04B964A624869F3300A41991 /* ProfileCell.xib */,
+				04B964A924869F5400A41991 /* PostsCell.swift */,
+				04B964AA24869F5400A41991 /* PostsCell.xib */,
+				04B964AD2486A2BA00A41991 /* PostImageCell.swift */,
+				04B964AE2486A2BA00A41991 /* PostImageCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		04E92CC5240B2F1000B54AE4 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,8 +375,6 @@
 				0465CACF2406CEA900A8E62B /* Posts.swift */,
 				0465CAC92406C7BC00A8E62B /* NewPostViewController.swift */,
 				0465CACA2406C7BC00A8E62B /* NewPostViewController.xib */,
-				0465CAC12406C08500A8E62B /* HomeCell.swift */,
-				0465CAC22406C08500A8E62B /* HomeCell.xib */,
 				3481C32E2406986C00C15B57 /* Models.scnassets */,
 				3481C32F2406986C00C15B57 /* Utilities.swift */,
 				3481C3302406986C00C15B57 /* UI Elements */,
@@ -436,6 +461,7 @@
 		E2419A6022EB8CAB0054D9E4 /* Furniture */ = {
 			isa = PBXGroup;
 			children = (
+				04B964A424869F0600A41991 /* Cells */,
 				E2419A9822EB90C10054D9E4 /* SupportingFiles */,
 				3481C32D2406986C00C15B57 /* ARKitProject */,
 				34ACFCAF24066E8E007683C2 /* Furnitura.entitlements */,
@@ -760,8 +786,11 @@
 				E258632522F08C2400B5080D /* FurnitureCartCell.xib in Resources */,
 				E2419A6922EB8CAE0054D9E4 /* Assets.xcassets in Resources */,
 				0465CAC02406B29500A8E62B /* GoogleService-Info.plist in Resources */,
+				04B964B02486A2BA00A41991 /* PostImageCell.xib in Resources */,
+				04B964AC24869F5400A41991 /* PostsCell.xib in Resources */,
 				0465CAC42406C08500A8E62B /* HomeCell.xib in Resources */,
 				0465CACC2406C7BC00A8E62B /* NewPostViewController.xib in Resources */,
+				04B964A824869F3300A41991 /* ProfileCell.xib in Resources */,
 				E258633222F330A100B5080D /* SingleFieldFormCell.xib in Resources */,
 				0424C0C924073E11008986C2 /* FurnitureDetailView.xib in Resources */,
 				E2419A6722EB8CAB0054D9E4 /* Main.storyboard in Resources */,
@@ -842,6 +871,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3481C35D2406986D00C15B57 /* Vase.swift in Sources */,
+				04B964AF2486A2BA00A41991 /* PostImageCell.swift in Sources */,
 				3481C3522406986D00C15B57 /* HitTestVisualization.swift in Sources */,
 				0424C0AF2407256B008986C2 /* FurnitureListView.swift in Sources */,
 				E25A6463235A71C90072C1F1 /* ServerManager.swift in Sources */,
@@ -850,6 +880,7 @@
 				0424C0BD24072861008986C2 /* Posts.swift in Sources */,
 				0465CAD02406CEA900A8E62B /* Posts.swift in Sources */,
 				34FC08C22404655D00A2BA43 /* FurnitureModel.swift in Sources */,
+				04B964A724869F3300A41991 /* ProfileCell.swift in Sources */,
 				040ED911240BE269005B65DC /* ProfileViewController.swift in Sources */,
 				040ED920240C00BB005B65DC /* ViewController.swift in Sources */,
 				3481C3662406986D00C15B57 /* ScieneView+Extension.swift in Sources */,
@@ -866,6 +897,7 @@
 				040ED914240BED6E005B65DC /* Message.swift in Sources */,
 				040ED91A240BEF3D005B65DC /* UIImageExtension.swift in Sources */,
 				3481C3612406986D00C15B57 /* ARCameraTrackingState.swift in Sources */,
+				04B964AB24869F5400A41991 /* PostsCell.swift in Sources */,
 				0424C0C424073DFC008986C2 /* FurnitureViewCellTableViewCell.swift in Sources */,
 				3481C3532406986D00C15B57 /* Gesture.swift in Sources */,
 				E258633A22F430E800B5080D /* CheckoutFormMetadeta.swift in Sources */,

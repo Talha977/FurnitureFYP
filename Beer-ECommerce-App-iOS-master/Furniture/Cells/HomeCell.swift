@@ -28,6 +28,13 @@ class HomeCell: UITableViewCell {
     
     @IBOutlet weak var btnOptions: UIButton!
     
+    @IBOutlet weak var btnLike: UIButton!
+    
+    @IBOutlet weak var btnComment: UIButton!
+    
+    @IBOutlet weak var btnShare: UIButton!
+    
+    @IBOutlet weak var btnSave: UIButton!
     var dropDownData = [String]()
     var optionSelected :((_ optionName : String) -> Void )? = nil
 
@@ -91,5 +98,17 @@ class HomeCell: UITableViewCell {
         }
     
     
+    @IBAction func btnLikePress(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
     
+    @IBAction func btnCommentPress(_ sender: Any) {
+    }
+    @IBAction func btnSharePress(_ sender: Any) {
+    }
+    
+    @IBAction func btnSavePress(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+
+    }
 }
