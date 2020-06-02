@@ -11,6 +11,7 @@ import UIKit
 class PostsCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+
    
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +31,7 @@ class PostsCell: UITableViewCell {
 
 extension PostsCell :UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return ProfileViewController.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -22,6 +22,8 @@ class ProfileCell: UITableViewCell {
     @IBOutlet weak var saveView: UIView!
     
     @IBOutlet weak var profileStack: UIStackView!
+    
+    var changeData : (( _ isPosts : Bool) -> Void )? = nil
    
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,11 +57,14 @@ class ProfileCell: UITableViewCell {
     @IBAction func btnSavePressed(_ sender: Any) {
         saveView.isHidden = false
         postView.isHidden = true
+        changeData?(false)
 
     }
     
     @IBAction func btnPostPressed(_ sender: Any) {
         saveView.isHidden = true
         postView.isHidden = false
+        changeData?(true)
+
     }
 }
