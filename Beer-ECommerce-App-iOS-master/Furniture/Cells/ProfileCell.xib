@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-Mk-jly">
-                        <rect key="frame" x="25.5" y="25.5" width="99" height="99"/>
+                        <rect key="frame" x="29" y="29" width="92" height="92"/>
                         <color key="backgroundColor" name="Primary Color"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="hrV-Mk-jly" secondAttribute="height" multiplier="1:1" id="YUq-uA-ApL"/>
                         </constraints>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-9w-ELH">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-9w-ELH">
                         <rect key="frame" x="30" y="31.5" width="90" height="87"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -168,7 +168,7 @@
                     <constraint firstItem="X97-9x-l8X" firstAttribute="leading" secondItem="CpA-9w-ELH" secondAttribute="trailing" constant="30" id="noX-jZ-Dez"/>
                     <constraint firstItem="wR4-7O-ICL" firstAttribute="trailing" secondItem="CpA-9w-ELH" secondAttribute="trailing" constant="-4" id="rWs-KJ-kBL"/>
                     <constraint firstItem="wR4-7O-ICL" firstAttribute="bottom" secondItem="CpA-9w-ELH" secondAttribute="bottom" id="rgL-00-lHc"/>
-                    <constraint firstItem="hrV-Mk-jly" firstAttribute="height" secondItem="CpA-9w-ELH" secondAttribute="height" multiplier="1.1" id="zzh-L6-dTg"/>
+                    <constraint firstItem="hrV-Mk-jly" firstAttribute="height" secondItem="CpA-9w-ELH" secondAttribute="height" multiplier="1.02" id="zzh-L6-dTg"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
