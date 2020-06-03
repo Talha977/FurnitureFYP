@@ -17,6 +17,7 @@ class ProfileCell: UITableViewCell {
     @IBOutlet weak var imgPlus: UIImageView!
     @IBOutlet weak var lblPostsCount: UILabel!
    
+    @IBOutlet weak var lblSave: UILabel!
     @IBOutlet weak var postView: UIView!
     
     @IBOutlet weak var saveView: UIView!
@@ -25,6 +26,8 @@ class ProfileCell: UITableViewCell {
     
     var changeData : (( _ isPosts : Bool) -> Void )? = nil
    
+    @IBOutlet weak var progress: UIActivityIndicatorView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

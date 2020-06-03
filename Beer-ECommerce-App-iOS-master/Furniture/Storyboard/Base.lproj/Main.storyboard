@@ -13,14 +13,14 @@
             <objects>
                 <viewController storyboardIdentifier="VC" modalPresentationStyle="fullScreen" id="uOC-h3-kXW" customClass="ViewController" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c5Z-Kd-hvF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="furn3" translatesAutoresizingMaskIntoConstraints="NO" id="SzN-yS-iUJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="itM-Lj-bLs">
-                                <rect key="frame" x="20" y="258.5" width="335" height="130"/>
+                                <rect key="frame" x="20" y="268.5" width="335" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD4-zh-bsr">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -158,7 +158,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qw9-M0-4wV">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="izF-T0-E2B" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigation" modalPresentationStyle="fullScreen" id="izF-T0-E2B" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ty8-E0-Dgz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="be0-Ie-sYJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -169,17 +169,33 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="8oA-PV-Cs7" kind="relationship" relationship="rootViewController" id="iUf-hQ-ueh"/>
+                        <segue destination="8oA-PV-Cs7" kind="relationship" relationship="rootViewController" id="5f1-Ml-zeS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftv-Cr-WTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2994" y="865"/>
         </scene>
+        <!--Notification-->
+        <scene sceneID="0n9-8v-5gm">
+            <objects>
+                <viewController id="USF-NX-MYk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ml9-BY-yHN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="00a-As-Ae9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notification" image="bell" catalog="system" id="0yc-CD-EQt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uFf-Eo-fvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2051" y="155"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="M26-rG-3FZ">
             <objects>
-                <tabBarController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="8oA-PV-Cs7" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeView" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="8oA-PV-Cs7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4D7-jT-Nak"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y8P-NB-3Aq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -193,7 +209,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Opr-3e-bA4"/>
                         <segue destination="JDp-QH-C7o" kind="relationship" relationship="viewControllers" id="kYm-eq-YeM"/>
                         <segue destination="92X-Lh-MT8" kind="relationship" relationship="viewControllers" id="P39-Xl-07i"/>
-                        <segue destination="IVv-VA-Rgw" kind="relationship" relationship="viewControllers" id="IM3-8N-GRT"/>
+                        <segue destination="USF-NX-MYk" kind="relationship" relationship="viewControllers" id="LuG-a0-4TP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zO-38-alW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,11 +271,11 @@
             <objects>
                 <viewController storyboardIdentifier="Profile" id="IVv-VA-Rgw" customClass="ProfileViewController" customModule="Furnitura" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a1Y-jf-c8l">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dTG-xE-hZd">
-                                <rect key="frame" x="0.0" y="10" width="375" height="627"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -269,7 +285,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ne4-Ao-4iH">
-                                <rect key="frame" x="295" y="508" width="50" height="50"/>
+                                <rect key="frame" x="295" y="577" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5Zt-Wj-Kac"/>
                                     <constraint firstAttribute="width" secondItem="ne4-Ao-4iH" secondAttribute="height" multiplier="1:1" id="BF1-KA-dVv"/>
@@ -291,6 +307,7 @@
                         <viewLayoutGuide key="safeArea" id="umg-2F-vdN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="0SF-CL-hmN"/>
+                    <navigationItem key="navigationItem" id="dCw-mG-gqE"/>
                     <connections>
                         <outlet property="btnSignOut" destination="ne4-Ao-4iH" id="d7Z-IQ-UVx"/>
                         <outlet property="tableView" destination="dTG-xE-hZd" id="h4H-9J-v4k"/>
@@ -1052,7 +1069,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rMV-MI-ijO"/>
-        <segue reference="iYt-UW-BMf"/>
+        <segue reference="px7-7g-QQM"/>
         <segue reference="SOo-BQ-16p"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1062,6 +1079,7 @@
         <image name="UpBtn" width="30" height="30"/>
         <image name="add" width="48" height="48"/>
         <image name="arkit" catalog="system" width="128" height="128"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="furn3" width="1146" height="1500"/>
         <image name="house" catalog="system" width="128" height="110"/>

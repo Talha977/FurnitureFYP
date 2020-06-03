@@ -26,46 +26,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if Auth.auth().currentUser != nil {
             let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-
+            let tabBarVC = storyboard.instantiateViewController(withIdentifier: "HomeView") as! UITabBarController
            
-
-             let tabBarVC = UITabBarController()
-             
-             let homeBarVC = storyboard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
-            homeBarVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.fill"), selectedImage: nil)
-                             
-             let inboxBarVC = storyboard.instantiateViewController(withIdentifier: "Inbox") as! InboxBarViewController
-                 inboxBarVC.tabBarItem = UITabBarItem(title: "Inbox", image: UIImage(systemName: "envelope"), selectedImage: nil)
-
-             let arkitVC = storyboard.instantiateViewController(withIdentifier: "AR") as! MainViewController
-                 arkitVC.tabBarItem = UITabBarItem(title: "AR View", image: UIImage(systemName: "arkit"), selectedImage: nil)
+            let navBar = storyboard.instantiateViewController(withIdentifier: "MainNavigation") as! UINavigationController
             
-                                 
-             let dashboardVC = storyboard.instantiateViewController(withIdentifier: "Dashboard") as! FurnitureListView
-                 dashboardVC.tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(systemName: "list.dash"), selectedImage: nil)
-            
-            let profileVC = storyboard.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
-                   profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), selectedImage: nil)
-            
-            
-                             
-                             
-                             
-            let controllers = [homeBarVC,dashboardVC, inboxBarVC,arkitVC, profileVC]
-            tabBarVC.viewControllers = controllers
-            
-//            tabBarVC.tabBar.isTranslucent = false
-
-            tabBarVC.tabBar.barTintColor = UIColor(red: 44/255, green: 46/255, blue: 47/255, alpha: 1)
-            
-            tabBarVC.tabBar.tintColor = UIColor(red: 234/255, green: 174/255, blue: 47/255, alpha: 1)
-            
-            self.navigationController = UINavigationController.init(rootViewController:tabBarVC)
-            
-            self.navigationController.navigationBar.barTintColor = UIColor(red: 44/255, green: 46/255, blue: 47/255, alpha: 1)
-            
-            UINavigationBar.appearance().tintColor = UIColor(red: 234/255, green: 174/255, blue: 47/255, alpha: 1)
-            window?.rootViewController = self.navigationController
+//             let tabBarVC = UITabBarController()
+//
+//             let homeBarVC = storyboard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+//            homeBarVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.fill"), selectedImage: nil)
+//
+//             let inboxBarVC = storyboard.instantiateViewController(withIdentifier: "Inbox") as! InboxBarViewController
+//                 inboxBarVC.tabBarItem = UITabBarItem(title: "Inbox", image: UIImage(systemName: "envelope"), selectedImage: nil)
+//
+//             let arkitVC = storyboard.instantiateViewController(withIdentifier: "AR") as! MainViewController
+//                 arkitVC.tabBarItem = UITabBarItem(title: "AR View", image: UIImage(systemName: "arkit"), selectedImage: nil)
+//
+//
+//             let dashboardVC = storyboard.instantiateViewController(withIdentifier: "Dashboard") as! FurnitureListView
+//                 dashboardVC.tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(systemName: "list.dash"), selectedImage: nil)
+//
+//            let profileVC = storyboard.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
+//                   profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), selectedImage: nil)
+//
+//
+//
+//
+//
+//            let controllers = [homeBarVC,dashboardVC, inboxBarVC,arkitVC, profileVC]
+//            tabBarVC.viewControllers = controllers
+//
+////            tabBarVC.tabBar.isTranslucent = false
+//
+//            tabBarVC.tabBar.barTintColor = UIColor(red: 44/255, green: 46/255, blue: 47/255, alpha: 1)
+//
+//            tabBarVC.tabBar.tintColor = UIColor(red: 234/255, green: 174/255, blue: 47/255, alpha: 1)
+//
+//            self.navigationController = UINavigationController.init(rootViewController:tabBarVC)
+//
+//            self.navigationController.navigationBar.barTintColor = UIColor(red: 44/255, green: 46/255, blue: 47/255, alpha: 1)
+//
+//            UINavigationBar.appearance().tintColor = UIColor(red: 234/255, green: 174/255, blue: 47/255, alpha: 1)
+            window?.rootViewController = navBar//self.navigationController
                 window?.makeKeyAndVisible()
         }
         return true

@@ -17,31 +17,47 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XY7-PM-IKY">
-                        <rect key="frame" x="0.0" y="0.5" width="50" height="49"/>
-                        <color key="tintColor" name="Primary Color"/>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izJ-mi-Bjh">
+                        <rect key="frame" x="0.0" y="49" width="50" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="XY7-PM-IKY" secondAttribute="height" multiplier="1:1" id="hXW-ey-ufG"/>
+                            <constraint firstAttribute="height" constant="1" id="hUt-FX-14z"/>
                         </constraints>
+                    </view>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYZ-DX-wBv">
+                        <rect key="frame" x="49" y="0.0" width="1" height="49"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="Hyz-s8-a0E"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="furn4" translatesAutoresizingMaskIntoConstraints="NO" id="XY7-PM-IKY">
+                        <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                        <color key="tintColor" name="Primary Color"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="XY7-PM-IKY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2es-6B-hgJ"/>
-                <constraint firstAttribute="trailing" secondItem="XY7-PM-IKY" secondAttribute="trailing" id="8b3-gd-6Qo"/>
-                <constraint firstAttribute="bottom" secondItem="XY7-PM-IKY" secondAttribute="bottom" id="8vU-dW-TVv"/>
-                <constraint firstItem="XY7-PM-IKY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Imv-50-w5t"/>
-                <constraint firstItem="XY7-PM-IKY" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="ltt-bv-hIK"/>
+                <constraint firstItem="PYZ-DX-wBv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ElL-2g-Xmy"/>
+                <constraint firstAttribute="trailing" secondItem="PYZ-DX-wBv" secondAttribute="trailing" id="Sxh-lz-1Y4"/>
+                <constraint firstItem="PYZ-DX-wBv" firstAttribute="leading" secondItem="XY7-PM-IKY" secondAttribute="trailing" id="VW2-rV-gP1"/>
+                <constraint firstItem="XY7-PM-IKY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YK4-L6-aGu"/>
+                <constraint firstAttribute="trailing" secondItem="izJ-mi-Bjh" secondAttribute="trailing" id="aDk-48-dpm"/>
+                <constraint firstItem="izJ-mi-Bjh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bmZ-Qh-cS2"/>
+                <constraint firstItem="XY7-PM-IKY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="quh-g1-Sks"/>
+                <constraint firstAttribute="bottom" secondItem="izJ-mi-Bjh" secondAttribute="bottom" id="r2b-9X-t0S"/>
+                <constraint firstAttribute="bottom" secondItem="PYZ-DX-wBv" secondAttribute="bottom" constant="1" id="tA5-tl-icK"/>
+                <constraint firstItem="izJ-mi-Bjh" firstAttribute="top" secondItem="XY7-PM-IKY" secondAttribute="bottom" id="zv8-TW-cNJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="postImage" destination="XY7-PM-IKY" id="tEg-VW-jda"/>
             </connections>
-            <point key="canvasLocation" x="71.014492753623188" y="104.46428571428571"/>
+            <point key="canvasLocation" x="69.565217391304358" y="104.46428571428571"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="furn4" width="255" height="197"/>
         <namedColor name="Primary Color">
             <color red="0.91764705882352937" green="0.67450980392156867" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

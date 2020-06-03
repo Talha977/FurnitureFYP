@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
     var profileImage:UIImage?
     
     var hud : JGProgressHUD  = JGProgressHUD(style: .dark)
-
+    var isProgressHidden : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +37,8 @@ class ProfileViewController: UIViewController {
         tableView.register(UINib(nibName: "PostsCell", bundle: nil), forCellReuseIdentifier: "PostsCell")
         
         let imageUrl = Auth.auth().currentUser?.photoURL
-        
+
+        self.title = "Profile"
         if imageUrl != nil{
             DispatchQueue.global().async { [weak self] in
                 if let data = try? Data(contentsOf: imageUrl!) {
@@ -45,10 +46,17 @@ class ProfileViewController: UIViewController {
                         DispatchQueue.main.async {
                             self?.profileImage = image
                             self?.tableView.reloadData()
+                            self?.isProgressHidden = true
+
+
                         }
                     }
                 }
             }
+        }else{
+            isProgressHidden = true
+            tableView.reloadData()
+            
         }
 
         
@@ -202,7 +210,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
             
             
             let profileCell  = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
-            
+            self.profileCell = profileCell
             profileCell.changeData = { isPosts in
                 if isPosts{
                     ProfileViewController.count = 100
@@ -227,6 +235,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
 
             }
             
+            if isProgressHidden {
+                profileCell.progress.isHidden = true
+            }
             profileCell.btnAddImage.addTarget(self, action: #selector(btnSelectImage(_:)), for: .touchUpInside)
             
             return profileCell

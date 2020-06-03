@@ -16,6 +16,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var postsArr = [Posts]()
     var hud : JGProgressHUD  = JGProgressHUD(style: .dark)
+    
+    var newMsgBtn = UIBarButtonItem()
+    var profileBtn = UIBarButtonItem()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +48,12 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Home"
-        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName : "square.and.pencil"), style: .done, target: self, action: #selector(addPostBtn))
         
+        newMsgBtn = UIBarButtonItem(image: UIImage(systemName : "square.and.pencil"), style: .done, target: self, action: #selector(addPostBtn))
+        profileBtn = UIBarButtonItem(image: UIImage(systemName : "person.fill"), style: .done, target: self, action: #selector(openProfile))
+        
+        self.tabBarController?.navigationItem.rightBarButtonItems = [profileBtn,newMsgBtn]
+
 //        if Auth.auth().currentUser == nil {
 //            btnNewPost.isHidden = true
 //        }else{
@@ -54,9 +62,19 @@ class HomeViewController: UIViewController {
 //        }
     }
     
-    @IBAction func addPostBtn(_ sender: Any) {
-        self.present(NewPostViewController(), animated: true, completion: nil)
+    override func viewDidDisappear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.rightBarButtonItems = [profileBtn]
     }
+    
+    @IBAction func addPostBtn(_ sender: Any) {
+        //self.present(NewPostViewController(), animated: true, completion: nil)
+        self.navigationController?.pushViewController(NewPostViewController(), animated: true)
+    }
+    @IBAction func openProfile(_ sender: Any) {
+           let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+           let vc = storyboard.instantiateViewController(withIdentifier:"Profile") as! ProfileViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+       }
     
     func getPost(completionHandler : ((_ post : [Posts]) -> Void)? = nil){
         let db = Firestore.firestore()
@@ -90,6 +108,11 @@ class HomeViewController: UIViewController {
         
     }
     
+    func share(image : UIImage){
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.present(activityController, animated: true, completion: nil)
+        
+    }
     
 }
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
@@ -120,6 +143,10 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell
         cell.setPost(post: postsArr[indexPath.row])
         
+        cell.sharedImage = { [weak self] (image) in
+            self!.share(image: image)
+        }
+
         cell.optionSelected = { [weak self] (name) in
             if name == "Delete"{
                 let db = Firestore.firestore(); db.collection("posts").document(self!.postsArr[indexPath.row].id).delete { (error) in

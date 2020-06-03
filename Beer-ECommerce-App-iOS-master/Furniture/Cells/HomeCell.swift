@@ -37,6 +37,8 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var btnSave: UIButton!
     var dropDownData = [String]()
     var optionSelected :((_ optionName : String) -> Void )? = nil
+    var sharedImage :((_ image : UIImage) -> Void )? = nil
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -105,6 +107,9 @@ class HomeCell: UITableViewCell {
     @IBAction func btnCommentPress(_ sender: Any) {
     }
     @IBAction func btnSharePress(_ sender: Any) {
+        if imgHomePic != nil {
+            sharedImage?((imgHomePic?.image)!)
+        }
     }
     
     @IBAction func btnSavePress(_ sender: UIButton) {

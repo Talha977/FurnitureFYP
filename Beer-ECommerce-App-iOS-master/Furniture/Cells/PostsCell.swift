@@ -29,7 +29,7 @@ class PostsCell: UITableViewCell {
     
 }
 
-extension PostsCell :UICollectionViewDelegate,UICollectionViewDataSource{
+extension PostsCell :UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ProfileViewController.count
     }
@@ -38,6 +38,12 @@ extension PostsCell :UICollectionViewDelegate,UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostImageCell", for: indexPath) as! PostImageCell
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width/3, height: collectionView.bounds.width/3)
+    }
+    
+    
     
     
 }
