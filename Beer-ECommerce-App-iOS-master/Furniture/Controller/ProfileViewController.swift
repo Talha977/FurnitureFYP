@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 import JGProgressHUD
 
 class ProfileViewController: UIViewController {
@@ -23,9 +24,15 @@ class ProfileViewController: UIViewController {
     static var count : Int = 100
     var profileCell = ProfileCell()
     var profileImage:UIImage?
+    var isFirstTime : Bool = true
     
     var hud : JGProgressHUD  = JGProgressHUD(style: .dark)
     var isProgressHidden : Bool = false
+    
+     var postsArr = [Posts]()
+     var savedPostArr = [Posts]()
+    var posts = [Posts]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +65,30 @@ class ProfileViewController: UIViewController {
             tableView.reloadData()
             
         }
+        
+        getPost { posts in
+            self.isFirstTime = true
+            self.tableView.reloadData()
+            let cell = self.tableView.cellForRow(at: [0,1]) as! PostsCell
+            cell.collectionView.reloadData()
+        }
 
+        getSavedPostIDs { ids in
+            
+            for id in ids{
+                self.getSavedPost(id: id){ post in
+                
+                    if self.savedPostArr.count == ids.count{
+                        self.tableView.reloadData()
+                        let cell = self.tableView.cellForRow(at: [0,1]) as! PostsCell
+                        cell.collectionView.reloadData()
+                    }
+                }
+                
+            }
+            
+            
+        }
         
     }
     
@@ -83,6 +113,82 @@ class ProfileViewController: UIViewController {
     @IBAction func btnSelectImage(_ sender: Any) {
         showBottomActivity()
     }
+    
+    func getPost(completionHandler : ((_ post : [Posts]) -> Void)? = nil){
+        let db = Firestore.firestore()
+        
+        db.collection("posts").whereField("id", isEqualTo : Auth.auth().currentUser!.uid).getDocuments() { (snapshot, error) in
+            self.hud.dismiss(animated: true)
+
+            if snapshot == nil {
+                return
+            }
+            for document in snapshot!.documents{
+                let documentID = document.documentID as! String
+                let id = document.get("id") as? String ?? ""
+                
+                let username = document.get("username") as? String ?? ""
+                let text = document.get("text") as? String ?? ""
+                let timestamp = document.get("timestamp") as? Double ?? 0
+                let image = document.get("imageurl") as? String ?? ""
+                let imageUrl = URL(string: image)
+                let profilePicImage = document.get("profilePicUrl") as? String ?? ""
+                let profilePicUrl = URL(string: profilePicImage)
+                
+                let post = Posts(username: username, timestamp: timestamp, id: documentID, text: text, image: imageUrl!, userid: id, profilePicUrl : profilePicUrl)
+                
+                self.postsArr.removeAll(where: {$0.timestamp == post.timestamp})
+                self.postsArr.append(post)
+                
+            }
+            self.postsArr.sort(by: {$0.timestamp > $1.timestamp})
+            
+            completionHandler!(self.postsArr)
+        }
+        
+    }
+    
+    func getSavedPostIDs(completionHandler : ((_ ids : [String]) -> Void)? = nil){
+        var ids = [String]()
+        let db = Firestore.firestore()
+        
+        db.collection("saved").document(Auth.auth().currentUser!.uid).collection("save").getDocuments { (snapshot, error) in
+            for document in snapshot!.documents{
+                let id = document.documentID
+                ids.append(id)
+            }
+            completionHandler!(ids)
+        }
+    }
+    
+    func getSavedPost(id : String ,completionHandler : ((_ saved : Posts) -> Void)? = nil){
+        let db = Firestore.firestore()
+        db.collection("posts").document(id).getDocument { snapshot, error in
+            let document = snapshot
+                let documentID = document?.documentID ?? ""
+                let id = document?.get("id") as? String ?? ""
+                
+                let username = document?.get("username") as? String ?? ""
+                let text = document?.get("text") as? String ?? ""
+                let timestamp = document?.get("timestamp") as? Double ?? 0
+                let image = document?.get("imageurl") as? String ?? ""
+                let imageUrl = URL(string: image)
+                let profilePicImage = document?.get("profilePicUrl") as? String ?? ""
+                let profilePicUrl = URL(string: profilePicImage)
+                
+                let post = Posts(username: username, timestamp: timestamp, id: documentID, text: text, image: imageUrl!, userid: id, profilePicUrl : profilePicUrl)
+            
+                self.savedPostArr.append(post)
+                
+                completionHandler?(post)
+            }
+
+        
+    }
+    
+    
+
+
     
     func showBottomActivity(){
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -211,16 +317,28 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
             
             let profileCell  = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
             self.profileCell = profileCell
+            profileCell.lblPostsCount.text = "\(postsArr.count)"
+            profileCell.lblSave.text = "\(savedPostArr.count)"
+
+            if (isFirstTime){
+            self.posts = self.postsArr
+                isFirstTime = false
+            }
             profileCell.changeData = { isPosts in
                 if isPosts{
-                    ProfileViewController.count = 100
+                    
+                    self.posts = self.postsArr
+                    
+                    tableView.reloadData()
                     let cell = tableView.cellForRow(at: [0,1]) as! PostsCell
                     cell.collectionView.reloadData()
                     
                     //tableView.reloadRows(at: [[0,1]], with: .automatic)
                     
                 }else{
-                    ProfileViewController.count = 1
+                    self.posts = self.savedPostArr
+                    tableView.reloadData()
+
                     let cell = tableView.cellForRow(at: [0,1]) as! PostsCell
                     cell.collectionView.reloadData()
                     
@@ -243,7 +361,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
             return profileCell
             
         }else{
-            let postsCell :UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "PostsCell") as! PostsCell
+            let postsCell  = tableView.dequeueReusableCell(withIdentifier: "PostsCell") as! PostsCell
+            postsCell.postsArr = self.posts
             return postsCell
         }
     }

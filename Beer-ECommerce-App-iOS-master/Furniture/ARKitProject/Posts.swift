@@ -14,6 +14,9 @@ struct Posts : Codable{
     var text : String
     var image : URL?
     var userid : String
+    var profilePicUrl : URL?
+     
+
     
 
 

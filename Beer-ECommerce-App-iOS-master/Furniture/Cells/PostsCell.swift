@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PostsCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var postsArr = [Posts]()
    
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,11 +33,14 @@ class PostsCell: UITableViewCell {
 
 extension PostsCell :UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ProfileViewController.count
+        return postsArr.count//ProfileViewController.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostImageCell", for: indexPath) as! PostImageCell
+        
+        cell.postImage.kf.setImage(with: postsArr[indexPath.row].image)
+
         return cell
     }
     

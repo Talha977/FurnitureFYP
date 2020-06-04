@@ -7,6 +7,7 @@
 //
 import Firebase
 import MessageKit
+import FirebaseFirestore
 
 
 struct Message: MessageType {

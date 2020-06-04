@@ -4,6 +4,8 @@ import SceneKit
 import UIKit
 import Photos
 import Firebase
+import FirebaseFirestore
+
 
 
 class MainViewController: UIViewController {

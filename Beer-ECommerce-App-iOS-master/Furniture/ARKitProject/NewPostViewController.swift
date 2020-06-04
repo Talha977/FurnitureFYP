@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import JGProgressHUD
+import FirebaseFirestore
 
 class NewPostViewController: UIViewController {
 
@@ -37,7 +38,7 @@ class NewPostViewController: UIViewController {
         Utilities.styleFilledButton(btnPost)
 
          
-        hud.textLabel.text = "Loading"
+       // hud.textLabel.text = "Loading"
 
         
     }
@@ -63,26 +64,48 @@ class NewPostViewController: UIViewController {
     }
     
     @IBAction func btnPostPressed(_ sender: Any) {
+        hud.textLabel.text = ""
+        hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
+
         hud.show(in: self.view)
+        
         addPost()
+        
+        
     }
     
     func addPost (){
+        if imgHomePic.image == nil {
+            hud.textLabel.text = "No Image Added"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.dismiss(afterDelay: 2, animated: true)
+            return
+            
+        }
             let text = tfHomeText.text
             let timestamp = NSDate().timeIntervalSince1970
         uploadImage { (url) in
-            let payload = ["text" : text , "timestamp" : timestamp , "username" : Auth.auth().currentUser?.displayName ,"imageurl" : url?.absoluteString , "id" : Auth.auth().currentUser?.uid] as [String : Any]
+            let payload = ["text" : text , "timestamp" : timestamp , "username" : Auth.auth().currentUser?.displayName ,"imageurl" : url?.absoluteString , "id" : Auth.auth().currentUser?.uid, "profilePicUrl" : Auth.auth().currentUser?.photoURL?.absoluteString
+                            ] as [String : Any]
                 
                 let db = Firestore.firestore()
                 db.collection("posts").addDocument(data: payload) { (error) in
                     if error != nil{
                         print("succeful")
-                        self.tfHomeText.text = ""
-                        self.hud.dismiss(animated: true)
+                       
 
+
+                    }else{
+                        self.tfHomeText.text = ""
+                        self.imgHomePic.image = nil
+                        self.btnAddPicture.isSelected = false
+                        self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                        self.hud.textLabel.text = "Posted"
+                        self.hud.dismiss(afterDelay: 1, animated: true)
+                        //self.navigationController?.popViewController(animated: true)
+                        //
 
                     }
-                    self.dismiss(animated: true, completion: nil)
                 }
 
         }

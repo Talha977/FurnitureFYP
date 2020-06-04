@@ -23,8 +23,8 @@
                             <constraint firstAttribute="width" secondItem="hrV-Mk-jly" secondAttribute="height" multiplier="1:1" id="YUq-uA-ApL"/>
                         </constraints>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-9w-ELH">
-                        <rect key="frame" x="30" y="31.5" width="90" height="87"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-9w-ELH">
+                        <rect key="frame" x="30" y="31.5" width="90" height="87.5"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="90" id="meb-g2-A2h"/>
@@ -212,7 +212,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.grid.3x2" catalog="system" width="128" height="101"/>
         <image name="save" width="50" height="50"/>

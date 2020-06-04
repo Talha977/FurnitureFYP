@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import JGProgressHUD
+import FirebaseFirestore
+
 
 class HomeViewController: UIViewController {
     
@@ -20,6 +22,8 @@ class HomeViewController: UIViewController {
     var newMsgBtn = UIBarButtonItem()
     var profileBtn = UIBarButtonItem()
 
+    var savedIds = [String]()
+    var likedIds = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +32,7 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         tableView.delegate = self
         tableView.dataSource = self
-        hud.textLabel.text = "Loading"
+        //hud.textLabel.text = "Loading"
         hud.show(in: self.view)
 
         
@@ -39,6 +43,19 @@ class HomeViewController: UIViewController {
 //            self.postsArr.append(contentsOf: posts)
             self.postsArr = posts
             self.tableView.reloadData()
+        }
+        
+        getLikedPostIDs { likedIds in
+            self.tableView.reloadData()
+
+            self.likedIds = likedIds
+        }
+        getSavedPostIDs { saveIds in
+            self.tableView.reloadData()
+
+            self.savedIds = saveIds
+
+            
         }
         
 
@@ -66,6 +83,36 @@ class HomeViewController: UIViewController {
         self.tabBarController?.navigationItem.rightBarButtonItems = [profileBtn]
     }
     
+    func getSavedPostIDs(completionHandler : ((_ ids : [String]) -> Void)? = nil){
+        var ids = [String]()
+        let db = Firestore.firestore()
+        guard let userID = Auth.auth().currentUser?.uid else {return }
+        db.collection("saved").document(userID).collection("save").getDocuments { (snapshot, error) in
+            for document in snapshot!.documents{
+                let id = document.documentID
+                ids.append(id)
+            }
+            completionHandler!(ids)
+        }
+    }
+    
+    
+    func getLikedPostIDs(completionHandler : ((_ ids : [String]) -> Void)? = nil){
+        var ids = [String]()
+        let db = Firestore.firestore()
+        
+        guard let userID = Auth.auth().currentUser?.uid else {return }
+        db.collection("liked").document(userID).collection("like").getDocuments { (snapshot, error) in
+            for document in snapshot!.documents{
+                let id = document.documentID
+                ids.append(id)
+            }
+            completionHandler!(ids)
+        }
+    }
+    
+    
+    
     @IBAction func addPostBtn(_ sender: Any) {
         //self.present(NewPostViewController(), animated: true, completion: nil)
         self.navigationController?.pushViewController(NewPostViewController(), animated: true)
@@ -79,7 +126,7 @@ class HomeViewController: UIViewController {
     func getPost(completionHandler : ((_ post : [Posts]) -> Void)? = nil){
         let db = Firestore.firestore()
         
-        db.collection("posts").getDocuments { (snapshot, error) in
+        db.collection("posts").addSnapshotListener { (snapshot, error) in
             self.hud.dismiss(animated: true)
 
             if snapshot == nil {
@@ -94,8 +141,10 @@ class HomeViewController: UIViewController {
                 let timestamp = document.get("timestamp") as? Double ?? 0
                 let image = document.get("imageurl") as? String ?? ""
                 let imageUrl = URL(string: image)
+                let profilePicImage = document.get("profilePicUrl") as? String ?? ""
+                let profilePicUrl = URL(string: profilePicImage)
                 
-                let post = Posts(username: username, timestamp: timestamp, id: documentID, text: text, image: imageUrl!, userid: id)
+                let post = Posts(username: username, timestamp: timestamp, id: documentID, text: text, image: imageUrl!, userid: id, profilePicUrl : profilePicUrl)
                 
                 self.postsArr.removeAll(where: {$0.timestamp == post.timestamp})
                 self.postsArr.append(post)
@@ -141,7 +190,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell
-        cell.setPost(post: postsArr[indexPath.row])
+        cell.setPost(post: postsArr[indexPath.section], likedId: self.likedIds , savedId: self.savedIds)
         
         cell.sharedImage = { [weak self] (image) in
             self!.share(image: image)
