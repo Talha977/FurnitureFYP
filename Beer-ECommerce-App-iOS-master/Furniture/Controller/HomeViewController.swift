@@ -208,7 +208,10 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
                 
             }
             else if name == "Message"{
-                
+                let channel : Channel = Channel(id: Auth.auth().currentUser!.uid, name: Auth.auth().currentUser?.displayName ?? "danyal")
+                let  vc = ChatViewController(user: Auth.auth().currentUser!, channel: channel)
+                self?.navigationController?.pushViewController(vc, animated: true)
+
                 
             }
             else if name == "Response"{
