@@ -72,6 +72,7 @@ class ChatViewController: MessagesViewController {
     var isFromHome : Bool = false
     var postImage : UIImage?
     var hud = JGProgressHUD(style: .dark)
+    let greyBackgroundColor = UIColor(red: 44/255, green: 46/255, blue: 47/255, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,7 +80,6 @@ class ChatViewController: MessagesViewController {
             hud.show(in: self.view)
             sendPhoto(postImage!)
         }
-        self.view.backgroundColor = UIColor(red: 44/255, green: 46/255, blue: 47/255, alpha: 1)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .done, target: self, action: #selector(action(sender:)))
         guard let receiverId = channel.id else {
             navigationController?.popViewController(animated: true)
@@ -128,6 +128,7 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
         messagesCollectionView.messageCellDelegate = self
+        messagesCollectionView.backgroundColor = greyBackgroundColor
         
         
         //        configureMessageInputBar()
@@ -444,10 +445,10 @@ extension ChatViewController: MessagesDisplayDelegate {
             }
                 
             else {
-                return isFromCurrentSender(message: message) ? senderColor : .purple
+                return isFromCurrentSender(message: message) ? senderColor : .white
             }
         }
-        return isFromCurrentSender(message: message) ? senderColor : .purple
+        return isFromCurrentSender(message: message) ? senderColor : .white
         
     }
     
@@ -515,14 +516,14 @@ extension ChatViewController: MessagesDataSource {
     
     func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         if indexPath.section % 3 == 0 {
-            return NSAttributedString(string: MessageKitDateFormatter.shared.string(from: message.sentDate), attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+            return NSAttributedString(string: MessageKitDateFormatter.shared.string(from: message.sentDate), attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.white])
         }
         return nil
     }
     
     func messageTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         let name = message.sender.displayName
-        return NSAttributedString(string: name, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
+        return NSAttributedString(string: name, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1),NSAttributedString.Key.foregroundColor: UIColor.white])
     }
     
     

@@ -96,8 +96,8 @@ class SignUpViewController: UIViewController {
                     
                     let reference = Database.database().reference().child("notificationCount").child("users").child(Auth.auth().currentUser!.uid)
                     reference.setValue(0)
-                    self.performSegue(withIdentifier: "SignupScreen", sender: self)
-                    
+                    let nextVC = self.storyboard?.instantiateViewController(identifier: "MainNavigation") as? UINavigationController
+                    self.present(nextVC!, animated: true, completion: nil)
                 }
             }
             

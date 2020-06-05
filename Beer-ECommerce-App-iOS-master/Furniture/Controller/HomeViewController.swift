@@ -214,7 +214,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             else if name == "Message"{
                 
                 let channel : Channel = Channel(id: self!.postsArr[indexPath.section].userid, name: self!.postsArr[indexPath.section].username)
-                let  vc = ChatViewController(user: Auth.auth().currentUser!, channel: channel,isNewChat: false)
+                let  vc = ChatViewController(user: Auth.auth().currentUser!, channel: channel)
                 self!.inboxRef?.selectedId = channel.id ?? ""
                 
                 vc.inboxRef = self!.inboxRef

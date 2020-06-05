@@ -48,6 +48,7 @@
 		04E92CC7240B38E300B54AE4 /* InboxBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92CC6240B38E300B54AE4 /* InboxBarViewController.swift */; };
 		04F7FAF0248AA6FB005DB2F4 /* InboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7FAEE248AA6FA005DB2F4 /* InboxCell.xib */; };
 		04F7FAF1248AA6FB005DB2F4 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FAEF248AA6FB005DB2F4 /* InboxCell.swift */; };
+		04F7FAF3248AE4F8005DB2F4 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FAF2248AE4F8005DB2F4 /* NotificationViewController.swift */; };
 		3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481C30E2406953100C15B57 /* ARKit.framework */; };
 		3481C34D2406986D00C15B57 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C32E2406986C00C15B57 /* Models.scnassets */; };
 		3481C34E2406986D00C15B57 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C32F2406986C00C15B57 /* Utilities.swift */; };
@@ -212,6 +213,7 @@
 		04E92CC6240B38E300B54AE4 /* InboxBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxBarViewController.swift; sourceTree = "<group>"; };
 		04F7FAEE248AA6FA005DB2F4 /* InboxCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InboxCell.xib; sourceTree = "<group>"; };
 		04F7FAEF248AA6FB005DB2F4 /* InboxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
+		04F7FAF2248AE4F8005DB2F4 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA322367DBE64D405E65460 /* Pods-FurnitureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureApp.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp.debug.xcconfig"; sourceTree = "<group>"; };
 		17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraft.release.xcconfig"; path = "Target Support Files/Pods-BeerCraft/Pods-BeerCraft.release.xcconfig"; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 				0426880524162206001B757D /* SignUpViewController.swift */,
 				040ED910240BE269005B65DC /* ProfileViewController.swift */,
 				040ED91F240C00BB005B65DC /* ViewController.swift */,
+				04F7FAF2248AE4F8005DB2F4 /* NotificationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 			files = (
 				3481C35D2406986D00C15B57 /* Vase.swift in Sources */,
 				04B964AF2486A2BA00A41991 /* PostImageCell.swift in Sources */,
+				04F7FAF3248AE4F8005DB2F4 /* NotificationViewController.swift in Sources */,
 				3481C3522406986D00C15B57 /* HitTestVisualization.swift in Sources */,
 				04F7FAF1248AA6FB005DB2F4 /* InboxCell.swift in Sources */,
 				0424C0AF2407256B008986C2 /* FurnitureListView.swift in Sources */,

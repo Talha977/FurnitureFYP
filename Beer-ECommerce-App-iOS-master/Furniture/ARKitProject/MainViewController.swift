@@ -42,9 +42,12 @@ class MainViewController: UIViewController {
         
         UIApplication.shared.isIdleTimerDisabled = true
         restartPlaneDetection()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+
         super.viewWillDisappear(animated)
         session.pause()
     }

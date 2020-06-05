@@ -29,6 +29,7 @@ class InboxBarViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         tableView.register(UINib(nibName: "InboxCell", bundle: nil), forCellReuseIdentifier: "InboxCell")
+        tableView.tableFooterView = UIView()
         self.selectedInboxUnreadMsgs =  0
         self.selectedId = ""
         self.tableView.reloadData()
@@ -193,6 +194,17 @@ extension InboxBarViewController : UITableViewDelegate, UITableViewDataSource{
 
         cell.lblChatName.text = channels[indexPath.row].name
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let channel = channels[indexPath.row]
+        selectedId = channel.id ?? ""
+        selectedInboxUnreadMsgs = channel.unreadMessages
+        
+        let vc = ChatViewController(user: Auth.auth().currentUser!, channel: channel,isNewChat: false)
+        vc.inboxRef = self
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

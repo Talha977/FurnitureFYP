@@ -568,7 +568,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0FCB8938-2913-451E-A1A4-35F02AAC70FC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Furniture/Controller/ProfileViewController.swift"
@@ -672,7 +672,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "79"
                   endingLineNumber = "79"
-                  offsetFromSymbolStart = "495">
+                  offsetFromSymbolStart = "472">
                </Location>
                <Location
                   uuid = "6D433E70-A581-419F-A95D-0FFE205494DD - 9b00bea064bfd10b"
@@ -687,7 +687,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "81"
                   endingLineNumber = "81"
-                  offsetFromSymbolStart = "126">
+                  offsetFromSymbolStart = "160">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -696,7 +696,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A47462CC-1F68-4CDC-AC62-8C284476A2AA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Furniture/Controller/ProfileViewController.swift"
@@ -711,56 +711,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CF4668C0-63DD-4C4D-AED7-8E5308B46D08"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Furniture/Controller/ProfileViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CF4668C0-63DD-4C4D-AED7-8E5308B46D08 - 19bc7f2c6a1c3751"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Array&lt;Swift.String&gt;) -&gt; () in Furnitura.ProfileViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Furnitura"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/Xcode%20Projects/FurnitureFYP/Beer-ECommerce-App-iOS-master/Furniture/Controller/ProfileViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "495">
-               </Location>
-               <Location
-                  uuid = "CF4668C0-63DD-4C4D-AED7-8E5308B46D08 - 9b00bea064bfd10b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Furnitura.Posts) -&gt; () in closure #3 (Swift.Array&lt;Swift.String&gt;) -&gt; () in Furnitura.ProfileViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Furnitura"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/Xcode%20Projects/FurnitureFYP/Beer-ECommerce-App-iOS-master/Furniture/Controller/ProfileViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "126">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "94334C2F-825C-49A3-9708-8440A850AF78"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Furniture/Controller/ProfileViewController.swift"
@@ -808,7 +760,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1EC46EAD-5ABA-4830-AE89-595D76324BE0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Furniture/Controller/ProfileViewController.swift"
@@ -824,7 +776,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EF1778EA-13AF-4810-9FCB-AE63CF35EE2A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Furniture/Controller/ProfileViewController.swift"
@@ -840,7 +792,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B63A0930-42AC-4A2D-982F-8D442E7704F3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Furniture/Controller/ProfileViewController.swift"
@@ -894,8 +846,8 @@
             filePath = "Furniture/Chat/InboxBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -910,8 +862,8 @@
             filePath = "Furniture/Chat/InboxBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "getChannelsFromSenderID(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -920,14 +872,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4B40D0CA-8AE0-4576-9490-8E2CC2336675"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Furniture/Chat/InboxBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "getChannelsFromRecID(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -942,8 +894,8 @@
             filePath = "Furniture/Chat/InboxBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "getChannelsFromRecID(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -958,8 +910,8 @@
             filePath = "Furniture/Chat/InboxBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "getChannelsFromSenderID(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -974,9 +926,105 @@
             filePath = "Furniture/Chat/InboxBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "getChannelsFromSenderID(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E230D91A-B444-4BB2-A686-7958DD41CF31"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Furniture/Controller/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "logginTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CBFC609-7D0B-4CD9-A859-EC73284642B8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Furniture/Controller/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "logginTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B75C4250-B28C-4E03-95DE-CDCB0338037E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Furniture/Controller/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21E01BE7-1BB2-44FF-A29B-D73C8E03A50C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Furniture/Controller/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "427E54AE-F8AE-43A0-97D7-B53FD25517DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Furniture/Chat/InboxBarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0AF4B2F9-E9E4-4958-9049-7BC26A8EABC7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Furniture/Controller/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "logginTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

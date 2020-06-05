@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -23,7 +24,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     
-    
+    var hud = JGProgressHUD(style: .dark)
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +35,7 @@ class LoginViewController: UIViewController {
     }
     
     func setUpElements(){
-        errorLabel.alpha = 0// hiding error label
+        // hiding error label
         
         //        Utilities.styleTextField(emailTextField)
         //        Utilities.styleTextField(passwordTextField)
@@ -47,26 +48,30 @@ class LoginViewController: UIViewController {
     
     @IBAction func logginTapped(_ sender: Any) {
         // valided text filed
-        
+        hud.show(in: self.view)
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            
+            self.hud.dismiss(animated: true)
+
             if error != nil{
-                // couldn't sign in
-                self.errorLabel.text = error!.localizedDescription
-                self.errorLabel.alpha = 1
+                self.errorLabel.isHidden = false
+
+               self.errorLabel.text = error?.localizedDescription
             }
             else{
+
+               // self.performSegue(withIdentifier: "loginController", sender: self)
+
                 
                 
+                                let nextVC = self.storyboard?.instantiateViewController(identifier: "MainNavigation") as? UINavigationController
+                self.present(nextVC!, animated: true, completion: nil)
+                //navigationController?.pushViewController(nextVC!, animated: true)
                 
-                //                let nextVC = self.storyboard?.instantiateViewController(identifier: "loginController") as? FurnitureListView
-                //                self.navigationController?.pushViewController(nextVC!, animated: true)
                 
-                self.performSegue(withIdentifier: "loginController", sender: self)
                 
             }
             
