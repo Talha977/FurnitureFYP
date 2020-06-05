@@ -146,6 +146,7 @@ class SignUpViewController: UIViewController {
         
         errorLabel.text = message
         errorLabel.alpha = 1
+        errorLabel.isHidden = false
     }
     
     

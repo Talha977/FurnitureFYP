@@ -43,6 +43,10 @@ class HomeCell: UITableViewCell {
     
 
     var post : Posts!
+    
+    @IBOutlet weak var commentProfilePic: UIImageView!
+    
+    @IBOutlet weak var commentTF: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -53,6 +57,10 @@ class HomeCell: UITableViewCell {
 
         imgUserPic.layer.cornerRadius = 25
         imgUserPic.layer.masksToBounds = true
+        commentProfilePic.layer.cornerRadius = 15
+        commentProfilePic.layer.masksToBounds = true
+        commentTF.attributedPlaceholder = NSAttributedString(string: "Add a comment ...",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemBackground])
         // Configure the view for the selected state
     }
     
@@ -77,6 +85,12 @@ class HomeCell: UITableViewCell {
             imgUserPic.image = UIImage(systemName: "person")
         }
 
+        if  Auth.auth().currentUser?.photoURL != nil {
+            commentProfilePic.kf.setImage(with:Auth.auth().currentUser?.photoURL )
+
+        }else{
+            commentProfilePic.image = UIImage(systemName: "person.circle")
+        }
         
         if Auth.auth().currentUser?.uid == post.userid {
                 dropDownData = ["Delete"]
