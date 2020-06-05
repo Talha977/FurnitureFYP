@@ -12,7 +12,7 @@ import JGProgressHUD
 import FirebaseFirestore
 
 class NewPostViewController: UIViewController {
-
+    
     
     @IBOutlet weak var lblUsername: UILabel!
     
@@ -28,36 +28,36 @@ class NewPostViewController: UIViewController {
     
     let db = Firestore.firestore()
     var hud : JGProgressHUD  = JGProgressHUD(style: .dark)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         tfHomeText.attributedPlaceholder = NSAttributedString(string: "Say something ...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-
+        
         Utilities.styleFilledButton(btnPost)
-
-         
-       // hud.textLabel.text = "Loading"
-
+        
+        
+        // hud.textLabel.text = "Loading"
+        
         
     }
-
-
-
+    
+    
+    
     
     @IBAction func btnAddPicturePressed(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-//        sender.setTitle("", for: .selected)
-//        sender.setTitle("Add Picture", for: .disabled)
-
+        //        sender.setTitle("", for: .selected)
+        //        sender.setTitle("Add Picture", for: .disabled)
+        
         if sender.isSelected {
             showBottomActivity()
-
-        
+            
+            
         }else{
             imgHomePic.image = nil
-
+            
         }
         
         
@@ -66,7 +66,7 @@ class NewPostViewController: UIViewController {
     @IBAction func btnPostPressed(_ sender: Any) {
         hud.textLabel.text = ""
         hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
-
+        
         hud.show(in: self.view)
         
         addPost()
@@ -82,38 +82,50 @@ class NewPostViewController: UIViewController {
             return
             
         }
-            let text = tfHomeText.text
-            let timestamp = NSDate().timeIntervalSince1970
+        let text = tfHomeText.text
+        let timestamp = NSDate().timeIntervalSince1970
+        let currentUser = Auth.auth().currentUser
+        let uid = currentUser?.uid
+        let profileUrl = currentUser?.photoURL
+        let username = currentUser?.displayName
         uploadImage { (url) in
-            let payload = ["text" : text , "timestamp" : timestamp , "username" : Auth.auth().currentUser?.displayName ,"imageurl" : url?.absoluteString , "id" : Auth.auth().currentUser?.uid, "profilePicUrl" : Auth.auth().currentUser?.photoURL?.absoluteString
-                            ] as [String : Any]
-                
-                let db = Firestore.firestore()
-                db.collection("posts").addDocument(data: payload) { (error) in
-                    if error != nil{
-                        print("succeful")
-                       
-
-
-                    }else{
-                        self.tfHomeText.text = ""
-                        self.imgHomePic.image = nil
-                        self.btnAddPicture.isSelected = false
-                        self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
-                        self.hud.textLabel.text = "Posted"
-                        self.hud.dismiss(afterDelay: 1, animated: true)
-                        //self.navigationController?.popViewController(animated: true)
-                        //
-
+            let payload = ["text" : text , "timestamp" : timestamp , "username" : username ,"imageurl" : url?.absoluteString , "id" : uid, "profilePicUrl" : profileUrl?.absoluteString
+                ] as [String : Any]
+            
+            let db = Firestore.firestore()
+            db.collection("posts").addDocument(data: payload) { (error) in
+                if error != nil{
+                    
+                    
+                    
+                }else{
+                    self.tfHomeText.text = ""
+                    self.imgHomePic.image = nil
+                    self.btnAddPicture.isSelected = false
+                    self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                    self.hud.textLabel.text = "Posted"
+                    self.hud.dismiss(afterDelay: 1, animated: true)
+                    
+                    let notification = [ "senderName" : username ,
+                                         "notificationName" : "ForumPost" ,
+                                         "sentTo" : ["All"] ,
+                                         "description" : "New Post" ,
+                                         "timestamp" : timestamp,
+                                         "photoUrl": profileUrl?.absoluteString] as [String : Any]
+                    
+                    db.collection("notification").addDocument(data: notification){ (error) in
+                        
                     }
+                    
                 }
-
+            }
+            
         }
-}
+    }
     func uploadImage(completion: @escaping (_ url: URL?)->()) {
         guard let image = imgHomePic.image else { return }
         let storageRef = Storage.storage().reference().child("ForumImages").child("\(UUID())")
-
+        
         let imageData = image.jpegData(compressionQuality: 0.8)
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpeg"
@@ -140,7 +152,7 @@ class NewPostViewController: UIViewController {
         alertController.view.addSubview(imgViewCamera)
         
         //self.image = self.image?.withRenderingMode(.alwaysTemplate)
-                  //self.tintColor = value
+        //self.tintColor = value
         let imgAlbum = UIImage(systemName: "photo")!.withRenderingMode(.alwaysTemplate)
         let imgViewAlbum = UIImageView()
         imgViewAlbum.image = imgAlbum
@@ -148,33 +160,33 @@ class NewPostViewController: UIViewController {
         imgViewAlbum.frame = CGRect(x: 25, y: 75, width: 24, height: 20)
         alertController.view.addSubview(imgViewAlbum)
         //imageView1.frame =
-
-           // Create the actions
+        
+        // Create the actions
         let cameraAction = UIAlertAction(title: "Camera", style: UIAlertAction.Style.default) { action in
             self.scanImage()
         }
         
         let photosAction = UIAlertAction(title: "Photos", style: UIAlertAction.Style.default) {
-               UIAlertAction in
+            UIAlertAction in
             self.openGallery()
-           }
+        }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) {
-               UIAlertAction in
-               NSLog("Cancel Pressed")
-           }
-
-           // Add the actions
-           alertController.addAction(cameraAction)
-           alertController.addAction(photosAction)
-           alertController.addAction(cancelAction)
-
-           // Present the controller
+            UIAlertAction in
+            NSLog("Cancel Pressed")
+        }
+        
+        // Add the actions
+        alertController.addAction(cameraAction)
+        alertController.addAction(photosAction)
+        alertController.addAction(cancelAction)
+        
+        // Present the controller
         self.present(alertController, animated: true, completion: nil)
         
     }
     
     func scanImage(){
-    
+        
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
@@ -186,7 +198,7 @@ class NewPostViewController: UIViewController {
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true)
     }
-        
+    
     
     
 }

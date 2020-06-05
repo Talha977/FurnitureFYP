@@ -193,10 +193,30 @@
                     <view key="view" contentMode="scaleToFill" id="ml9-BY-yHN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h57-UR-Uju">
+                                <rect key="frame" x="0.0" y="44" width="365" height="574"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" name="Primary Color"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="USF-NX-MYk" id="AjK-7u-F5a"/>
+                                    <outlet property="delegate" destination="USF-NX-MYk" id="JJX-qq-tmo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="h57-UR-Uju" firstAttribute="top" secondItem="00a-As-Ae9" secondAttribute="top" id="X24-Nu-s0I"/>
+                            <constraint firstItem="h57-UR-Uju" firstAttribute="leading" secondItem="00a-As-Ae9" secondAttribute="leading" id="XL6-xi-RE8"/>
+                            <constraint firstItem="00a-As-Ae9" firstAttribute="trailing" secondItem="h57-UR-Uju" secondAttribute="trailing" constant="10" id="dXE-wp-dtB"/>
+                            <constraint firstItem="00a-As-Ae9" firstAttribute="bottom" secondItem="h57-UR-Uju" secondAttribute="bottom" id="eRp-Fa-Rif"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="00a-As-Ae9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notification" image="bell" catalog="system" id="0yc-CD-EQt"/>
+                    <connections>
+                        <outlet property="tableView" destination="h57-UR-Uju" id="KN9-VG-kXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uFf-Eo-fvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

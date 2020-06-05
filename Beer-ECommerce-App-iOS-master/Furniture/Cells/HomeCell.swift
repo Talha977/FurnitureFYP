@@ -40,6 +40,7 @@ class HomeCell: UITableViewCell {
     var optionSelected :((_ optionName : String) -> Void )? = nil
     
     var sharedImage :((_ image : UIImage) -> Void )? = nil
+
     
 
     var post : Posts!
@@ -144,19 +145,35 @@ class HomeCell: UITableViewCell {
     @IBAction func btnLikePress(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         let db = Firestore.firestore()
-        guard let userID = Auth.auth().currentUser?.uid else {return }
+        guard let currentUser = Auth.auth().currentUser else {return }
+        let uid = currentUser.uid
+        let profileUrl = currentUser.photoURL
+        let username = currentUser.displayName
+        let timestamp = NSDate().timeIntervalSince1970
 
         if sender.isSelected{
 
-            db.collection("liked").document(userID).collection("like").document(post.id).setData(["postID": post.id])
+            db.collection("liked").document(uid).collection("like").document(post.id).setData(["postID": post.id])
+            
+            let notification = [ "senderName" : username ,
+                                 "notificationName" : "Likes" ,
+                                 "sentTo" : [self.post.userid] ,
+                                 "description" : "New Like" ,
+                                 "timestamp" : timestamp,
+                                 "photoUrl": profileUrl?.absoluteString] as [String : Any]
+            
+            db.collection("notification").addDocument(data: notification){ (error) in
+                
+            }
         }else{
-            db.collection("liked").document(userID)
+            db.collection("liked").document(uid)
                 .collection("like").document(post.id).delete()
             
         }
     }
     
     @IBAction func btnCommentPress(_ sender: Any) {
+        
     }
     
     @IBAction func btnSharePress(_ sender: Any) {
@@ -172,10 +189,13 @@ class HomeCell: UITableViewCell {
 
         if sender.isSelected{
             db.collection("saved").document(userID).collection("save").document(post.id).setData(["postID": post.id])
+            
+            
         }else{
             db.collection("saved").document(userID)
                 .collection("save").document(post.id).delete()
             
         }
     }
+    
 }

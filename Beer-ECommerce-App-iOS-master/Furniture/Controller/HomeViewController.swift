@@ -37,6 +37,7 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         //hud.textLabel.text = "Loading"
+        hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
         hud.show(in: self.view)
 
         
@@ -167,6 +168,61 @@ class HomeViewController: UIViewController {
         
     }
     
+    func addComment(text : String, postID : String, senderID : String ,completion : ((_ success : Bool)-> Void)? = nil){
+        let currentUser = Auth.auth().currentUser
+        let uid = currentUser?.uid
+        let profileUrl = currentUser?.photoURL
+        let username = currentUser?.displayName
+
+        
+        let timestamp = NSDate().timeIntervalSince1970
+        
+        var data = [String:Any]()
+        data = ["commentText" : text, "timestamp" : timestamp , "senderID" : uid, "senderProfileUrl" : profileUrl?.absoluteString, "senderName" : username]
+        
+        let db = Firestore.firestore()
+        db.collection("comments").document(postID).collection("comment").addDocument(data: data) { (error) in
+            if error == nil {
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 1,animated: true)
+                completion?(true)
+
+                
+            }else{
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.textLabel.text = error?.localizedDescription
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 3,animated: true)
+                completion?(false)
+
+            }
+            
+        }
+        
+        
+        let notification = [ "senderName" : username ,
+                               "notificationName" : "Comment" ,
+                               "sentTo" : [senderID] ,
+                               "description" : "New Comment" ,
+                               "timestamp" : timestamp,
+                               "photoUrl": profileUrl?.absoluteString] as [String : Any]
+                           
+    db.collection("notification").addDocument(data: notification){ (error) in
+                               
+        }
+        
+    }
+    
+    @objc func openCommentsView(sender : UIButton){
+        let vc = CommentsViewController(postID: postsArr[sender.tag].id, senderID: postsArr[sender.tag].userid)
+        self.present(vc, animated: true, completion: nil)
+        vc.commentDismiss = { isTrue in
+           
+            
+        }
+    }
+    
 }
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
@@ -195,10 +251,14 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell
         cell.setPost(post: postsArr[indexPath.section], likedId: self.likedIds , savedId: self.savedIds)
-        
+        cell.btnComment.tag = indexPath.row
+        cell.btnComment.addTarget(self, action: #selector(openCommentsView), for: .touchUpInside)
         cell.sharedImage = { [weak self] (image) in
             self!.share(image: image)
         }
+        
+        cell.commentTF.tag = indexPath.row
+        cell.commentTF.delegate = self
 
         cell.optionSelected = { [weak self] (name) in
             if name == "Delete"{
@@ -235,4 +295,16 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
     
     
+}
+
+extension HomeViewController : UITextFieldDelegate{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text != ""{
+            addComment(text: textField.text!, postID: postsArr[textField.tag].id, senderID: postsArr[textField.tag].userid){ result in
+                textField.text = nil
+                
+            }
+            
+        }
+    }
 }

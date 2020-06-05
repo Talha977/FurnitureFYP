@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsViewController" customModule="Furnitura" customModuleProvider="target">
+            <connections>
+                <outlet property="btnPost" destination="kB5-oS-Vvy" id="bAM-hP-6ZK"/>
+                <outlet property="tableView" destination="6i5-uM-hWC" id="SwM-hn-5JU"/>
+                <outlet property="tfComment" destination="IMW-G5-B9C" id="MVF-mQ-MRl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ilP-0b-aRm">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6i5-uM-hWC">
+                    <rect key="frame" x="0.0" y="74" width="414" height="739"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i77-yM-zsd">
+                    <rect key="frame" x="8" y="823" width="398" height="34"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a comment..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMW-G5-B9C">
+                            <rect key="frame" x="0.0" y="0.0" width="326.5" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB5-oS-Vvy">
+                            <rect key="frame" x="326.5" y="2" width="71.5" height="30"/>
+                            <state key="normal" title="Post">
+                                <color key="titleColor" name="Primary Color"/>
+                            </state>
+                            <connections>
+                                <action selector="btnPostPressed:" destination="-1" eventType="touchUpInside" id="rVG-w0-Evv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.17254901959999999" green="0.18039215689999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="i77-yM-zsd" firstAttribute="top" secondItem="6i5-uM-hWC" secondAttribute="bottom" constant="10" id="4y8-DW-wvd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i77-yM-zsd" secondAttribute="trailing" constant="8" id="EW7-co-RzS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ilP-0b-aRm" secondAttribute="trailing" id="Jdw-KM-kUI"/>
+                <constraint firstItem="ilP-0b-aRm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="P0e-5w-Qxo"/>
+                <constraint firstItem="i77-yM-zsd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="ZR4-cD-Oaa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6i5-uM-hWC" secondAttribute="trailing" id="av8-7g-aV8"/>
+                <constraint firstItem="ilP-0b-aRm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jEm-JF-Imo"/>
+                <constraint firstItem="6i5-uM-hWC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lb9-cn-Snt"/>
+                <constraint firstAttribute="bottom" secondItem="ilP-0b-aRm" secondAttribute="bottom" id="m4T-aq-UG4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="i77-yM-zsd" secondAttribute="bottom" constant="5" id="vUf-7R-byJ"/>
+                <constraint firstItem="6i5-uM-hWC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="zSw-Ip-Iiq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="109"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Primary Color">
+            <color red="0.91764705882352937" green="0.67450980392156867" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -49,6 +49,14 @@
 		04F7FAF0248AA6FB005DB2F4 /* InboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7FAEE248AA6FA005DB2F4 /* InboxCell.xib */; };
 		04F7FAF1248AA6FB005DB2F4 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FAEF248AA6FB005DB2F4 /* InboxCell.swift */; };
 		04F7FAF3248AE4F8005DB2F4 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FAF2248AE4F8005DB2F4 /* NotificationViewController.swift */; };
+		04F7FAF5248AFCD5005DB2F4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FAF4248AFCD5005DB2F4 /* Comment.swift */; };
+		04F7FAF8248AFEF7005DB2F4 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7FAF6248AFEF6005DB2F4 /* CommentsViewController.xib */; };
+		04F7FAF9248AFEF7005DB2F4 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FAF7248AFEF6005DB2F4 /* CommentsViewController.swift */; };
+		04F7FAFC248B01D0005DB2F4 /* CommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7FAFA248B01CF005DB2F4 /* CommentsCell.xib */; };
+		04F7FAFD248B01D0005DB2F4 /* CommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FAFB248B01D0005DB2F4 /* CommentsCell.swift */; };
+		04F7FB00248B0F08005DB2F4 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7FAFE248B0F07005DB2F4 /* NotificationCell.xib */; };
+		04F7FB01248B0F08005DB2F4 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FAFF248B0F07005DB2F4 /* NotificationCell.swift */; };
+		04F7FB03248B10AC005DB2F4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FB02248B10AC005DB2F4 /* Notification.swift */; };
 		3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481C30E2406953100C15B57 /* ARKit.framework */; };
 		3481C34D2406986D00C15B57 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C32E2406986C00C15B57 /* Models.scnassets */; };
 		3481C34E2406986D00C15B57 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C32F2406986C00C15B57 /* Utilities.swift */; };
@@ -214,6 +222,14 @@
 		04F7FAEE248AA6FA005DB2F4 /* InboxCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InboxCell.xib; sourceTree = "<group>"; };
 		04F7FAEF248AA6FB005DB2F4 /* InboxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
 		04F7FAF2248AE4F8005DB2F4 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		04F7FAF4248AFCD5005DB2F4 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		04F7FAF6248AFEF6005DB2F4 /* CommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
+		04F7FAF7248AFEF6005DB2F4 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		04F7FAFA248B01CF005DB2F4 /* CommentsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsCell.xib; sourceTree = "<group>"; };
+		04F7FAFB248B01D0005DB2F4 /* CommentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsCell.swift; sourceTree = "<group>"; };
+		04F7FAFE248B0F07005DB2F4 /* NotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		04F7FAFF248B0F07005DB2F4 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		04F7FB02248B10AC005DB2F4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		07F93E648AB1F9C0D511C4B3 /* Pods_BeerCraftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerCraftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA322367DBE64D405E65460 /* Pods-FurnitureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureApp.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureApp/Pods-FurnitureApp.debug.xcconfig"; sourceTree = "<group>"; };
 		17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraft.release.xcconfig"; path = "Target Support Files/Pods-BeerCraft/Pods-BeerCraft.release.xcconfig"; sourceTree = "<group>"; };
@@ -349,6 +365,10 @@
 				04B964AE2486A2BA00A41991 /* PostImageCell.xib */,
 				04F7FAEF248AA6FB005DB2F4 /* InboxCell.swift */,
 				04F7FAEE248AA6FA005DB2F4 /* InboxCell.xib */,
+				04F7FAFB248B01D0005DB2F4 /* CommentsCell.swift */,
+				04F7FAFA248B01CF005DB2F4 /* CommentsCell.xib */,
+				04F7FAFF248B0F07005DB2F4 /* NotificationCell.swift */,
+				04F7FAFE248B0F07005DB2F4 /* NotificationCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -492,6 +512,8 @@
 				0424C0CB24073E3E008986C2 /* FurnitureDataModel.swift */,
 				34FC08C12404655D00A2BA43 /* FurnitureModel.swift */,
 				34ACFCAB2405A6EA007683C2 /* Extensions.swift */,
+				04F7FAF4248AFCD5005DB2F4 /* Comment.swift */,
+				04F7FB02248B10AC005DB2F4 /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -510,6 +532,8 @@
 		E2419A9122EB8D530054D9E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04F7FAF7248AFEF6005DB2F4 /* CommentsViewController.swift */,
+				04F7FAF6248AFEF6005DB2F4 /* CommentsViewController.xib */,
 				0424C0C0240728EF008986C2 /* HomeViewController.swift */,
 				0424C0AE2407256B008986C2 /* FurnitureListView.swift */,
 				0424C0CE24073E63008986C2 /* FurnitureDetailViewController.swift */,
@@ -799,13 +823,16 @@
 				04B964AC24869F5400A41991 /* PostsCell.xib in Resources */,
 				0465CAC42406C08500A8E62B /* HomeCell.xib in Resources */,
 				0465CACC2406C7BC00A8E62B /* NewPostViewController.xib in Resources */,
+				04F7FB00248B0F08005DB2F4 /* NotificationCell.xib in Resources */,
 				04B964A824869F3300A41991 /* ProfileCell.xib in Resources */,
 				E258633222F330A100B5080D /* SingleFieldFormCell.xib in Resources */,
 				0424C0C924073E11008986C2 /* FurnitureDetailView.xib in Resources */,
+				04F7FAF8248AFEF7005DB2F4 /* CommentsViewController.xib in Resources */,
 				E2419A6722EB8CAB0054D9E4 /* Main.storyboard in Resources */,
 				3481C34D2406986D00C15B57 /* Models.scnassets in Resources */,
 				04F7FAF0248AA6FB005DB2F4 /* InboxCell.xib in Resources */,
 				E258633622F330BD00B5080D /* MultipleFieldFormCell.xib in Resources */,
+				04F7FAFC248B01D0005DB2F4 /* CommentsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,6 +909,7 @@
 			files = (
 				3481C35D2406986D00C15B57 /* Vase.swift in Sources */,
 				04B964AF2486A2BA00A41991 /* PostImageCell.swift in Sources */,
+				04F7FAF9248AFEF7005DB2F4 /* CommentsViewController.swift in Sources */,
 				04F7FAF3248AE4F8005DB2F4 /* NotificationViewController.swift in Sources */,
 				3481C3522406986D00C15B57 /* HitTestVisualization.swift in Sources */,
 				04F7FAF1248AA6FB005DB2F4 /* InboxCell.swift in Sources */,
@@ -895,6 +923,7 @@
 				04B964A724869F3300A41991 /* ProfileCell.swift in Sources */,
 				040ED911240BE269005B65DC /* ProfileViewController.swift in Sources */,
 				040ED920240C00BB005B65DC /* ViewController.swift in Sources */,
+				04F7FB01248B0F08005DB2F4 /* NotificationCell.swift in Sources */,
 				3481C3662406986D00C15B57 /* ScieneView+Extension.swift in Sources */,
 				3481C3502406986D00C15B57 /* Plane.swift in Sources */,
 				3481C34E2406986D00C15B57 /* Utilities.swift in Sources */,
@@ -904,6 +933,7 @@
 				3481C3572406986D00C15B57 /* TextManager.swift in Sources */,
 				3481C3582406986D00C15B57 /* Chair.swift in Sources */,
 				3481C35B2406986D00C15B57 /* Cup.swift in Sources */,
+				04F7FB03248B10AC005DB2F4 /* Notification.swift in Sources */,
 				E258632922F0B17A00B5080D /* Global.swift in Sources */,
 				040ED919240BEF3D005B65DC /* UICollectionView+Additions.swift in Sources */,
 				040ED914240BED6E005B65DC /* Message.swift in Sources */,
@@ -929,6 +959,7 @@
 				3481C3592406986D00C15B57 /* VirtualObjectsManager.swift in Sources */,
 				3481C3512406986D00C15B57 /* FocusSquare.swift in Sources */,
 				0465CACB2406C7BC00A8E62B /* NewPostViewController.swift in Sources */,
+				04F7FAFD248B01D0005DB2F4 /* CommentsCell.swift in Sources */,
 				E258632422F08C2400B5080D /* FurnitureCartCell.swift in Sources */,
 				040ED91E240BEF81005B65DC /* Channel.swift in Sources */,
 				3481C3642406986D00C15B57 /* VirtualObject.swift in Sources */,
@@ -940,6 +971,7 @@
 				E2419A9422EB8DEF0054D9E4 /* ServerManagerRequestHandler.swift in Sources */,
 				3481C3552406986D00C15B57 /* MainViewController.swift in Sources */,
 				3481C35E2406986D00C15B57 /* Lamp.swift in Sources */,
+				04F7FAF5248AFCD5005DB2F4 /* Comment.swift in Sources */,
 				040ED916240BEF00005B65DC /* DatabaseRepresentation.swift in Sources */,
 				0426880624162206001B757D /* SignUpViewController.swift in Sources */,
 				0424C0CF24073E63008986C2 /* FurnitureDetailViewController.swift in Sources */,
