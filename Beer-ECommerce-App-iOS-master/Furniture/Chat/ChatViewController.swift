@@ -16,6 +16,7 @@ import FirebaseFirestore
 import FirebaseStorage
 import InputBarAccessoryView
 import IQKeyboardManagerSwift
+import JGProgressHUD
 //import Toast_Swift
 
 class ChatViewController: MessagesViewController {
@@ -37,8 +38,9 @@ class ChatViewController: MessagesViewController {
     private var reference: CollectionReference?
     private var participantReference : CollectionReference?
     var user = Auth.auth().currentUser
-    weak var inboxRef : InboxBarViewController? = nil
     var id = ""
+    
+    weak var inboxRef : InboxBarViewController? = nil
     deinit {
         messageListener?.remove()
     }
@@ -67,10 +69,17 @@ class ChatViewController: MessagesViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    var isFromHome : Bool = false
+    var postImage : UIImage?
+    var hud = JGProgressHUD(style: .dark)
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if postImage != nil {
+            hud.show(in: self.view)
+            sendPhoto(postImage!)
+        }
+        self.view.backgroundColor = UIColor(red: 44/255, green: 46/255, blue: 47/255, alpha: 1)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .done, target: self, action: #selector(action(sender:)))
         guard let receiverId = channel.id else {
             navigationController?.popViewController(animated: true)
@@ -175,7 +184,7 @@ class ChatViewController: MessagesViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enable = false
 //        if inboxRef!.selectedInboxUnreadMsgs <= 0 {
 //            newMessages.removeAll()
 //        }
@@ -185,8 +194,8 @@ class ChatViewController: MessagesViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        IQKeyboardManager.shared.enable = false
+        //self.navigationController?.setNavigationBarHidden(true, animated: false)
+        IQKeyboardManager.shared.enable = true
     }
     // MARK: - Actions
     
@@ -295,9 +304,9 @@ class ChatViewController: MessagesViewController {
         case .removed:
 //            messages.remove(at: index)
             if inboxRef!.selectedInboxUnreadMsgs < 0 {
-                db.collection("channels").document(id).updateData(["unreadMessages" : 0])
+                db.collection("inbox").document(id).updateData(["unreadMessages" : 0])
             }else {
-                db.collection("channels").document(id).updateData(["unreadMessages" : inboxRef!.selectedInboxUnreadMsgs])
+                db.collection("inbox").document(id).updateData(["unreadMessages" : inboxRef!.selectedInboxUnreadMsgs])
             }
             
             messages.removeAll(where: {selectedMsgIDs.contains($0.messageId)})
@@ -355,6 +364,11 @@ class ChatViewController: MessagesViewController {
             
             self.save(message)
             self.messagesCollectionView.scrollToBottom()
+            
+            if self.self.hud.isVisible{
+                self.hud.dismiss(animated: true)
+            }
+            
         }
     }
     
@@ -422,16 +436,18 @@ extension ChatViewController: MessagesDisplayDelegate {
     
     func backgroundColor(for message: MessageType, at indexPath: IndexPath,
                          in messagesCollectionView: MessagesCollectionView) -> UIColor {
+        
+        let senderColor = UIColor(red: 234/255, green: 172/255, blue: 47/255, alpha: 1)
         if !selectedIndex.isEmpty{
             if selectedIndex.contains(indexPath.section) {
                 return .red
             }
                 
             else {
-                return isFromCurrentSender(message: message) ? .black : .purple
+                return isFromCurrentSender(message: message) ? senderColor : .purple
             }
         }
-        return isFromCurrentSender(message: message) ? .black : .purple
+        return isFromCurrentSender(message: message) ? senderColor : .purple
         
     }
     

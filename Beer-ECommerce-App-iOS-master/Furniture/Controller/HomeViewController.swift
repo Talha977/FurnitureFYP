@@ -19,8 +19,12 @@ class HomeViewController: UIViewController {
     var postsArr = [Posts]()
     var hud : JGProgressHUD  = JGProgressHUD(style: .dark)
     
+    weak var inboxRef : InboxBarViewController? = nil
+
+    
     var newMsgBtn = UIBarButtonItem()
     var profileBtn = UIBarButtonItem()
+    
 
     var savedIds = [String]()
     var likedIds = [String]()
@@ -208,8 +212,13 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
                 
             }
             else if name == "Message"{
-                let channel : Channel = Channel(id: Auth.auth().currentUser!.uid, name: Auth.auth().currentUser?.displayName ?? "danyal")
-                let  vc = ChatViewController(user: Auth.auth().currentUser!, channel: channel)
+                
+                let channel : Channel = Channel(id: self!.postsArr[indexPath.section].userid, name: self!.postsArr[indexPath.section].username)
+                let  vc = ChatViewController(user: Auth.auth().currentUser!, channel: channel,isNewChat: false)
+                self!.inboxRef?.selectedId = channel.id ?? ""
+                
+                vc.inboxRef = self!.inboxRef
+                vc.postImage = cell.imgHomePic.image
                 self?.navigationController?.pushViewController(vc, animated: true)
 
                 
