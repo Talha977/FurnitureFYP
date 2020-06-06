@@ -57,6 +57,7 @@
 		04F7FB00248B0F08005DB2F4 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7FAFE248B0F07005DB2F4 /* NotificationCell.xib */; };
 		04F7FB01248B0F08005DB2F4 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FAFF248B0F07005DB2F4 /* NotificationCell.swift */; };
 		04F7FB03248B10AC005DB2F4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7FB02248B10AC005DB2F4 /* Notification.swift */; };
+		347A5A84248B26D900B5597A /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 347A5A83248B26D800B5597A /* test.json */; };
 		3481C30F2406953100C15B57 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3481C30E2406953100C15B57 /* ARKit.framework */; };
 		3481C34D2406986D00C15B57 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3481C32E2406986C00C15B57 /* Models.scnassets */; };
 		3481C34E2406986D00C15B57 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481C32F2406986C00C15B57 /* Utilities.swift */; };
@@ -235,6 +236,7 @@
 		17A8C9998A0131BB01731884 /* Pods-BeerCraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraft.release.xcconfig"; path = "Target Support Files/Pods-BeerCraft/Pods-BeerCraft.release.xcconfig"; sourceTree = "<group>"; };
 		22C2092706CCC8716844DCEF /* Pods-BeerCraftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerCraftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BeerCraftUITests/Pods-BeerCraftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		306D6D220BE2F14EEAD59816 /* Pods_FurnitureApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		347A5A83248B26D800B5597A /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		3481C30E2406953100C15B57 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		3481C32E2406986C00C15B57 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		3481C32F2406986C00C15B57 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 		E2419A5522EB8CAA0054D9E4 = {
 			isa = PBXGroup;
 			children = (
+				347A5A83248B26D800B5597A /* test.json */,
 				E29E3EE3235A47D50022E433 /* Shared */,
 				E2419A6022EB8CAB0054D9E4 /* Furniture */,
 				E29E3EEA235A488A0022E433 /* IntentKit */,
@@ -821,6 +824,7 @@
 				0465CAC02406B29500A8E62B /* GoogleService-Info.plist in Resources */,
 				04B964B02486A2BA00A41991 /* PostImageCell.xib in Resources */,
 				04B964AC24869F5400A41991 /* PostsCell.xib in Resources */,
+				347A5A84248B26D900B5597A /* test.json in Resources */,
 				0465CAC42406C08500A8E62B /* HomeCell.xib in Resources */,
 				0465CACC2406C7BC00A8E62B /* NewPostViewController.xib in Resources */,
 				04F7FB00248B0F08005DB2F4 /* NotificationCell.xib in Resources */,

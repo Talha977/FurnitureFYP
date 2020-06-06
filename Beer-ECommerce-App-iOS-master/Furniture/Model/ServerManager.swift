@@ -51,6 +51,36 @@ public struct ServerManager{
     
      static let sharedInstance = ServerManager()
     
+    
+    func getAllFurniture(_ handler:@escaping ([Furnitures?],ServerError?) -> Void) {
+
+        let filepath = Bundle.main.path(forResource: "test", ofType: "json")
+        let url = URL(fileURLWithPath: filepath!)
+        let json  = try! Data(contentsOf: url)
+        let jsonData = try! JSONSerialization.jsonObject(with: json, options: .allowFragments)
+        var furnitData = jsonData as! [[String:Any]]
+        var tempArray = Array<FurnitureData>()
+        
+        for temp in furnitData {
+            tempArray.append(FurnitureData(JSON: temp)!)
+        }
+//        tempArray = furnitData
+//        print(furnitData)
+//
+        handler(tempArray,nil)
+////        let test = jsonData as! [[String:Any]]
+//        for furn in furnitData {
+//
+//
+//        }
+
+//        let res = jsonStr as? [Furnitures?]
+
+//        handler(furnitData,nil)
+
+    }
+    
+    
     func getAllBeers(_ handler:@escaping ([Furnitures?],ServerError?) -> Void){
         
         Alamofire.request(ServerRequestRouter.getBeers).validate().responseArray {(response:DataResponse<[Furnitures]>) in

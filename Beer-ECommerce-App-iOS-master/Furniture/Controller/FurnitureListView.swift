@@ -132,7 +132,7 @@ class FurnitureListView: UIViewController {
     // API :getBeerDetails
     open func fetchAllBeers(){
             vSpinner = showSpinner(onView: self.view)
-        ServerManager.sharedInstance.getAllBeers() { [unowned self](details, error) in
+        ServerManager.sharedInstance.getAllFurniture { [unowned self](details, error) in
             
             if let error = error {
                 self.removeSpinner(spinner: self.vSpinner)

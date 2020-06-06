@@ -25,7 +25,10 @@ internal enum ServerRequestRouter: URLRequestConvertible{
     var path: String {
         switch self {
         case .getBeers:
-            return ServerRequestRouter.baseURLString
+            
+            // changedd
+            return FurnitureModel.shared.myURL
+//            return ServerRequestRouter.baseURLString
         }
     }
     
