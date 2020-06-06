@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="HNh-sx-tCN">
@@ -204,7 +209,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.18039215689999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h57-UR-Uju" firstAttribute="top" secondItem="00a-As-Ae9" secondAttribute="top" id="X24-Nu-s0I"/>
                             <constraint firstItem="h57-UR-Uju" firstAttribute="leading" secondItem="00a-As-Ae9" secondAttribute="leading" id="XL6-xi-RE8"/>

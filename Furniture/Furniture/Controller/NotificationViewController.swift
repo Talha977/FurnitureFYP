@@ -84,25 +84,26 @@ class NotificationViewController: UIViewController {
                 let timestamp = document.get("timestamp") as? Double ?? 0
                 
                 let senderID = document.get("senderID") as? String
+                let notiImage = document.get("photoUrl") as? String ?? ""
+                let notiImgUrl = URL(string: notiImage)
+
                 
                 if Auth.auth().currentUser?.uid == senderID {
                     continue
                 }
                 
-                if notiID != nil{
-                    let notification = Notification(notificationID: notiID! ,id : id, name: notificationName, senderName: senderName, description: description, timestamp: timestamp)
-                    
-                    //                    self.notificationArray.removeAll(where: {$0.notificationID == notification.notificationID})
-                    //                    self.notificationArray.append(notification)
-                    notifications.removeAll(where: {$0.timestamp == notification.timestamp})
+                if notiID != nil && notiImage != nil {
+                    let notiImgUrl = URL(string: notiImage)
+
+                    let notification = Notification(notificationID: notiID! ,id : id, name: notificationName, senderName: senderName, description: description, timestamp: timestamp , notificationPhoto: notiImgUrl )
+                 notifications.removeAll(where: {$0.timestamp == notification.timestamp})
                     notifications.append(notification)
                     
                 }
                 else{
-                    let notification = Notification( id : id, name: notificationName, senderName: senderName, description: description, timestamp: timestamp)
+                    let notification = Notification( id : id, name: notificationName, senderName: senderName, description: description, timestamp: timestamp, notificationPhoto: notiImgUrl)
                     
-                    //                        self.notificationArray.removeAll(where: {$0.notificationID == notification.notificationID})
-                    //                        self.notificationArray.append(notification)
+               
                     notifications.removeAll(where: {$0.timestamp == notification.timestamp})
                     notifications.append(notification)
                     

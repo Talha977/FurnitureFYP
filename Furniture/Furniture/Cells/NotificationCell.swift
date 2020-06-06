@@ -33,8 +33,8 @@ class NotificationCell: UITableViewCell {
     func setItems(notificationName:String , senderName:String , description:String , photoUrl : URL?)
     {
         
-        if photoUrl == nil {
-            notificiationImage.image = UIImage(systemName: "person.fill")
+        if photoUrl == nil  {
+            notificiationImage.image = UIImage(systemName: "person.circle")
         }else{
             notificiationImage.kf.setImage(with: photoUrl)
 
