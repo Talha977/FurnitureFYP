@@ -35,7 +35,7 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KuB-8r-I2r">
-                    <rect key="frame" x="70" y="58.5" width="87" height="41"/>
+                    <rect key="frame" x="70" y="68.5" width="87" height="21.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmA-0P-bx8">
                             <rect key="frame" x="0.0" y="0.0" width="87" height="21.5"/>
@@ -43,16 +43,9 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ei-J7-IAR">
-                            <rect key="frame" x="1" y="26.5" width="86" height="14.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <constraints>
                         <constraint firstItem="WmA-0P-bx8" firstAttribute="leading" secondItem="KuB-8r-I2r" secondAttribute="leading" id="7tG-q7-VWl"/>
-                        <constraint firstItem="6ei-J7-IAR" firstAttribute="leading" secondItem="KuB-8r-I2r" secondAttribute="leading" constant="1" id="C7f-Wj-Gfo"/>
                     </constraints>
                 </stackView>
                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nfa-Bf-Usi">

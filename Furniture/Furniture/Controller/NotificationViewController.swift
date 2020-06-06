@@ -140,7 +140,7 @@ extension NotificationViewController : UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationCell
         let notification = notificationArray[indexPath.row]
-        cell.setItems(notificationName: notification.name, senderName: notification.senderName, description: notification.description, photoUrl: notification.notificationPhoto)
+        cell.setItems(notificationName: notification.name, senderName: notification.senderName, description: notification.description, photoUrl: notification.notificationPhoto, timestamp : notification.timestamp)
         
         return cell
     }

@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import JGProgressHUD
 import FirebaseFirestore
+import Kingfisher
 
 class NewPostViewController: UIViewController {
     
@@ -36,6 +37,14 @@ class NewPostViewController: UIViewController {
         tfHomeText.attributedPlaceholder = NSAttributedString(string: "Say something ...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         
         Utilities.styleFilledButton(btnPost)
+        
+        guard let user = Auth.auth().currentUser else {return}
+        
+        lblUsername.text = user.displayName
+        
+        if user.photoURL != nil {
+            imgUserImage.kf.setImage(with: user.photoURL)
+        }
         
         
         // hud.textLabel.text = "Loading"

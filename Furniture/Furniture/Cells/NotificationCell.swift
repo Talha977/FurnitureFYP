@@ -18,6 +18,8 @@ class NotificationCell: UITableViewCell {
     
     @IBOutlet weak var notificiationImage: UIImageView!
     
+    
+    @IBOutlet weak var lblTime: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,8 +32,13 @@ class NotificationCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setItems(notificationName:String , senderName:String , description:String , photoUrl : URL?)
+    func setItems(notificationName:String , senderName:String , description:String , photoUrl : URL?, timestamp : Double)
     {
+        
+       
+        let date = Date(timeIntervalSince1970: timestamp)
+
+        lblTime.text = date.calenderTimeSinceNow()
         
         if photoUrl == nil  {
             notificiationImage.image = UIImage(systemName: "person.circle")
