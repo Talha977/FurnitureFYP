@@ -29,9 +29,9 @@ class FurnitureViewCellTableViewCell: UITableViewCell {
                 
                 if let abv = beerDetails.abv{
                     if abv.count>0{
-                        ABV.text = "ABV: \(abv)"
+                        ABV.text = "Weight: \(abv)"
                     } else{
-                        ABV.text = "ABV: NA"
+                        ABV.text = "Weight: NA"
                     }
                 }
                 let currencySymbol = getCurrencySymbol()
