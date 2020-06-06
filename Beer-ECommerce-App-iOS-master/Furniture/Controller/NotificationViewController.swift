@@ -60,7 +60,8 @@ class NotificationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.title = "Notifications"
-        self.tabBarController?.navigationController?.navigationItem.title = "Notifications"
+        self.tabBarController?.navigationItem.title = "Notifications"
+
     }
     
     func getAllNotifications(queryText : String,completionHandler : ((_ notification : [Notification]) -> Void)? = nil){
